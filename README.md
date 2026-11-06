@@ -1,6 +1,6 @@
 # Via Pulchritudinis
 
-A Catholic style journal. Outfits drawn from the stone, glass, and gold of 52 churches, with what the popes and the Church have said about beauty, dress, and the body.
+A Catholic style journal. Outfits drawn from the stone, glass, and gold of 53 churches, with what the popes and the Church have said about beauty, dress, and the body.
 
 Static site for GitHub Pages. `index.html` holds the layout, `data.js` holds the churches, palettes, looks, and photo credits, and `img/` holds the photos.
 
