@@ -114,7 +114,7 @@ if(grid){
  regionF.innerHTML=["All regions"].concat([...new Set(L.map(l=>l.region))]).map(r=>'<option>'+esc(r)+'</option>').join('');
  colorF.innerHTML='<button type="button" class="all" aria-pressed="true" data-v="all">Any color</button>'+FAM.map(f=>'<button type="button" aria-pressed="false" data-v="'+f[0]+'" style="background:'+f[1]+'" title="'+f[2]+'" aria-label="'+f[2]+'"></button>').join('');
  let fWho='all',fCol='all';
- grid.innerHTML=L.map((l,i)=>'<button type="button" class="card" data-i="'+i+'" aria-label="Explore this look, '+esc(l.look.title)+', inspired by '+esc(l.name)+', '+esc(l.place)+'"><div class="ph"><span class="ch"><img loading="lazy" decoding="async" src="'+sm(l.exterior.src)+'"'+dim(l.exterior)+' alt=""></span><span class="lk"><img loading="lazy" decoding="async" src="'+sm(l.look.src)+'"'+dim(l.look)+' alt=""><span class="tag">'+WHO[l.who]+'</span></span></div><div class="strip" aria-hidden="true">'+strip(l)+'</div><h3>'+esc(l.name)+'</h3><span class="pl">'+esc(l.place)+'</span><span class="lt">'+esc(l.look.title)+'</span></button>').join('');
+ grid.innerHTML=L.map((l,i)=>'<button type="button" class="card" data-i="'+i+'" aria-label="Explore this look, '+esc(l.look.title)+', inspired by '+esc(l.name)+', '+esc(l.place)+'"><div class="ph"><span class="ch"><img loading="lazy" decoding="async" src="'+sm(l.exterior.src)+'"'+dim(l.exterior)+' alt=""></span><span class="lk"><img loading="lazy" decoding="async" src="'+sm(l.look.src)+'"'+dim(l.look)+' alt=""></span></div><div class="strip" aria-hidden="true">'+strip(l)+'</div><h3>'+esc(l.name)+'</h3><span class="pl">'+esc(l.place)+'</span><span class="lt">'+esc(l.look.title)+'</span></button>').join('');
  let VIS=L.map((l,i)=>i);
  function filter(){const q=qEl.value.trim().toLowerCase(),r=regionF.value,st=styleF.value;let n=0;VIS=[];
   [...grid.children].forEach(el=>{const l=L[+el.dataset.i];const ok=(fWho==='all'||l.who===fWho)&&(fCol==='all'||l.families.includes(fCol))&&(r==='All regions'||l.region===r)&&(st==='All styles'||l.period===st)&&(!q||(l.name+' '+l.place+' '+l.city+' '+l.region+' '+l.style+' '+l.look.title).toLowerCase().includes(q));el.hidden=!ok;if(ok){n++;VIS.push(+el.dataset.i)}});
@@ -140,7 +140,7 @@ if(grid){
   dBody.innerHTML='<div class="trio"><figure class="t-ch"><div class="ph zp"><img data-zoom tabindex="0" role="button" data-cap="'+esc(l.name)+', exterior" data-credit="'+esc(credit(l.exterior))+'" src="'+l.exterior.src+'"'+dim(l.exterior)+' alt="'+esc(l.name)+', exterior"></div><figcaption class="label">The Church</figcaption></figure><figure class="t-pal"><div class="chips" aria-hidden="true">'+strip(l)+'</div><figcaption class="label">The Palette</figcaption></figure><figure class="t-lk"><div class="ph zp"><img data-zoom tabindex="0" role="button" data-cap="'+esc(l.look.title)+', inspired by '+esc(l.name)+'" data-credit="'+esc(credit(l.look))+'" src="'+l.look.src+'"'+dim(l.look)+' alt="'+esc(l.look.title)+'. '+esc(l.look.wear)+'"></div><figcaption class="label">The Look</figcaption></figure></div>'+
   '<p class="credit t-credit">'+credit(l.exterior,'Exterior photo')+'<br>'+credit(l.look,'Look photo')+'</p>'+
   '<div class="d-read"><div class="d-info">'+
-   '<span class="label kicker">'+WHO[l.who]+' · '+esc(l.period)+'</span><h2 id="dTitle">'+esc(l.name)+'</h2><p class="label place">'+esc(l.place)+' · '+esc(l.style)+' · '+esc(l.year)+'</p><p class="story">'+esc(l.story)+'</p>'+
+   '<h2 id="dTitle">'+esc(l.name)+'</h2><p class="label place">'+esc(l.place)+' · '+esc(l.style)+' · '+esc(l.year)+'</p><p class="story">'+esc(l.story)+'</p>'+
    '<figure class="d-int"><div class="ph zp"><img data-zoom tabindex="0" role="button" data-cap="'+esc(l.name)+', interior" data-credit="'+esc(credit(l.interior))+'" loading="lazy" src="'+l.interior.src+'"'+dim(l.interior)+' alt="'+esc(l.name)+', interior"></div><figcaption class="credit"><span class="label">Interior</span> · '+credit(l.interior,'Photo')+'</figcaption></figure>'+
    '<div class="d-sec"><span class="label">The Palette</span><div class="palette">'+l.palette.map(p=>'<button type="button" class="sw" data-hex="'+p.h+'" aria-label="Copy '+esc(p.n)+', '+p.h+'"><i style="background:'+p.h+'"></i><b>'+esc(p.n)+'</b><small>'+p.h+'</small></button>').join('')+'</div><p class="tip">Five colors measured from the exterior and interior photographs. Select a color to copy its value.</p></div>'+
    '<div class="d-sec"><span class="label">The Look</span><h3>'+esc(l.look.title)+'</h3><p class="wear">'+esc(l.look.wear)+'</p></div>'+
@@ -167,7 +167,7 @@ if(grid){
 /* ---------- liturgical seasons ---------- */
 if($('seasonsGrid')){
  const S=[["Advent","#4B2E6B","Violet and blue-violet","Watchful, quiet tones. Plum knits, a violet scarf, and on Gaudete Sunday a touch of rose."],["Christmas","#F4EEDF","White and gold","Ivory, cream, and gold jewelry from the Nativity through the Baptism of the Lord."],["Ordinary Time","#3F6B47","Green","The long green season of growth. Olive, sage, and forest for everyday wear."],["Lent","#5A3A63","Violet","Penitential and plain. Fewer pieces, darker tones, and rose on Laetare Sunday."],["Easter","#F7F2E4","White and gold","Fifty days of light. Whites, creams, and spring brightness."],["Pentecost & Martyrs","#A1252F","Red","The fire of the Spirit and the blood of witnesses. A red tie, a red lip, a red lining."]];
- $('seasonsGrid').innerHTML=S.map((s,i)=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);return '<div class="season'+(i===today[0]?' now':'')+'">'+(i===today[0]?'<span class="now-tag">Now · '+esc(today[2])+'</span>':'')+'<div class="bar" style="background:'+s[1]+(light?';box-shadow:inset 0 -10px 0 #C2A162':'')+'" aria-hidden="true"></div><div class="txt"><span class="label">'+esc(s[2])+'</span><h3>'+esc(s[0])+'</h3><p>'+esc(s[3])+'</p></div></div>'}).join('');
+ $('seasonsGrid').innerHTML=S.map((s,i)=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);return '<div class="season'+(i===today[0]?' now':'')+'">'+(i===today[0]?'<span class="now-tag">Now</span>':'')+'<div class="bar" style="background:'+s[1]+(light?';box-shadow:inset 0 -10px 0 #C2A162':'')+'" aria-hidden="true"></div><div class="txt"><h3>'+esc(s[0])+'</h3><p>'+esc(s[3])+'</p></div></div>'}).join('');
 }
 
 /* ---------- photo credits ---------- */
@@ -181,15 +181,13 @@ if(document.body.dataset.page==='home'&&location.hash){
  const h=location.hash.slice(1);const map={lookbook:'lookbook.html',how:'how-it-works.html','liturgical-year':'liturgical-year.html','beauty-faith':'beauty-and-faith.html',frassati:'st-pier-giorgio.html',directory:'directory.html',library:'directory.html#library',credits:'sources-and-credits.html'};
  if(map[h])location.replace(map[h]);else if(L.some(l=>l.id===h))location.replace('lookbook.html#'+h);
 }
-/* ---------- reveal on scroll and gentle parallax ---------- */
+/* ---------- reveal on scroll ---------- */
 if(!still&&'IntersectionObserver' in window){
  const els=[...document.querySelectorAll('.sec-h,.page-head h1,.page-head .lede,.statement>*,.toc>li,.step,.season,.pq,.fq,.mk,.book,.tc,.themes>div,.method>*,.feature-row>*,.quote-teaser>*,.fr-art,.sub-h,.src li')];
  els.forEach(el=>{const sib=el.parentNode?[...el.parentNode.children].indexOf(el):0;el.classList.add('rv');el.style.transitionDelay=Math.min(sib%6,5)*70+'ms'});
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
  els.forEach(el=>io.observe(el));
  const cards=$('grid');if(cards){const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');co.unobserve(e.target)}}),{threshold:.05});[...cards.children].forEach((c,i)=>{c.classList.add('rv');c.style.transitionDelay=(i%3)*80+'ms';co.observe(c)})}
- const par=[...document.querySelectorAll('.interlude img,.nave-band img')];
- if(par.length){let tk=false;const run=()=>{par.forEach(im=>{const r=im.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const p=(r.top+r.height/2-innerHeight/2)/innerHeight;im.style.transform='translateY('+(p*-60).toFixed(1)+'px) scale(1.12)'});tk=false};addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(run)}},{passive:true});run()}
 }
 window.VP={toast};
 })();

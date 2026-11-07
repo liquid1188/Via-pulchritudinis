@@ -95,7 +95,6 @@ def layout(fname,title,desc,body,page,scripts=True):
 def head(no,label,h1,*paras,extra=''):
     ps=''.join(f'<p class="lede">{p}</p>' for p in paras)
     return f'''<div class="wrap page-head">
-  <span class="label no">{no} · {label}</span>
   <div class="intro"><h1>{h1}</h1><div>{ps}{extra}</div></div>
 </div>'''
 
@@ -109,20 +108,19 @@ TOC=[('lookbook.html','I','The Lookbook','Fifty churches, each with its own pale
  ('beauty-and-faith.html','IV','Beauty &amp; Faith','What the popes and the Church have said about beauty and dress.','img/art/san-paolo-nave.jpg'),
  ('st-pier-giorgio.html','V','St. Pier Giorgio','The saint who dressed well and gave his clothes away.','img/art/fra-angelico-st-dominic.jpg'),
  ('directory.html','VI','The Directory','Catholic makers, stylists, publications, and books.','img/sm/ext/vezelay.jpg')]
-toc=''.join(f'<li><a href="{h}"><div class="im"><img loading="lazy" src="{im}" alt=""{' style="object-position:center 88%"' if 'angelico' in im else ''}></div><span class="label n">{n}</span><h3>{t}</h3><p>{d}</p></a></li>' for h,n,t,d,im in TOC)
+toc=''.join(f'<li><a href="{h}"><div class="im"><img loading="lazy" src="{im}" alt=""{' style="object-position:center 88%"' if 'angelico' in im else ''}></div><h3>{t}</h3><p>{d}</p></a></li>' for h,n,t,d,im in TOC)
 PAGES['index.html']=('Home','Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.','home',f'''
 <section class="hero" id="hero" data-zoom-group aria-roledescription="carousel" aria-label="Featured churches and looks">
   <div class="h-panel h-church zp"><img class="kb" alt="" data-zoom tabindex="0" role="button"><img class="kb" alt="" data-zoom tabindex="-1" role="button" aria-hidden="true"></div>
   <div class="h-pal" id="hPal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="h-panel h-look zp"><img class="kb" alt="" data-zoom tabindex="0" role="button"><img class="kb" alt="" data-zoom tabindex="-1" role="button" aria-hidden="true"></div>
   <div class="h-copy">
-    <p class="label">A Catholic Journal of Style and Beauty</p>
     <h1 id="cover-h">The Beauty of Cathedrals in Everyday Fashion</h1>
     <div class="ctas"><a class="btn solid light" href="lookbook.html">Explore the Lookbook</a><a class="btn ghost" href="how-it-works.html">Discover the Concept</a></div>
   </div>
   <div class="h-now" aria-live="polite">
     <div class="h-count"><b id="hNo">01</b><span>/ <span id="hOf">06</span></span></div>
-    <a class="h-name" id="hOpen" href="lookbook.html"><span class="label">Church, palette, look</span><b id="hTitle"></b><span id="hSub"></span></a>
+    <a class="h-name" id="hOpen" href="lookbook.html"><b id="hTitle"></b><span id="hSub"></span></a>
     <div class="h-ctrl"><button type="button" id="hPrev" aria-label="Previous church">←</button><span class="h-prog"><i id="hProg"></i></span><button type="button" id="hNext" aria-label="Next church">→</button></div>
   </div>
 </section>
@@ -135,15 +133,14 @@ PAGES['index.html']=('Home','Via Pulchritudinis draws inspiration from the world
 
 <section class="contents" aria-labelledby="toc-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">In This Journal</span><h2 id="toc-h">Six Ways In</h2></div><p>Begin with the lookbook, or start with the ideas behind it. Each part of the journal stands on its own.</p></div>
+    <div class="sec-h"><div><h2 id="toc-h">Six Ways In</h2></div><p>Begin with the lookbook, or start with the ideas behind it. Each part of the journal stands on its own.</p></div>
     <ol class="toc" role="list">{toc}</ol>{HINT}
-    <p class="wall-credit">Background, {ART['co'][0]}. {cr('co')}</p>
   </div>
 </section>
 
 <section class="sec marquee-sec" aria-labelledby="rail-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">From the Lookbook</span><h2 id="rail-h">Fifty Churches, Fifty Looks</h2></div><p>Every church has its own visual language. Hover to pause, or select any look to see its church, palette, and outfit. <a class="more" href="lookbook.html" style="margin-left:6px">Open the Lookbook</a></p></div>
+    <div class="sec-h"><div><h2 id="rail-h">Fifty Churches, Fifty Looks</h2></div><p>Every church has its own visual language. Hover to pause, or select any look to see its church, palette, and outfit. <a class="more" href="lookbook.html" style="margin-left:6px">Open the Lookbook</a></p></div>
   </div>
   <div class="marquee" id="marquee"><div class="mq-track" id="mqA"></div></div>
   <div class="marquee rev" id="marquee2"><div class="mq-track" id="mqB"></div></div>
@@ -206,8 +203,7 @@ head('II','How It Works','From Sacred Architecture to Personal Style',
   <div class="wrap method">
     <figure id="methodFig"></figure>
     <div>
-      <span class="label" style="color:var(--gold)">The Method</span>
-      <h2 style="margin:12px 0 18px">A Palette, Not a Formula</h2>
+      <h2 style="margin:0 0 18px">A Palette, Not a Formula</h2>
       <p>Each palette is measured from an exterior and an interior photograph, then checked by eye so it reflects the building’s real stone, glass, wood, and metal rather than the accident of a cloudy day or a camera’s color cast.</p>
       <p>The outfit is chosen first for its own beauty and good taste. A color-match score in each look shows how closely the clothes follow the palette, but it is a guide, not a verdict.</p>
       <p>Photographs of churches and clothing are used under Creative Commons licenses or are in the public domain, and every image is credited.</p>
@@ -239,7 +235,7 @@ head('III','The Liturgical Year','Dressing with the Seasons of the Church',
 PAGES['beauty-and-faith.html']=('Beauty &amp; Faith','What the popes and the Church have said about beauty, art, modesty, and dress.','bf',f'''
 <figure class="nave-band">
   <img data-zoom tabindex="0" role="button" data-cap="Basilica of St. Paul Outside the Walls, Rome" src="img/art/san-paolo-nave.jpg" width="1920" height="1032" decoding="async" alt="The long colonnaded nave of the Basilica of St. Paul Outside the Walls, with the apse mosaic at the far end">
-  <figcaption><div><span class="label">IV · Beauty &amp; Faith</span><h1>The Way of Beauty</h1></div><small>St. Paul Outside the Walls, Rome. {cr('sp')}</small></figcaption>
+  <figcaption><div><h1>The Way of Beauty</h1></div><small>St. Paul Outside the Walls, Rome. {cr('sp')}</small></figcaption>
 </figure>
 <div class="wrap page-head" style="padding-top:clamp(40px,6vw,80px)">
   <div class="intro">
@@ -251,13 +247,13 @@ PAGES['beauty-and-faith.html']=('Beauty &amp; Faith','What the popes and the Chu
 </div>
 <section class="sec" style="padding-top:0" aria-labelledby="popes-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">From Pius XII to Leo XIV</span><h2 id="popes-h">The Popes on Beauty</h2></div><p>Across generations, the popes have spoken of beauty as an expression of human creativity, a reflection of truth, and a means of drawing the human heart toward God.</p></div>
+    <div class="sec-h"><div><h2 id="popes-h">The Popes on Beauty</h2></div><p>Across generations, the popes have spoken of beauty as an expression of human creativity, a reflection of truth, and a means of drawing the human heart toward God.</p></div>
     {P('_popes.html')}{HINT}
   </div>
 </section>
 <section class="sec" aria-labelledby="dress-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">Principles, not a dress code</span><h2 id="dress-h">The Church on Dress</h2></div><p>Six passages from the Catechism, the Council, and St. John Paul II on modesty, reverence, the body, and noble beauty. Open each to read it.</p></div>
+    <div class="sec-h"><div><h2 id="dress-h">The Church on Dress</h2></div><p>Six passages from the Catechism, the Council, and St. John Paul II on modesty, reverence, the body, and noble beauty. Open each to read it.</p></div>
     <div class="teach">{P('_teach.html')}</div>
   </div>
 </section>''')
@@ -269,7 +265,6 @@ PAGES['st-pier-giorgio.html']=('St. Pier Giorgio Frassati','St. Pier Giorgio Fra
     <figure class="fr-art"><div class="im zp"><img data-zoom tabindex="0" role="button" data-cap="Fra Angelico, Crucifixion with St. Dominic, Convent of San Marco, Florence" src="img/art/fra-angelico-st-dominic.jpg" width="420" height="795" alt="Detail of Fra Angelico’s fresco of St. Dominic kneeling at the foot of the Cross"></div>
       <figcaption>Fra Angelico, <em>Crucifixion with St. Dominic</em>, Convent of San Marco, Florence. Frassati was a lay Dominican.<br><span class="cr">{cr('fa')}</span></figcaption></figure>
     <div>
-      <span class="label no">V · St. Pier Giorgio</span>
       <h1>A Life of Faith, Friendship, and Generosity</h1>
       <p class="dates">St. Pier Giorgio Frassati, 1901–1925. Canonized September 7, 2025.</p>
       <div class="read">
@@ -285,7 +280,7 @@ PAGES['st-pier-giorgio.html']=('St. Pier Giorgio Frassati','St. Pier Giorgio Fra
 </div>
 <section class="sec" style="padding-top:0" aria-labelledby="voices-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">National Catholic Register</span><h2 id="voices-h">Perspectives on Frassati</h2></div><p>Six people interviewed for the <em>Register</em> on what his clothing reveals about his character. Quotations are reproduced as published.</p></div>
+    <div class="sec-h"><div><h2 id="voices-h">Perspectives on Frassati</h2></div><p>Six people interviewed for the <em>Register</em> on what his clothing reveals about his character. Quotations are reproduced as published.</p></div>
     {P('_fqs.html')}{HINT}
   </div>
 </section>''')
@@ -305,7 +300,7 @@ head('VI','The Directory','People, Books, and Ideas Worth Discovering',
 </section>''')
 
 # ---------------- CREDITS ----------------
-artp=''.join(f'<p><b>{ART[k][0]}.</b> {cr(k)}.</p>' for k in ('co','nd','sp','fa'))
+artp=''.join(f'<p><b>{ART[k][0]}.</b> {cr(k)}.</p>' for k in ('nd','sp','fa'))
 PAGES['sources-and-credits.html']=('Sources &amp; Credits','Primary sources and photo credits for Via Pulchritudinis.','credits',
 head('','Sources &amp; Credits','Sources and Credits','Primary sources quoted in the journal, and the photographers whose work appears here under Creative Commons licenses or in the public domain.').replace('<span class="label no"> · ','<span class="label no">')+f'''
 <section class="wrap" aria-label="Sources">
