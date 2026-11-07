@@ -362,6 +362,97 @@ img[data-zoom]{cursor:zoom-in}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--ink);color:var(--ivory);padding:10px 16px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:130}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
+/* ---------- cinematic hero: church, palette, look ---------- */
+.hero{position:relative;display:grid;grid-template-columns:1.25fr 56px 1fr;height:max(560px,min(calc(100vh - 174px),900px));background:var(--night);color:#F6EFDF;overflow:hidden}
+.h-panel{position:relative;overflow:hidden;margin:0}
+.h-panel.zp::after{display:none}
+.kb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.3s ease;will-change:opacity,transform}
+.kb.on{opacity:1;z-index:1}
+html.motion .kb.on{animation:kb 9s ease-out forwards}
+html.motion .hero.paused .kb.on{animation-play-state:paused}
+@keyframes kb{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+.h-look .kb.on{animation-name:kb2}
+@keyframes kb2{from{transform:scale(1.1) translate3d(1%,0,0)}to{transform:scale(1.02) translate3d(0,-1%,0)}}
+.h-pal{display:flex;flex-direction:column;z-index:2}
+.h-pal i{flex:1;background:#555;transition:background 1s ease}
+html.motion .h-pal i{animation:barIn .9s cubic-bezier(.2,.7,.2,1) both}
+html.motion .h-pal i:nth-child(2){animation-delay:.08s}html.motion .h-pal i:nth-child(3){animation-delay:.16s}html.motion .h-pal i:nth-child(4){animation-delay:.24s}html.motion .h-pal i:nth-child(5){animation-delay:.32s}
+@keyframes barIn{from{transform:scaleY(0);transform-origin:top}to{transform:scaleY(1);transform-origin:top}}
+.hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(16,14,12,.78) 0%,rgba(16,14,12,.35) 34%,rgba(16,14,12,0) 55%),linear-gradient(0deg,rgba(16,14,12,.7) 0%,rgba(16,14,12,0) 38%)}
+.h-copy{position:absolute;z-index:3;left:var(--gut);bottom:clamp(96px,13vh,150px);max-width:min(620px,52vw)}
+.h-copy .label{color:var(--gold-2)}
+.h-copy h1{color:#FBF6EC;font-size:clamp(46px,6.4vw,92px);line-height:.98;margin-top:16px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+html.motion .h-copy>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+html.motion .h-copy h1{animation-delay:.12s}html.motion .h-copy .ctas{animation-delay:.28s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.btn.light{background:#F6EFDF;color:var(--ink);border-color:#F6EFDF}
+.btn.light:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.btn.ghost{color:#F6EFDF;border-color:rgba(246,239,223,.55)}
+.btn.ghost:hover{background:rgba(246,239,223,.12);color:#fff}
+.h-now{position:absolute;z-index:3;left:var(--gut);right:var(--gut);bottom:26px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:end;padding-top:16px;border-top:1px solid rgba(246,239,223,.22)}
+.h-count{font-family:var(--serif);line-height:1}
+.h-count b{font-size:34px;font-weight:500}
+.h-count span{font-size:15px;color:#CFC6B8;margin-left:4px}
+.h-name{text-decoration:none;display:flex;flex-direction:column}
+.h-name .label{color:#CFC6B8;font-size:10px}
+.h-name b{font-family:var(--serif);font-weight:500;font-size:22px;margin-top:3px}
+.h-name span:last-child{font-size:13px;color:#CFC6B8}
+.h-name:hover b{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.h-ctrl{display:flex;align-items:center;gap:12px}
+.h-ctrl button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(246,239,223,.4);color:#F6EFDF;transition:background .2s}
+.h-ctrl button:hover{background:rgba(246,239,223,.14)}
+.h-prog{display:block;width:120px;height:1px;background:rgba(246,239,223,.25);overflow:hidden}
+.h-prog i{display:block;height:100%;background:var(--gold-2);transform-origin:left;transform:scaleX(0)}
+
+/* statement and today's season */
+.statement{padding-top:clamp(64px,9vw,128px);padding-bottom:clamp(20px,3vw,40px);max-width:1080px}
+.statement .big{font-family:var(--serif);font-size:clamp(28px,3.6vw,48px);line-height:1.2;color:var(--ink)}
+.statement .lede{max-width:60ch;margin-top:22px}
+.today{display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center;margin-top:40px;padding:18px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.today-sw{width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 0 0 4px var(--ivory),0 0 0 5px var(--rule-2)}
+html.motion .today-sw{animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{50%{box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 0 0 7px var(--ivory),0 0 0 8px var(--rule-2)}}
+.today .label{display:block;color:var(--gold)}
+.today b{display:block;font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.1;margin-top:4px}
+.today div span:last-child{font-size:14px;color:var(--ink-2)}
+.season{position:relative}
+.season.now{border-color:var(--ink);box-shadow:0 10px 30px rgba(31,28,25,.08)}
+.now-tag{position:absolute;top:10px;left:10px;z-index:2;background:var(--ink);color:var(--ivory);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px}
+
+/* marquee of looks */
+.marquee-sec{overflow:hidden}
+.marquee{overflow:hidden;padding:6px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee+.marquee{margin-top:22px}
+.mq-track{display:flex;gap:18px;width:max-content}
+html.motion .mq-track{animation:mq 110s linear infinite}
+html.motion .marquee.rev .mq-track{animation-direction:reverse;animation-duration:130s}
+.marquee:hover .mq-track,.marquee:focus-within .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+html:not(.motion) .marquee{overflow-x:auto}
+.mq{display:block;width:230px;flex:none;text-decoration:none}
+.mq-ph{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:160px;overflow:hidden}
+.mq-ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.mq-ph img+img{object-position:center 22%}
+.mq:hover .mq-ph img{transform:scale(1.05)}
+.mq-strip{display:flex;height:4px;margin-top:6px}
+.mq-strip i{flex:1}
+.mq b{display:block;font-family:var(--serif);font-weight:500;font-size:18px;margin-top:8px;line-height:1.2}
+.mq small{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-3)}
+
+/* reveal on scroll */
+html.motion .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+html.motion .rv.in{opacity:1;transform:none}
+html.motion body{animation:fadeIn .45s ease both}
+.interlude,.nave-band{overflow:hidden}
+.interlude img,.nave-band img{will-change:transform}
+.nav a{position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--burgundy);transform:scaleX(0);transition:transform .3s}
+.nav a:hover::after{transform:scaleX(1)}
+.nav a[aria-current="page"]{border-bottom-color:transparent}
+.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.card .strip i{transition:flex .5s}
+.card:hover .strip i:nth-child(odd){flex:1.6}
+
 /* ---------- tablet ---------- */
 @media (max-width:1020px){
   .grid{grid-template-columns:repeat(2,1fr)}
@@ -380,6 +471,25 @@ img[data-zoom]{cursor:zoom-in}
 /* ---------- phone: compact, sideways where it helps ---------- */
 @media (max-width:720px){
   body{font-size:16px}
+
+  .hero{grid-template-columns:1fr 14px 1fr;height:calc(100svh - 56px);min-height:520px;max-height:820px}
+  .hero::before{background:linear-gradient(0deg,rgba(16,14,12,.88) 0%,rgba(16,14,12,.55) 38%,rgba(16,14,12,0) 62%)}
+  .h-copy{left:var(--gut);right:var(--gut);bottom:112px;max-width:none}
+  .h-copy h1{font-size:40px}
+  .h-copy .ctas{margin-top:20px;gap:10px}
+  .h-copy .btn{flex:1 1 0;padding:0 10px;min-height:44px;font-size:11.5px}
+  .h-now{bottom:16px;gap:12px;grid-template-columns:auto 1fr auto}
+  .h-count b{font-size:24px}
+  .h-name b{font-size:17px}
+  .h-name span:last-child{display:none}
+  .h-prog{display:none}
+  .h-ctrl button{width:40px;height:40px}
+  .statement{padding-top:44px}
+  .today{grid-template-columns:40px 1fr;gap:14px}
+  .today .more{grid-column:2}
+  .mq{width:168px}
+  .mq-ph{height:120px}
+  .mq b{font-size:16px}
   .masthead{display:none}
   .navbar .in{justify-content:space-between;min-height:56px}
   .mini{display:flex}

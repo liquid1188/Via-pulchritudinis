@@ -37,7 +37,7 @@ if(btn&&nav){
 const lb=$('lb'),lbImg=$('lbImg');let lbSet=[],lbI=0,lbFrom=null;
 function lbCredit(im){if(im.dataset.credit)return im.dataset.credit;const c=im.closest('figure');const s=c&&c.querySelector('small,.cr');return s?s.innerHTML:''}
 function lbShow(i){lbI=(i+lbSet.length)%lbSet.length;const im=lbSet[lbI];lbImg.src=(im.dataset.full||im.currentSrc||im.src).replace('/img/sm/','/img/');lbImg.alt=im.alt;$('lbCap').textContent=im.dataset.cap||im.alt;$('lbCredit').innerHTML=lbCredit(im);$('lbN').textContent=lbSet.length>1?(lbI+1)+' of '+lbSet.length:'';$('lbP').hidden=$('lbNx').hidden=lbSet.length<2}
-function lbOpen(im){const g=im.closest('[data-zoom-group]');lbSet=g?[...g.querySelectorAll('img[data-zoom]')]:[im];lbFrom=document.activeElement;lb.hidden=false;document.body.classList.add('locked');lbShow(lbSet.indexOf(im));$('lbX').focus({preventScroll:true})}
+function lbOpen(im){const g=im.closest('[data-zoom-group]');lbSet=g?[...g.querySelectorAll('img[data-zoom]')].filter(i=>i.getAttribute('aria-hidden')!=='true'):[im];lbFrom=document.activeElement;lb.hidden=false;document.body.classList.add('locked');lbShow(lbSet.indexOf(im));$('lbX').focus({preventScroll:true})}
 function lbClose(){lb.hidden=true;const d=$('detail');if(!d||d.hidden)document.body.classList.remove('locked');if(lbFrom&&document.contains(lbFrom))lbFrom.focus({preventScroll:true})}
 if(lb){
  document.addEventListener('click',e=>{const im=e.target.closest('img[data-zoom]');if(im&&!lb.contains(im)){e.preventDefault();e.stopPropagation();lbOpen(im)}},true);
@@ -48,24 +48,61 @@ if(lb){
  let tx=null;lbImg.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});lbImg.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)lbShow(lbI+(dx<0?1:-1));tx=null});
 }
 
-/* ---------- home: featured triptych and lookbook rail ---------- */
-if($('trip')&&L.length){
- const FEAT=L.map((l,i)=>i).filter(i=>L[i].featured).concat(L.map((l,i)=>i)).filter((v,i,a)=>a.indexOf(v)===i).slice(0,6);
- let ti=0,timer;const dots=$('tDots');
- FEAT.forEach((k,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show '+L[k].name);b.onclick=()=>{showTrip(j);restart()};dots.appendChild(b)});
- function showTrip(j){ti=j;const l=L[FEAT[j]];
-  const set=(id,m,alt)=>{const im=$(id);im.dataset.cap=alt;im.dataset.credit=credit(m);im.style.opacity=0;setTimeout(()=>{im.onload=()=>im.style.opacity=1;im.src=m.src;im.alt=alt},180)};
-  set('tExt',l.exterior,l.name+', exterior');set('tLook',l.look,l.look.title+', a look inspired by '+l.name);set('tInt',l.interior,l.name+', interior');
-  $('tBar').innerHTML=strip(l);$('tTitle').textContent=l.name;$('tSub').textContent=l.place+' · '+l.look.title;$('tOpen').href='lookbook.html#'+l.id;
-  [...dots.children].forEach((b,k)=>b.setAttribute('aria-current',k===j))}
- function restart(){clearInterval(timer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>showTrip((ti+1)%FEAT.length),6500)}
- const trip=$('trip');['mouseenter','focusin','touchstart'].forEach(ev=>trip.addEventListener(ev,()=>clearInterval(timer),{passive:true}));['mouseleave','focusout'].forEach(ev=>trip.addEventListener(ev,restart));
- showTrip(0);restart();
+/* ---------- motion helpers ---------- */
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!still)root.classList.add('motion');
+
+/* ---------- home hero: church, palette, look ---------- */
+if($('hero')&&L.length){
+ const PICK=[['siena','exterior'],['saint-denis','interior'],['st-marks','exterior'],['florence','exterior'],['national-shrine','interior'],['las-lajas','exterior'],['orvieto','exterior'],['vezelay','interior']];
+ const F=PICK.map(([id,k])=>({l:L.find(x=>x.id===id),k})).filter(x=>x.l);
+ const DUR=7000;let hi=-1,timer,t0=0,raf;
+ const ch=[...document.querySelectorAll('.h-church .kb')],lk=[...document.querySelectorAll('.h-look .kb')],bars=[...$('hPal').children];
+ $('hOf').textContent=String(F.length).padStart(2,'0');
+ const load=src=>new Promise(r=>{const i=new Image();i.onload=i.onerror=()=>r();i.src=src});
+ function swap(set,src,alt,cap,cred,pos){const on=set.find(i=>i.classList.contains('on'))||set[1],nx=set[0]===on?set[1]:set[0];
+  nx.src=src;nx.alt=alt;nx.dataset.cap=cap;nx.dataset.credit=cred;nx.style.objectPosition=pos||'';nx.setAttribute('tabindex','0');nx.removeAttribute('aria-hidden');
+  on.setAttribute('tabindex','-1');on.setAttribute('aria-hidden','true');
+  nx.classList.remove('on');void nx.offsetWidth;nx.classList.add('on');on.classList.remove('on')}
+ async function show(j){hi=(j+F.length)%F.length;const {l,k}=F[hi];const nx=F[(hi+1)%F.length];
+  await Promise.all([load(l[k].src),load(l.look.src)]);
+  swap(ch,l[k].src,l.name+(k==='interior'?', interior':', exterior'),l.name+(k==='interior'?', interior':', exterior'),credit(l[k]));
+  swap(lk,l.look.src,l.look.title+', a look inspired by '+l.name,l.look.title+', inspired by '+l.name,credit(l.look),'center 22%');
+  bars.forEach((b,i)=>{b.style.transitionDelay=(i*90)+'ms';b.style.background=l.palette[i].h;b.title=l.palette[i].n});
+  $('hNo').textContent=String(hi+1).padStart(2,'0');$('hTitle').textContent=l.name;$('hSub').textContent=l.place+' · '+l.look.title;$('hOpen').href='lookbook.html#'+l.id;
+  load(nx.l[nx.k].src);load(nx.l.look.src);
+  t0=performance.now()}
+ function tick(t){const p=Math.min(1,(t-t0)/DUR);$('hProg').style.transform='scaleX('+p+')';if(p>=1&&!paused)show(hi+1);raf=requestAnimationFrame(tick)}
+ let paused=still;const hero=$('hero');
+ hero.addEventListener('mouseenter',()=>{paused=true;hero.classList.add('paused')});hero.addEventListener('mouseleave',()=>{if(!still){paused=false;t0=performance.now()-(parseFloat(getComputedStyle($('hProg')).transform.split(',')[0].replace('matrix(',''))||0)*DUR;hero.classList.remove('paused')}});
+ $('hPrev').onclick=()=>show(hi-1);$('hNext').onclick=()=>show(hi+1);
+ let sx=null;hero.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});hero.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50){e.preventDefault();show(hi+(dx<0?1:-1))}sx=null});
+ show(0).then(()=>{if(!still)raf=requestAnimationFrame(tick)});
 }
-if($('homeRail')&&L.length){
- const pick=['siena','st-marks','florence','national-shrine','saint-denis','vezelay','orvieto','las-lajas'];
- $('homeRail').innerHTML=pick.map(id=>L.find(l=>l.id===id)).filter(Boolean).map(l=>'<a class="mini-look" href="lookbook.html#'+l.id+'"><div class="ph"><span><img loading="lazy" src="'+sm(l.exterior.src)+'" alt=""></span><span class="lk"><img loading="lazy" src="'+sm(l.look.src)+'" alt=""></span></div><div class="strip" aria-hidden="true">'+strip(l)+'</div><h3>'+esc(l.name)+'</h3><p>'+esc(l.place)+' · <i>'+esc(l.look.title)+'</i></p></a>').join('');
+
+/* ---------- home marquee of all looks ---------- */
+if($('mqA')&&L.length){
+ const tile=l=>'<a class="mq" href="lookbook.html#'+l.id+'"><span class="mq-ph"><img loading="lazy" src="'+sm(l.exterior.src)+'" alt=""><img loading="lazy" src="'+sm(l.look.src)+'" alt=""></span><span class="mq-strip" aria-hidden="true">'+strip(l)+'</span><b>'+esc(l.name)+'</b><small>'+esc(l.look.title)+'</small></a>';
+ const half=Math.ceil(L.length/2),A=L.slice(0,half),B=L.slice(half);
+ $('mqA').innerHTML=A.map(tile).join('')+(still?'':A.map(tile).join('').replace(/<a /g,'<a tabindex="-1" aria-hidden="true" '));
+ $('mqB').innerHTML=B.map(tile).join('')+(still?'':B.map(tile).join('').replace(/<a /g,'<a tabindex="-1" aria-hidden="true" '));
 }
+
+/* ---------- liturgical season for today ---------- */
+function easter(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da)}
+const D=(y,m,d)=>new Date(y,m,d),add=(dt,n)=>new Date(dt.getFullYear(),dt.getMonth(),dt.getDate()+n);
+function season(t){const y=t.getFullYear();t=D(y,t.getMonth(),t.getDate());
+ const xmas=D(y,11,25),adv=add(xmas,-(xmas.getDay()||7)-21),ep=D(y,0,6),bap=add(ep,7-ep.getDay()||7),E=easter(y),ash=add(E,-46),pent=add(E,49);
+ if(t>=adv&&t<xmas){const wk=Math.floor((t-adv)/864e5/7)+1;return [0,'Advent',wk===3&&t.getDay()===0?'Gaudete Sunday. Rose may be worn.':'Week '+wk+' of Advent']}
+ if(t>=xmas||t<=bap)return [1,'Christmas','The Christmas season, through the Baptism of the Lord'];
+ if(t>=ash&&t<E){const wk=Math.floor((t-ash)/864e5/7);return [3,'Lent',(t-ash)/864e5===25?'Laetare Sunday. Rose may be worn.':(add(E,-7)<=t?'Holy Week':'The season of Lent')]}
+ if(+t===+pent)return [5,'Pentecost','The coming of the Holy Spirit'];
+ if(t>=E&&t<pent)return [4,'Easter','The fifty days of Easter'];
+ return [2,'Ordinary Time','The green season of growth']}
+const SEAS_COLORS=['#4B2E6B','#F4EEDF','#3F6B47','#5A3A63','#F7F2E4','#A1252F'];
+const today=season(new Date());
+if($('today')){$('today').hidden=false;$('todaySw').style.background=SEAS_COLORS[today[0]];$('todayName').textContent=today[1];$('todayNote').textContent=today[2]}
+
 if($('methodFig')&&L.length){const l=L.find(x=>x.id==='siena')||L[0];$('methodFig').innerHTML='<div class="ph" data-zoom-group><span><img data-zoom tabindex="0" role="button" data-cap="'+esc(l.name)+', exterior" data-credit="'+esc(credit(l.exterior))+'" src="'+l.exterior.src+'" alt="'+esc(l.name)+', exterior"></span><span class="chips" aria-hidden="true">'+strip(l)+'</span><span><img data-zoom tabindex="0" role="button" data-cap="'+esc(l.look.title)+'" data-credit="'+esc(credit(l.look))+'" src="'+l.look.src+'" style="object-position:center 22%" alt="'+esc(l.look.title)+'"></span></div><figcaption>'+esc(l.name)+', its palette, and '+esc(l.look.title)+'. <a class="link" href="lookbook.html#'+l.id+'">See the full look</a></figcaption>'}
 
 /* ---------- lookbook ---------- */
@@ -130,7 +167,7 @@ if(grid){
 /* ---------- liturgical seasons ---------- */
 if($('seasonsGrid')){
  const S=[["Advent","#4B2E6B","Violet and blue-violet","Watchful, quiet tones. Plum knits, a violet scarf, and on Gaudete Sunday a touch of rose."],["Christmas","#F4EEDF","White and gold","Ivory, cream, and gold jewelry from the Nativity through the Baptism of the Lord."],["Ordinary Time","#3F6B47","Green","The long green season of growth. Olive, sage, and forest for everyday wear."],["Lent","#5A3A63","Violet","Penitential and plain. Fewer pieces, darker tones, and rose on Laetare Sunday."],["Easter","#F7F2E4","White and gold","Fifty days of light. Whites, creams, and spring brightness."],["Pentecost & Martyrs","#A1252F","Red","The fire of the Spirit and the blood of witnesses. A red tie, a red lip, a red lining."]];
- $('seasonsGrid').innerHTML=S.map(s=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);return '<div class="season"><div class="bar" style="background:'+s[1]+(light?';box-shadow:inset 0 -10px 0 #C2A162':'')+'" aria-hidden="true"></div><div class="txt"><span class="label">'+esc(s[2])+'</span><h3>'+esc(s[0])+'</h3><p>'+esc(s[3])+'</p></div></div>'}).join('');
+ $('seasonsGrid').innerHTML=S.map((s,i)=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);return '<div class="season'+(i===today[0]?' now':'')+'">'+(i===today[0]?'<span class="now-tag">Now · '+esc(today[2])+'</span>':'')+'<div class="bar" style="background:'+s[1]+(light?';box-shadow:inset 0 -10px 0 #C2A162':'')+'" aria-hidden="true"></div><div class="txt"><span class="label">'+esc(s[2])+'</span><h3>'+esc(s[0])+'</h3><p>'+esc(s[3])+'</p></div></div>'}).join('');
 }
 
 /* ---------- photo credits ---------- */
@@ -143,6 +180,16 @@ if($('photoCredits')){
 if(document.body.dataset.page==='home'&&location.hash){
  const h=location.hash.slice(1);const map={lookbook:'lookbook.html',how:'how-it-works.html','liturgical-year':'liturgical-year.html','beauty-faith':'beauty-and-faith.html',frassati:'st-pier-giorgio.html',directory:'directory.html',library:'directory.html#library',credits:'sources-and-credits.html'};
  if(map[h])location.replace(map[h]);else if(L.some(l=>l.id===h))location.replace('lookbook.html#'+h);
+}
+/* ---------- reveal on scroll and gentle parallax ---------- */
+if(!still&&'IntersectionObserver' in window){
+ const els=[...document.querySelectorAll('.sec-h,.page-head h1,.page-head .lede,.statement>*,.toc>li,.step,.season,.pq,.fq,.mk,.book,.tc,.themes>div,.method>*,.feature-row>*,.quote-teaser>*,.fr-art,.sub-h,.src li')];
+ els.forEach(el=>{const sib=el.parentNode?[...el.parentNode.children].indexOf(el):0;el.classList.add('rv');el.style.transitionDelay=Math.min(sib%6,5)*70+'ms'});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+ els.forEach(el=>io.observe(el));
+ const cards=$('grid');if(cards){const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');co.unobserve(e.target)}}),{threshold:.05});[...cards.children].forEach((c,i)=>{c.classList.add('rv');c.style.transitionDelay=(i%3)*80+'ms';co.observe(c)})}
+ const par=[...document.querySelectorAll('.interlude img,.nave-band img')];
+ if(par.length){let tk=false;const run=()=>{par.forEach(im=>{const r=im.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const p=(r.top+r.height/2-innerHeight/2)/innerHeight;im.style.transform='translateY('+(p*-60).toFixed(1)+'px) scale(1.12)'});tk=false};addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(run)}},{passive:true});run()}
 }
 window.VP={toast};
 })();

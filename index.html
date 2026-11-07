@@ -39,21 +39,26 @@
 </div>
 <main id="main">
 
-<section class="cover wrap" aria-labelledby="cover-h">
-  <p class="label eyebrow">A Catholic Journal of Style and Beauty</p>
-  <h1 id="cover-h">The Beauty of Cathedrals in Everyday Fashion</h1>
-  <p class="lede">From the marble of Rome’s great basilicas to the stained glass of Gothic cathedrals, sacred architecture offers an extraordinary vocabulary of color, texture, and form. Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.</p>
-  <div class="ctas"><a class="btn solid" href="lookbook.html">Explore the Lookbook</a><a class="btn" href="how-it-works.html">Discover the Concept</a></div>
-  <div class="trip" id="trip" aria-roledescription="carousel" aria-label="Featured looks">
-    <div class="trip-row" data-zoom-group>
-      <figure class="side zp"><img id="tExt" data-zoom tabindex="0" role="button" alt=""></figure>
-      <figure class="mid zp"><img id="tLook" data-zoom tabindex="0" role="button" alt=""></figure>
-      <figure class="side zp"><img id="tInt" data-zoom tabindex="0" role="button" alt=""></figure>
-    </div>
-    <div class="trip-cap" aria-hidden="true"><span class="label">Exterior</span><span class="label">The Look</span><span class="label">Interior</span></div>
-    <div class="trip-bar" id="tBar" aria-hidden="true"></div>
-    <div class="trip-meta"><a id="tOpen" href="lookbook.html"><h3 id="tTitle"></h3><p id="tSub"></p></a><div class="dots" id="tDots" role="group" aria-label="Choose a featured look"></div></div>
+<section class="hero" id="hero" data-zoom-group aria-roledescription="carousel" aria-label="Featured churches and looks">
+  <div class="h-panel h-church zp"><img class="kb" alt="" data-zoom tabindex="0" role="button"><img class="kb" alt="" data-zoom tabindex="-1" role="button" aria-hidden="true"></div>
+  <div class="h-pal" id="hPal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="h-panel h-look zp"><img class="kb" alt="" data-zoom tabindex="0" role="button"><img class="kb" alt="" data-zoom tabindex="-1" role="button" aria-hidden="true"></div>
+  <div class="h-copy">
+    <p class="label">A Catholic Journal of Style and Beauty</p>
+    <h1 id="cover-h">The Beauty of Cathedrals in Everyday Fashion</h1>
+    <div class="ctas"><a class="btn solid light" href="lookbook.html">Explore the Lookbook</a><a class="btn ghost" href="how-it-works.html">Discover the Concept</a></div>
   </div>
+  <div class="h-now" aria-live="polite">
+    <div class="h-count"><b id="hNo">01</b><span>/ <span id="hOf">06</span></span></div>
+    <a class="h-name" id="hOpen" href="lookbook.html"><span class="label">Church, palette, look</span><b id="hTitle"></b><span id="hSub"></span></a>
+    <div class="h-ctrl"><button type="button" id="hPrev" aria-label="Previous church">←</button><span class="h-prog"><i id="hProg"></i></span><button type="button" id="hNext" aria-label="Next church">→</button></div>
+  </div>
+</section>
+
+<section class="statement wrap rv-group" aria-label="About the journal">
+  <p class="big">From the marble of Rome’s great basilicas to the stained glass of Gothic cathedrals, sacred architecture offers an extraordinary vocabulary of color, texture, and form.</p>
+  <p class="lede">Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.</p>
+  <div class="today" id="today" hidden><span class="today-sw" id="todaySw"></span><div><span class="label">Today in the liturgical year</span><b id="todayName"></b><span id="todayNote"></span></div><a class="more" href="liturgical-year.html">The Liturgical Year</a></div>
 </section>
 
 <section class="contents" aria-labelledby="toc-h">
@@ -64,11 +69,12 @@
   </div>
 </section>
 
-<section class="sec" aria-labelledby="rail-h">
+<section class="sec marquee-sec" aria-labelledby="rail-h">
   <div class="wrap">
-    <div class="sec-h"><div><span class="label">From the Lookbook</span><h2 id="rail-h">Sacred Spaces. Personal Style.</h2></div><p>Every church has its own visual language. A few of the fifty looks, from Siena’s striped marble to the green gorge of Las Lajas. <a class="more" href="lookbook.html" style="margin-left:6px">All fifty looks</a></p></div>
-    <div class="rail" id="homeRail"></div><p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
+    <div class="sec-h"><div><span class="label">From the Lookbook</span><h2 id="rail-h">Fifty Churches, Fifty Looks</h2></div><p>Every church has its own visual language. Hover to pause, or select any look to see its church, palette, and outfit. <a class="more" href="lookbook.html" style="margin-left:6px">Open the Lookbook</a></p></div>
   </div>
+  <div class="marquee" id="marquee"><div class="mq-track" id="mqA"></div></div>
+  <div class="marquee rev" id="marquee2"><div class="mq-track" id="mqB"></div></div>
 </section>
 
 <figure class="interlude">
