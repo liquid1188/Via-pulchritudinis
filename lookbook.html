@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{if(localStorage.getItem('vp-desktop')==='1')document.querySelector('meta[name=viewport]').setAttribute('content','width=1280')}catch(e){}</script>
+<title>The Lookbook | Via Pulchritudinis</title>
+<meta name="description" content="Fifty contemporary looks drawn from the colors and materials of Catholic cathedrals, basilicas, and shrines.">
+<link rel="canonical" href="https://liquid1188.github.io/Via-pulchritudinis/lookbook.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Via Pulchritudinis">
+<meta property="og:title" content="The Lookbook | Via Pulchritudinis">
+<meta property="og:description" content="The Beauty of Cathedrals in Everyday Fashion">
+<meta property="og:url" content="https://liquid1188.github.io/Via-pulchritudinis/lookbook.html">
+<meta property="og:image" content="https://liquid1188.github.io/Via-pulchritudinis/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F3EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="lookbook">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <a class="brand" href="index.html" aria-label="Via Pulchritudinis, home"><b>VIA PULCHRITUDINIS</b><span>A Catholic Journal of Style and Beauty</span></a>
+</header>
+<div class="navbar">
+  <div class="in">
+    <a class="mini" href="index.html" aria-label="Via Pulchritudinis, home"><b>VIA PULCHRITUDINIS</b><span>A Catholic Journal of Style and Beauty</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu<i aria-hidden="true"></i></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul><li><a href="lookbook.html" aria-current="page">The Lookbook</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="liturgical-year.html">The Liturgical Year</a></li><li><a href="beauty-and-faith.html">Beauty &amp; Faith</a></li><li><a href="st-pier-giorgio.html">St. Pier Giorgio</a></li><li><a href="directory.html">The Directory</a></li></ul>
+      <div class="nav-extra"><button type="button" class="vp-toggle">View desktop version</button></div>
+    </nav>
+  </div>
+</div>
+<main id="main">
+<div class="wrap page-head">
+  <span class="label no">I · The Lookbook</span>
+  <div class="intro"><h1>Sacred Spaces. Personal Style.</h1><div><p class="lede">Every church has its own visual language, shaped by centuries of artistic imagination, local tradition, and religious devotion. Explore contemporary looks inspired by the colors and materials of sacred architecture.</p><p class="lede">Select a look to see the church that inspired it, its palette, and how those colors become a wardrobe.</p></div></div>
+</div>
+<div class="wrap">
+  <div class="filters" id="filters" role="search" aria-label="Filter looks">
+    <div class="seg" id="segWho" role="group" aria-label="Show looks for"><button type="button" aria-pressed="true" data-v="all">All</button><button type="button" aria-pressed="false" data-v="her">Women</button><button type="button" aria-pressed="false" data-v="him">Men</button></div>
+    <button type="button" class="f-toggle" id="fToggle" aria-expanded="false" aria-controls="fMore">Filters<span id="fCount"></span></button>
+    <div class="f-more" id="fMore">
+      <div class="colors" id="colorF" role="group" aria-label="Filter by color"></div><span class="color-name" id="colorName" aria-hidden="true">Any color</span>
+      <label><span class="sr">Architectural style</span><select id="styleF"></select></label>
+      <label><span class="sr">Region</span><select id="regionF"></select></label>
+      <div class="search"><label style="display:contents"><span class="sr">Search looks</span><input id="q" type="search" placeholder="Search church, city, or region" autocomplete="off"></label><button type="button" class="clear" id="clearF" disabled>Clear</button></div>
+    </div>
+  </div>
+  <p class="result-count" id="resultCount" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No looks match your current selection. Try a different search or adjust the filters.</p>
+</div>
+<div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="dTitle" hidden>
+  <div class="detail-bar">
+    <button class="btn small" id="dClose">← All Looks</button>
+    <div class="detail-step"><button id="dPrev" aria-label="Previous look">←</button><span id="dIdx"></span><button id="dNext" aria-label="Next look">→</button></div>
+  </div>
+  <article class="detail-body" id="dBody" data-zoom-group></article>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand"><b>VIA PULCHRITUDINIS</b><span>A Catholic Journal of Style and Beauty</span></div>
+        <p>Via Pulchritudinis explores the relationship between sacred architecture, personal style, and the Catholic understanding of beauty. Through its architectural lookbook, theological reflections, and curated resources, the journal invites readers to discover new ways of appreciating the Church’s artistic inheritance.</p>
+        <p>Curated by Andrew Likoudis, a Catholic writer and editor whose work on St. Pier Giorgio Frassati and personal style appeared in the <em>National Catholic Register</em>.</p>
+      </div>
+      <nav aria-label="Footer"><span class="label">The Journal</span><ul><li><a href="lookbook.html">The Lookbook</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="liturgical-year.html">The Liturgical Year</a></li></ul></nav>
+      <nav aria-label="Footer, more"><span class="label">More</span><ul><li><a href="beauty-and-faith.html">Beauty &amp; Faith</a></li><li><a href="st-pier-giorgio.html">St. Pier Giorgio</a></li><li><a href="directory.html">The Directory</a></li><li><a href="sources-and-credits.html">Sources &amp; Credits</a></li></ul></nav>
+    </div>
+    <div class="base"><span>Photos are used under Creative Commons licenses or are in the public domain, credited on each page and in <a href="sources-and-credits.html" style="color:inherit">Sources &amp; Credits</a>.</span><button type="button" class="vp-toggle">View desktop version</button><span class="amdg">Ad maiorem Dei gloriam</span></div>
+  </div>
+</footer>
+<button type="button" class="vp-back">View mobile version</button>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button type="button" class="lb-x" id="lbX">Close <span aria-hidden="true">✕</span></button>
+  <button type="button" class="lb-nav lb-p" id="lbP" aria-label="Previous photo">←</button>
+  <figure><img id="lbImg" alt=""><figcaption><b id="lbCap"></b><span id="lbCredit"></span><span class="lb-n" id="lbN"></span></figcaption></figure>
+  <button type="button" class="lb-nav lb-nx" id="lbNx" aria-label="Next photo">→</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
