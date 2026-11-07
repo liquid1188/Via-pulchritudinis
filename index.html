@@ -3,731 +3,780 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Via Pulchritudinis · Dress like a cathedral</title>
-<meta name="description" content="Catholic style inspired by sacred architecture. Colors taken from the stone and glass of great churches, matched to real outfits for women and men.">
+<title>Via Pulchritudinis | The Beauty of Cathedrals in Everyday Fashion</title>
+<meta name="description" content="Via Pulchritudinis explores the beauty of cathedrals in everyday fashion through sacred architecture, contemporary style, Catholic art, and the theology of beauty.">
+<link rel="canonical" href="https://liquid1188.github.io/Via-pulchritudinis/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Via Pulchritudinis">
+<meta property="og:title" content="Via Pulchritudinis">
+<meta property="og:description" content="The Beauty of Cathedrals in Everyday Fashion">
+<meta property="og:url" content="https://liquid1188.github.io/Via-pulchritudinis/">
+<meta property="og:image" content="https://liquid1188.github.io/Via-pulchritudinis/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Baltimore Basilica exterior, a dove-grey dress, and the basilica's interior">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Via Pulchritudinis">
+<meta name="twitter:description" content="The Beauty of Cathedrals in Everyday Fashion">
+<meta name="twitter:image" content="https://liquid1188.github.io/Via-pulchritudinis/img/og.jpg">
+<meta name="theme-color" content="#F7F3EC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --parch:#F5F0E6; --parch-2:#EAE2D2; --vellum:#FBF8F2;
-  --ink:#1D1A17; --ink-2:#4A443D; --ink-3:#7A7167;
-  --gilt:#A8843A; --gilt-2:#C9A85C; --lapis:#21375C; --oxblood:#6B1E26;
-  --rule:rgba(29,26,23,.13);
-  --serif:"Cormorant Garamond", Georgia, serif;
-  --caps:"Cinzel", Georgia, serif;
-  --sans:"Instrument Sans", system-ui, -apple-system, sans-serif;
-  --max:1280px;
+  --ivory:#F7F3EC; --ivory-2:#EEE7DA; --vellum:#FBF9F4;
+  --ink:#222120; --ink-2:#4B4741; --ink-3:#77706A;
+  --burgundy:#6E2A33; --stone:#B9AD9A; --gold:#94743A; --gold-2:#C2A162;
+  --night:#1E1C1A; --night-text:#D3CBBE; --night-mute:#9B9284;
+  --rule:rgba(34,33,32,.12); --rule-night:rgba(239,232,218,.13);
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max:1240px; --read:66ch; --head:72px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{background:var(--parch);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 20px)}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{display:block;max-width:100%}
 a{color:inherit}
-button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--gilt);outline-offset:3px;border-radius:2px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-.caps{font-family:var(--caps);letter-spacing:.18em;text-transform:uppercase;font-size:11px;font-weight:500}
-.eyebrow{color:var(--gilt);display:flex;align-items:center;gap:14px}
-.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.01em}
-h2{font-size:clamp(36px,4.8vw,60px)}
-em{font-style:italic}
-.lede{font-family:var(--serif);font-size:clamp(19px,1.8vw,22px);line-height:1.45;color:var(--ink-2)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--caps);font-size:11px;letter-spacing:.18em;text-decoration:none;padding:15px 24px;border-radius:999px;border:1px solid var(--ink);transition:background .25s,color .25s,transform .25s;cursor:pointer;background:none;color:var(--ink)}
-.btn.solid{background:var(--ink);color:var(--parch)}
-.btn:hover{transform:translateY(-1px)}
-.btn.solid:hover{background:var(--lapis);border-color:var(--lapis)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--burgundy);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+.label{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{color:var(--gold)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.005em}
+h2{font-size:clamp(34px,4.2vw,54px)}
+.lede{font-size:17px;line-height:1.7;color:var(--ink-2);max-width:var(--read)}
+.lede+.lede{margin-top:16px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--ivory);padding:10px 16px;z-index:100;text-decoration:none;font-size:14px}
+.skip:focus{top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border-radius:2px;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn.solid{background:var(--ink);color:var(--ivory)}
+.btn.solid:hover{background:var(--burgundy);border-color:var(--burgundy)}
+.btn.small{min-height:40px;padding:10px 16px;font-size:11px}
+.link{font-size:14px;font-weight:500;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:1px;text-underline-offset:5px}
+.link:hover{color:var(--burgundy)}
+section{padding:112px 0}
+.sec-head{max-width:820px;margin-bottom:52px}
+.sec-head h2{margin:14px 0 22px}
 
-/* header */
-.top{position:sticky;top:0;z-index:50;background:rgba(245,240,230,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
-.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
-.brand b{font-family:var(--caps);letter-spacing:.22em;font-size:13.5px;font-weight:600}
-.brand span{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-3)}
-.nav{display:flex;gap:26px;list-style:none;align-items:center}
-.nav a{text-decoration:none;font-family:var(--caps);font-size:10.5px;letter-spacing:.18em;color:var(--ink-2);padding:6px 0;border-bottom:1px solid transparent}
-.nav a:hover,.nav a[aria-current="true"]{color:var(--ink);border-color:var(--gilt)}
-.nav .cta a{border:1px solid var(--ink);border-radius:999px;padding:9px 16px;color:var(--ink)}
-.menu-btn{display:none;background:none;border:1px solid var(--rule);border-radius:999px;padding:8px 14px;font-family:var(--caps);font-size:10.5px;letter-spacing:.16em;cursor:pointer}
+/* masthead */
+.top{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--head);gap:24px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+.brand b{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:.14em}
+.brand span{font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);margin-top:2px}
+.nav{display:flex;gap:24px;list-style:none;align-items:center}
+.nav a{text-decoration:none;font-size:12.5px;font-weight:500;color:var(--ink-2);padding:8px 0;border-bottom:1px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--ink);border-color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid var(--rule);border-radius:2px;min-height:44px;padding:0 16px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 
 /* hero */
-.hero{border-bottom:1px solid var(--rule);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;padding-top:56px;padding-bottom:64px}
-.hero h1{font-size:clamp(52px,7.4vw,104px);line-height:.92;margin:20px 0 22px}
-.hero h1 em{color:var(--gilt);font-weight:400}
-.hero .lede{max-width:34ch}
-.hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero{border-bottom:1px solid var(--rule)}
+.hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;padding-top:64px;padding-bottom:72px}
+.hero h1{font-size:clamp(42px,5.2vw,72px);line-height:1.02;margin:18px 0 26px;max-width:12ch}
+.hero .lede{max-width:46ch}
+.hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
 .trip{position:relative}
-.trip-row{display:grid;grid-template-columns:.8fr 1.1fr .8fr;gap:12px;align-items:end}
-.trip figure{position:relative;overflow:hidden;border-radius:3px;background:var(--parch-2)}
+.trip-row{display:grid;grid-template-columns:.82fr 1.08fr .82fr;gap:14px;align-items:end}
+.trip figure{position:relative;overflow:hidden;background:var(--ivory-2)}
 .trip figure img{width:100%;height:100%;object-fit:cover;transition:opacity .6s ease}
-.trip .side{aspect-ratio:3/4.4}
-.trip .mid{aspect-ratio:3/4.6;border-radius:200px 200px 3px 3px}
-.trip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(251,248,242,.92);padding:5px 9px;border-radius:999px;font-family:var(--caps);font-size:9px;letter-spacing:.14em}
-.trip-bar{display:flex;height:14px;margin-top:12px;border-radius:2px;overflow:hidden}
+.trip .side{aspect-ratio:3/4.3}
+.trip .mid{aspect-ratio:3/4.4;border-radius:220px 220px 0 0}
+.trip .cap{display:grid;grid-template-columns:.82fr 1.08fr .82fr;gap:14px;margin-top:10px}
+.trip .cap span{color:var(--ink-3)}
+.trip-bar{display:flex;height:10px;margin-top:16px}
 .trip-bar i{flex:1;transition:background .6s}
-.trip-meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;gap:16px}
-.trip-meta h3{font-size:26px}
-.trip-meta p{font-size:13px;color:var(--ink-3)}
-.trip-dots{display:flex;gap:6px}
-.trip-dots button{width:8px;height:8px;border-radius:50%;border:1px solid var(--ink-3);background:none;cursor:pointer;padding:0}
-.trip-dots button[aria-current="true"]{background:var(--ink);border-color:var(--ink)}
-.trip a.open{position:absolute;inset:0;z-index:2}
+.trip-meta{display:flex;justify-content:space-between;align-items:flex-start;margin-top:16px;gap:16px}
+.trip-meta h3{font-size:25px}
+.trip-meta p{font-size:13.5px;color:var(--ink-3);margin-top:2px}
+.trip-meta a{text-decoration:none}
+.trip-meta a:hover h3{color:var(--burgundy)}
+.trip-dots{display:flex;gap:2px;flex-shrink:0}
+.trip-dots button{width:28px;height:28px;border:none;background:none;cursor:pointer;padding:0;display:grid;place-items:center}
+.trip-dots button::before{content:"";width:7px;height:7px;border-radius:50%;border:1px solid var(--ink-3)}
+.trip-dots button[aria-current="true"]::before{background:var(--ink);border-color:var(--ink)}
 
-/* how */
-.how{background:var(--vellum);border-bottom:1px solid var(--rule)}
-.how .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.step{padding:34px 30px 34px 0;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.step+.step{padding-left:30px;border-left:1px solid var(--rule)}
-.step .n{font-family:var(--serif);font-style:italic;font-size:44px;line-height:.8;color:var(--gilt)}
-.step h3{font-size:24px}
-.step p{font-size:14px;color:var(--ink-2);margin-top:6px}
-
-section{padding:100px 0}
-.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
-.sec-head h2{margin-top:16px}
-.band{background:var(--vellum);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.dark{background:#16130F;color:#EFE8DA}
-.dark .eyebrow{color:var(--gilt-2)}
-.dark .lede,.dark p{color:#CFC6B6}
+/* how it works */
+.how{background:var(--vellum);border-bottom:1px solid var(--rule);padding:96px 0}
+.how .sec-head{margin-bottom:44px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
+.step{padding:30px 32px 6px 0}
+.step+.step{padding-left:32px;border-left:1px solid var(--rule)}
+.step .n{font-size:12px;font-weight:500;letter-spacing:.12em;color:var(--gold)}
+.step h3{font-size:27px;margin:10px 0 10px}
+.step p{font-size:15px;color:var(--ink-2)}
 
 /* lookbook */
-.filters{position:sticky;top:64px;z-index:20;background:rgba(245,240,230,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.seg{display:flex;border:1px solid var(--rule);border-radius:999px;padding:3px}
-.seg button{background:none;border:none;border-radius:999px;padding:7px 14px;font-family:var(--caps);font-size:10px;letter-spacing:.14em;cursor:pointer;color:var(--ink-2)}
-.seg button[aria-pressed="true"]{background:var(--ink);color:var(--parch)}
-.colors{display:flex;gap:8px;align-items:center}
-.colors button{width:26px;height:26px;border-radius:50%;border:2px solid var(--parch);box-shadow:0 0 0 1px var(--rule);cursor:pointer;padding:0}
+.filters{position:sticky;top:var(--head);z-index:20;background:rgba(247,243,236,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.seg{display:flex;border:1px solid var(--rule)}
+.seg button{background:none;border:none;min-height:40px;padding:0 15px;font-size:12px;font-weight:500;letter-spacing:.06em;cursor:pointer;color:var(--ink-2)}
+.seg button+button{border-left:1px solid var(--rule)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ivory)}
+.colors{display:flex;gap:6px;align-items:center}
+.colors button{width:30px;height:30px;border-radius:50%;border:3px solid var(--ivory);box-shadow:0 0 0 1px var(--rule);cursor:pointer;padding:0;position:relative}
 .colors button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
-.colors .all{width:auto;height:26px;border-radius:999px;background:none;padding:0 10px;font-family:var(--caps);font-size:9.5px;letter-spacing:.12em;border:1px solid var(--rule);box-shadow:none}
-.colors .all[aria-pressed="true"]{background:var(--ink);color:var(--parch)}
-.filters select,.filters input{font:inherit;font-size:13.5px;background:var(--vellum);border:1px solid var(--rule);border-radius:999px;padding:8px 14px;color:var(--ink)}
-.filters input{margin-left:auto;width:220px}
-.result-count{font-family:var(--serif);font-style:italic;color:var(--ink-3);margin:18px 0 20px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px}
-.card{background:none;border:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column}
-.card .ph{position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:var(--parch-2)}
+.colors button[aria-pressed="true"]:not(.all)::after{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.colors .all{width:auto;height:30px;border-radius:2px;background:none;padding:0 11px;font-size:11.5px;font-weight:500;border:1px solid var(--rule);box-shadow:none}
+.colors .all[aria-pressed="true"]{background:var(--ink);color:var(--ivory);box-shadow:none}
+.filters select,.filters input{font-size:14px;background:var(--vellum);border:1px solid var(--rule);border-radius:2px;min-height:40px;padding:0 12px;color:var(--ink)}
+.filters .search{flex:1;display:flex;justify-content:flex-end;gap:10px;align-items:center}
+.filters input{width:260px}
+.clear{background:none;border:none;min-height:40px;padding:0 4px;font-size:13px;font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold);cursor:pointer;color:var(--ink-2)}
+.clear[disabled]{opacity:.4;cursor:default;text-decoration:none}
+.result-count{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink-3);margin:22px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 28px}
+.card{background:none;border:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;color:inherit}
+.card .ph{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--ivory-2)}
 .card .ph>img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.card:hover .ph>img{transform:scale(1.04)}
-.card .church{position:absolute;right:10px;bottom:10px;width:30%;aspect-ratio:3/4;border-radius:80px 80px 2px 2px;overflow:hidden;border:3px solid var(--vellum);box-shadow:0 6px 16px -6px rgba(0,0,0,.45)}
+.card:hover .ph>img{transform:scale(1.03)}
+.card .church{position:absolute;right:10px;bottom:10px;width:31%;aspect-ratio:3/4;border-radius:80px 80px 0 0;overflow:hidden;border:3px solid var(--vellum)}
 .card .church img{width:100%;height:100%;object-fit:cover}
-.card .tag{position:absolute;left:10px;top:10px;background:rgba(251,248,242,.92);padding:4px 9px;border-radius:999px;font-family:var(--caps);font-size:8.5px;letter-spacing:.14em}
-.card .strip{display:flex;height:7px;margin-top:12px;border-radius:2px;overflow:hidden}
+.card .tag{position:absolute;left:10px;top:10px;background:rgba(251,249,244,.94);padding:4px 9px;font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.card .strip{display:flex;height:8px;margin-top:14px}
 .card .strip i{flex:1}
-.card h3{font-size:23px;margin-top:10px;line-height:1.1}
-.card .pl{font-size:13px;color:var(--ink-3);margin-top:3px}
+.card h3{font-size:24px;margin-top:12px;line-height:1.12}
+.card .pl{font-size:13.5px;color:var(--ink-3);margin-top:4px}
+.card .go{margin-top:10px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px}
+.card .go::after{content:"→";transition:transform .25s}
+.card:hover .go{color:var(--burgundy)}
+.card:hover .go::after{transform:translateX(4px)}
 .card[hidden]{display:none}
-.empty{padding:60px 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-3)}
+.empty{padding:64px 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--ink-3)}
 
 /* detail */
-.detail{position:fixed;inset:0;z-index:80;background:var(--parch);overflow-y:auto;overscroll-behavior:contain;animation:fadeIn .3s ease}
+.detail{position:fixed;inset:0;z-index:80;background:var(--ivory);overflow-y:auto;overscroll-behavior:contain;animation:fadeIn .3s ease}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.detail-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:10px 28px;background:rgba(245,240,230,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.detail-bar .btn{padding:10px 18px}
-.detail-step{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-style:italic;color:var(--ink-3)}
-.detail-step button{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:none;cursor:pointer;font-size:16px}
-.detail-body{max-width:var(--max);margin:0 auto;padding:32px 32px 90px}
-.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.d-look{position:sticky;top:84px}
-.d-look .ph{border-radius:3px;overflow:hidden;background:var(--parch-2)}
+.detail-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 32px;background:rgba(247,243,236,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.detail-step{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-3)}
+.detail-step button{width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);background:none;cursor:pointer;font-size:16px}
+.detail-step button:hover{border-color:var(--ink)}
+.detail-body{max-width:var(--max);margin:0 auto;padding:40px 40px 100px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.d-look{position:sticky;top:88px}
+.d-look .ph{overflow:hidden;background:var(--ivory-2)}
 .d-look img{width:100%;max-height:82vh;object-fit:cover;object-position:center 20%}
-.credit{font-size:11px;color:var(--ink-3);margin-top:7px;line-height:1.45}
+.credit{font-size:11.5px;color:var(--ink-3);margin-top:8px;line-height:1.5}
 .credit a{text-underline-offset:2px}
-.d-info .kicker{color:var(--gilt)}
-.d-info h2{font-size:clamp(40px,4.2vw,58px);margin-top:10px}
-.d-info .wear{margin-top:16px;font-size:17px;color:var(--ink-2)}
-.match{margin-top:28px;border-top:1px solid var(--rule);padding-top:22px}
-.match-head{display:flex;justify-content:space-between;align-items:baseline}
-.match-head b{font-family:var(--serif);font-size:30px;font-weight:500}
-.match-rows{margin-top:12px;display:grid;gap:8px}
-.mrow{display:grid;grid-template-columns:34px 150px 22px 34px 1fr;gap:10px;align-items:center;font-size:13px;color:var(--ink-2)}
-.mrow i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,0,0,.1)}
-.mrow .ar{color:var(--ink-3);text-align:center}
-.church-h{margin-top:40px;border-top:1px solid var(--rule);padding-top:26px}
-.church-h h3{font-size:34px;margin-top:8px}
-.church-h .place{color:var(--ink-3);margin-top:8px}
-.church-h .story{margin-top:14px;color:var(--ink-2);font-size:15.5px}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.d-info .kicker{color:var(--gold)}
+.d-info h2{font-size:clamp(38px,4vw,54px);margin-top:12px}
+.d-info .place{color:var(--ink-3);margin-top:10px}
+.d-info .story{margin-top:16px;color:var(--ink-2);font-size:16px}
+.d-sec{margin-top:40px;padding-top:26px;border-top:1px solid var(--rule)}
+.d-sec>.label{color:var(--ink-3);display:block}
+.d-sec h3{font-size:30px;margin-top:8px}
+.d-sec .wear{margin-top:10px;font-size:16px;color:var(--ink-2)}
+.d-sec .insp{margin-top:12px;font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
 .pair figure{margin:0}
-.pair .ph{aspect-ratio:4/5;overflow:hidden;border-radius:3px;background:var(--parch-2);position:relative}
+.pair .ph{aspect-ratio:4/5;overflow:hidden;background:var(--ivory-2)}
 .pair img{width:100%;height:100%;object-fit:cover}
-.pair .lab{position:absolute;left:8px;top:8px;background:rgba(251,248,242,.92);padding:3px 8px;border-radius:999px;font-family:var(--caps);font-size:8.5px;letter-spacing:.14em}
-.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:22px}
+.pair figcaption{margin-top:8px;color:var(--ink-3)}
+.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
 .sw{border:none;cursor:pointer;background:none;text-align:left;padding:0;color:var(--ink-2);display:flex;flex-direction:column;align-self:start}
-.sw i{display:block;height:58px;border-radius:2px;border:1px solid rgba(0,0,0,.08)}
-.sw b{display:block;font-weight:500;font-size:12px;margin-top:7px;color:var(--ink);line-height:1.25}
-.sw small{font-size:10.5px;letter-spacing:.06em;color:var(--ink-3)}
-.tip{font-size:11.5px;color:var(--ink-3);margin-top:10px}
-.d-shop{margin-top:34px;padding:22px;background:var(--vellum);border:1px solid var(--rule);border-radius:4px}
-.d-shop p{font-family:var(--serif);font-size:20px}
+.sw i{display:block;height:62px;border:1px solid rgba(0,0,0,.08)}
+.sw b{display:block;font-weight:500;font-size:12.5px;margin-top:8px;color:var(--ink);line-height:1.3}
+.sw small{font-size:11px;letter-spacing:.04em;color:var(--ink-3)}
+.tip{font-size:12px;color:var(--ink-3);margin-top:12px}
+.analysis{margin-top:40px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.analysis summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:56px;gap:12px}
+.analysis summary::-webkit-details-marker{display:none}
+.analysis summary .label{color:var(--ink-3)}
+.analysis summary b{font-weight:500;font-size:14px;color:var(--ink-2)}
+.analysis summary b::after{content:"+";margin-left:12px;color:var(--gold)}
+.analysis[open] summary b::after{content:"–"}
+.analysis .inner{padding:4px 0 22px}
+.match-rows{display:grid;gap:8px}
+.mrow{display:grid;grid-template-columns:30px 150px 22px 30px 1fr;gap:10px;align-items:center;font-size:13.5px;color:var(--ink-2)}
+.mrow i{width:30px;height:30px;border-radius:50%;border:1px solid rgba(0,0,0,.1)}
+.mrow .ar{color:var(--ink-3);text-align:center}
+.d-shop{margin-top:36px}
+.d-shop p{font-family:var(--serif);font-size:21px}
 .d-shop .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.d-shop .links a{font-family:var(--caps);font-size:9.5px;letter-spacing:.14em;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:9px 13px;background:var(--parch)}
+.d-shop .links a{font-size:13px;font-weight:500;text-decoration:none;border:1px solid var(--rule);padding:10px 14px;background:var(--vellum)}
 .d-shop .links a:hover{border-color:var(--ink)}
 body.locked{overflow:hidden}
 
-/* seasons */
-.seasons{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
-.season{background:var(--parch);border-right:1px solid var(--rule)}
+/* liturgical year */
+.band{background:var(--vellum);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.seasons{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--rule);margin-top:8px}
+.season{background:var(--ivory);border-right:1px solid var(--rule)}
 .season:last-child{border-right:none}
-.season .bar{height:120px;position:relative}
-.season .bar::after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:56%;height:62%;border-radius:999px 999px 0 0;background:var(--parch)}
-.season .txt{padding:2px 18px 22px}
+.season .bar{height:96px}
+.season .txt{padding:16px 18px 22px}
 .season h4{font-size:23px;margin:6px 0 8px}
 .season p{font-size:13.5px;color:var(--ink-2);line-height:1.55}
-.season .caps{color:var(--ink-3);font-size:9.5px}
+.season .label{color:var(--ink-3);font-size:10px}
+.season-note{font-size:13px;color:var(--ink-3);margin-top:16px;max-width:var(--read)}
 
-/* why (tabs) */
-.tabs{display:flex;gap:6px;border-bottom:1px solid rgba(239,232,218,.15);margin-bottom:40px;flex-wrap:wrap}
-.tabs button{background:none;border:none;border-bottom:2px solid transparent;padding:14px 18px;font-family:var(--caps);font-size:11px;letter-spacing:.16em;color:#A99F8E;cursor:pointer;margin-bottom:-1px}
-.tabs button[aria-selected="true"]{color:#F3ECDD;border-color:var(--gilt-2)}
+/* beauty & faith */
+.dark{background:var(--night);color:#EFE8DA}
+.dark .eyebrow{color:var(--gold-2)}
+.dark .lede{color:var(--night-text)}
+.tabs{scroll-margin-top:calc(var(--head) + 16px);display:flex;gap:4px;border-bottom:1px solid var(--rule-night);margin:8px 0 48px;flex-wrap:wrap}
+.tabs button{background:none;border:none;border-bottom:2px solid transparent;min-height:50px;padding:0 18px;font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--night-mute);cursor:pointer;margin-bottom:-1px}
+.tabs button:hover{color:#F3ECDD}
+.tabs button[aria-selected="true"]{color:#F3ECDD;border-color:var(--gold-2)}
 .panel[hidden]{display:none}
-.panel-light{background:var(--parch);color:var(--ink);border-radius:4px;padding:44px}
-.panel-light p{color:var(--ink-2)}
-.panel-light .eyebrow{color:var(--gilt)}
-
-/* read & shop */
-.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.book{text-decoration:none;display:flex;flex-direction:column}
-.cover{aspect-ratio:2/3;border-radius:2px 6px 6px 2px;position:relative;overflow:hidden;box-shadow:inset 6px 0 0 rgba(0,0,0,.18),0 18px 30px -18px rgba(0,0,0,.5);transition:transform .35s;display:flex;flex-direction:column;justify-content:space-between;padding:26px 20px 22px 26px}
-.book:hover .cover{transform:translateY(-6px) rotate(-.6deg)}
-.cover .t{font-family:var(--serif);font-size:26px;line-height:1.02;font-weight:500}
-.cover .a{font-family:var(--caps);font-size:9.5px;letter-spacing:.18em}
-.cover .orn{position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;border:1px solid currentColor;opacity:.25}
-.book h5{font-family:var(--serif);font-size:20px;font-weight:600;margin-top:16px;line-height:1.2}
-.book p{font-size:13.5px;color:var(--ink-2);margin-top:6px}
-.book .by{font-size:12.5px;color:var(--ink-3);margin-top:4px}
-.subhead{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 26px;gap:20px}
-.subhead h3{font-size:36px}
-.makers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
-.mk{padding:30px 26px 30px 0;border-bottom:1px solid var(--rule);text-decoration:none;display:flex;flex-direction:column;gap:9px}
-.mk:nth-child(3n+2),.mk:nth-child(3n){padding-left:26px;border-left:1px solid var(--rule)}
-.mk .tag{color:var(--gilt)}
-.mk h4{font-size:28px}
-.mk p{font-size:14px;color:var(--ink-2)}
-.mk .go{margin-top:auto;padding-top:6px;font-size:12.5px;font-weight:500;display:flex;gap:8px}
-.mk .go::after{content:"→";transition:transform .25s}
-.mk:hover .go::after{transform:translateX(4px)}
-.mk.feature{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:40px 0;align-items:center;border-left:none}
-.mk.feature .mono{aspect-ratio:16/9;border-radius:4px;background:#1C2A44;display:grid;place-items:center}
-.mk.feature .mono svg{width:58%}
-
-footer{background:#16130F;color:#CFC6B6;padding:72px 0 36px}
-footer .grid2{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
-footer h4{font-family:var(--serif);font-size:32px;color:#F3ECDD}
-footer p{font-size:14px;margin-top:12px;max-width:44ch}
-footer ul{list-style:none}
-footer li{margin:8px 0;font-size:14px}
-footer a{text-underline-offset:3px;text-decoration-color:rgba(201,168,92,.6)}
-footer .base{margin-top:56px;padding-top:22px;border-top:1px solid rgba(239,232,218,.12);display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#8D8475;flex-wrap:wrap}
-.photo-credits{columns:3;column-gap:32px;font-size:12px;color:#8D8475;margin-top:24px}
-.photo-credits p{break-inside:avoid;margin:0 0 6px}
-.photo-credits a{color:#BFB49F}
-.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--parch);padding:12px 20px;border-radius:999px;font-size:13px;transition:all .3s;pointer-events:none;z-index:99}
-.toast.on{opacity:1;transform:translate(-50%,0)}
-
-/* ---------- popes ---------- */
-.popes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(239,232,218,.12);border:1px solid rgba(239,232,218,.12)}
-.pq{min-width:0;overflow-wrap:break-word;background:#16130F;padding:40px 34px 34px;display:flex;flex-direction:column;min-height:300px}
-.pq .yr{font-family:var(--serif);font-size:52px;line-height:1;color:var(--gilt-2);font-style:italic}
-.pq blockquote{font-family:var(--serif);font-size:23px;line-height:1.35;color:#F3ECDD;margin:20px 0 22px;flex:1}
-.pq .who{font-family:var(--caps);font-size:11px;letter-spacing:.16em;color:#EFE8DA}
-.pq .src{font-size:13px;color:#A99F8E;margin-top:6px}
-.pq .src a{color:#D8C89E;text-underline-offset:3px}
-.pq.wide{grid-column:span 2}
-.pq.full{grid-column:1/-1;min-height:0;display:grid;grid-template-columns:200px 1fr;gap:6px 40px;align-items:start}
-.pq.full .yr{grid-row:span 3}
-.pq.full blockquote{font-size:34px;margin:0 0 14px}
-.pq.wide blockquote{font-size:28px}
-.translate{font-size:12px;color:#8D8475;margin-top:6px;font-style:italic}
-
-/* ---------- church teaching ---------- */
-.teach{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.tc{background:var(--vellum);border:1px solid var(--rule);border-radius:4px;padding:34px 34px 30px;display:flex;flex-direction:column}
-.tc .caps{color:var(--gilt)}
-.tc h4{font-size:30px;margin:10px 0 14px}
-.tc blockquote{font-family:var(--serif);font-size:20px;line-height:1.42;color:var(--ink);border-left:2px solid var(--gilt);padding-left:18px;margin:6px 0 16px}
-.tc p{color:var(--ink-2);font-size:15px}
-.tc .links{margin-top:auto;padding-top:18px;display:flex;gap:18px;flex-wrap:wrap}
-.tc .links a,.plain{font-size:13px;font-weight:500;text-underline-offset:4px;text-decoration-color:var(--gilt);text-decoration-thickness:1px}
-
-/* ---------- frassati ---------- */
-.fr{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
-.fr-card{position:sticky;top:96px;background:#1F2A44;color:#EFE8DA;border-radius:160px 160px 4px 4px;padding:70px 36px 40px;text-align:center;overflow:hidden}
-.fr-card svg{margin:0 auto 26px;width:150px}
-.fr-card h3{font-size:44px}
-.fr-card p{color:#C9C3B5;font-family:var(--serif);font-style:italic;font-size:19px;margin-top:10px}
-.fr-card .stripe{height:10px;margin:26px -36px 0;background:repeating-linear-gradient(90deg,#EFE8DA 0 8px,#3F5C93 8px 16px)}
-.voices{list-style:none;margin-top:36px}
-.voices li{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--rule)}
+.panel-intro{font-family:var(--serif);font-size:23px;line-height:1.5;color:#E9E1D2;max-width:60ch;margin-bottom:40px}
+.popes{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--rule-night)}
+.pq{min-width:0;overflow-wrap:break-word;padding:34px 36px 34px 0;border-bottom:1px solid var(--rule-night);display:flex;flex-direction:column}
+.pq:nth-child(even){padding-left:36px;padding-right:0;border-left:1px solid var(--rule-night)}
+.pq:last-child:nth-child(odd){grid-column:1/-1}
+.pq .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;color:var(--night-mute)}
+.pq .who{color:#EFE8DA}
+.pq blockquote{font-family:var(--serif);font-size:25px;line-height:1.38;color:#F3ECDD;margin:16px 0 16px;max-width:36ch}
+.pq .doc{font-size:14px;color:var(--night-text)}
+.pq .doc a{color:var(--gold-2);text-underline-offset:3px}
+.pq .note{font-size:12.5px;color:var(--night-mute);margin-top:8px;font-style:italic}
+.panel-light{background:var(--ivory);color:var(--ink);padding:56px}
+.teach{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.tc{padding:30px 0 34px;border-top:1px solid var(--rule);display:flex;flex-direction:column}
+.tc .label{color:var(--gold)}
+.tc h4{font-size:30px;margin:8px 0 12px}
+.tc p{color:var(--ink-2);font-size:15.5px}
+.tc blockquote{font-family:var(--serif);font-size:19px;line-height:1.45;color:var(--ink);border-left:2px solid var(--gold);padding-left:16px;margin:16px 0 0}
+.tc blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:11.5px;color:var(--ink-3);margin-top:6px}
+.tc .links{margin-top:16px}
+.fr{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;align-items:start}
+.fr-card{position:sticky;top:112px;background:var(--night);color:#EFE8DA;border-radius:160px 160px 0 0;padding:72px 34px 44px;text-align:center}
+.fr-card svg{margin:0 auto 26px;width:140px}
+.fr-card .label{color:var(--gold-2)}
+.fr-card h3{font-size:40px;margin-top:10px}
+.fr-card .sub{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--night-text);margin-top:10px}
+.fr-card .dates{font-size:13px;color:var(--night-mute);margin-top:16px;line-height:1.6}
+.fr h2{margin:12px 0 22px}
+.fr .lede{color:var(--ink-2)}
+.themes{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px;margin-top:40px;border-top:1px solid var(--rule)}
+.themes div{padding:20px 0;border-bottom:1px solid var(--rule)}
+.themes h5{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.themes p{font-size:15px;margin-top:6px;color:var(--ink-2)}
+.voices-h{margin-top:56px}
+.voices-h h3{font-size:32px}
+.voices-h p{margin-top:12px;color:var(--ink-2);max-width:var(--read)}
+.voices{list-style:none;margin-top:24px}
+.voices li{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--rule)}
 .voices li:last-child{border-bottom:1px solid var(--rule)}
 .voices b{font-family:var(--serif);font-size:21px;font-weight:600;display:block;line-height:1.15}
 .voices small{display:block;color:var(--ink-3);font-size:12.5px;margin-top:4px}
 .voices p{color:var(--ink-2);font-size:15.5px}
-.virtues{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
-.virtues div{border:1px solid var(--rule);border-radius:3px;padding:16px;background:var(--vellum)}
-.virtues h5{font-family:var(--caps);font-size:11px;letter-spacing:.16em;font-weight:500;color:var(--gilt)}
-.virtues p{font-size:13.5px;margin-top:6px;color:var(--ink-2)}
 
-/* ---------- library ---------- */
-.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.book{text-decoration:none;display:flex;flex-direction:column}
-.cover{aspect-ratio:2/3;border-radius:2px 6px 6px 2px;position:relative;overflow:hidden;box-shadow:inset 6px 0 0 rgba(0,0,0,.18),0 18px 30px -18px rgba(0,0,0,.5);transition:transform .35s;display:flex;flex-direction:column;justify-content:space-between;padding:26px 20px 22px 26px}
-.book:hover .cover{transform:translateY(-6px) rotate(-.6deg)}
-.cover .t{font-family:var(--serif);font-size:27px;line-height:1.02;font-weight:500}
-.cover .a{font-family:var(--caps);font-size:9.5px;letter-spacing:.18em}
-.cover .orn{position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;border:1px solid currentColor;opacity:.25}
-.cover .orn::after{content:"";position:absolute;inset:16px;border-radius:50%;border:1px solid currentColor}
-.book h5{font-family:var(--serif);font-size:20px;font-weight:600;margin-top:16px;line-height:1.2}
-.book p{font-size:13.5px;color:var(--ink-2);margin-top:6px}
-.book .by{font-size:12.5px;color:var(--ink-3);margin-top:4px}
-
-/* ---------- makers ---------- */
-.makers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
-.mk{padding:34px 30px 34px 0;border-bottom:1px solid var(--rule);text-decoration:none;display:flex;flex-direction:column;gap:10px;position:relative;transition:background .25s}
-.mk:nth-child(3n+2),.mk:nth-child(3n){padding-left:30px;border-left:1px solid var(--rule)}
-.mk .tag{color:var(--gilt)}
-.mk h4{font-size:30px}
-.mk p{font-size:14.5px;color:var(--ink-2)}
-.mk .go{margin-top:auto;padding-top:8px;font-size:12.5px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:8px}
+/* directory */
+.subhead{margin:0 0 28px}
+.subhead h3{font-size:36px}
+.subhead p{margin-top:10px;color:var(--ink-2);max-width:var(--read)}
+.makers{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;border-top:1px solid var(--rule)}
+.mk{padding:30px 0 32px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:10px}
+.mk .label{color:var(--gold)}
+.mk h4{font-size:29px}
+.mk p{font-size:15px;color:var(--ink-2)}
+.mk .go{margin-top:auto;padding-top:8px;font-size:13.5px;font-weight:500;display:inline-flex;align-items:center;gap:8px;text-decoration:none;align-self:flex-start;min-height:36px}
 .mk .go::after{content:"→";transition:transform .25s}
-.mk:hover .go::after{transform:translateX(4px)}
-.mk.feature{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:44px 0;align-items:center;border-left:none}
-.mk.feature .mono{aspect-ratio:16/9;border-radius:4px;background:#1C2A44;display:grid;place-items:center;color:#E8D9B5;position:relative;overflow:hidden}
-.mk.feature .mono svg{width:58%}
+.mk .go:hover{color:var(--burgundy)}
+.mk .go:hover::after{transform:translateX(4px)}
+.mk.feature{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0;align-items:center}
+.mk.feature .mono{aspect-ratio:16/9;background:var(--night);display:grid;place-items:center}
+.mk.feature .mono svg{width:56%}
+.mk.feature h4{font-size:40px;margin-top:10px}
+.library{margin-top:96px}
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 28px}
+.book{display:flex;flex-direction:column}
+.cover{aspect-ratio:2/3;border-radius:1px 4px 4px 1px;position:relative;overflow:hidden;box-shadow:inset 5px 0 0 rgba(0,0,0,.16),0 16px 28px -18px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:space-between;padding:26px 20px 22px 26px}
+.cover .t{font-family:var(--serif);font-size:26px;line-height:1.05;font-weight:500}
+.cover .a{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.cover .orn{position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;border:1px solid currentColor;opacity:.22}
+.cover .orn::after{content:"";position:absolute;inset:16px;border-radius:50%;border:1px solid currentColor}
+.book h5{font-family:var(--serif);font-size:21px;font-weight:600;margin-top:18px;line-height:1.2}
+.book .by{font-size:13px;color:var(--ink-3);margin-top:4px}
+.book p{font-size:14px;color:var(--ink-2);margin-top:8px}
+.book .go{margin-top:12px;align-self:flex-start}
 
-/* ---------- footer ---------- */
-
-footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
-footer h4{font-family:var(--serif);font-size:34px;color:#F3ECDD}
-footer p{font-size:14px;margin-top:12px;max-width:44ch}
-footer ul{list-style:none}
-footer li{margin:8px 0;font-size:14px}
-footer a{text-underline-offset:3px;text-decoration-color:rgba(201,168,92,.6)}
-footer .base{margin-top:64px;padding-top:24px;border-top:1px solid rgba(239,232,218,.12);display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#8D8475;flex-wrap:wrap}
-
-.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--parch);padding:12px 20px;border-radius:999px;font-size:13px;transition:all .3s;pointer-events:none;z-index:99}
+/* footer */
+footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr;gap:64px}
+.foot .brand b{font-size:22px;color:#F3ECDD}
+.foot .brand span{color:var(--night-mute);font-size:11px}
+.foot p{font-size:14.5px;margin-top:16px;max-width:56ch}
+.foot .curator{color:var(--night-mute)}
+.foot nav .label{color:var(--gold-2)}
+.foot ul{list-style:none;margin-top:12px}
+.foot li a{display:inline-block;padding:6px 0;font-size:14.5px;text-underline-offset:4px;text-decoration-color:rgba(194,161,98,.55)}
+.credits{margin-top:64px;padding-top:40px;border-top:1px solid var(--rule-night)}
+.credits h2{font-size:30px;color:#F3ECDD}
+.credits .src{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 32px;list-style:none;margin-top:18px;font-size:13.5px}
+.credits .src a{color:var(--night-text);text-underline-offset:3px;text-decoration-color:rgba(194,161,98,.55)}
+.credits details{margin-top:28px}
+.credits summary{cursor:pointer;color:var(--gold-2);min-height:44px;display:flex;align-items:center}
+.photo-credits{columns:3;column-gap:32px;font-size:12px;color:var(--night-mute);margin-top:12px}
+.photo-credits p{break-inside:avoid;margin:0 0 6px}
+.photo-credits a{color:#BFB49F}
+.base{margin-top:48px;padding-top:22px;border-top:1px solid var(--rule-night);display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--night-mute);flex-wrap:wrap}
+.base .amdg{font-family:var(--serif);font-style:italic;font-size:14px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--ivory);padding:12px 20px;font-size:13px;transition:all .3s;pointer-events:none;z-index:99}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
-.{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
-..in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.{opacity:1;transform:none}}
-
-
-
-@media (max-width:1100px){
+@media (max-width:1180px){
+  .nav{gap:18px}
+  .nav a{font-size:12px}
   .grid{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:960px){
-  .nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--parch);border-bottom:1px solid var(--rule);padding:8px 28px 18px}
+@media (max-width:1020px){
+  .nav{display:none;position:absolute;top:var(--head);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ivory);border-bottom:1px solid var(--rule);padding:6px 40px 18px;box-shadow:0 18px 30px -24px rgba(0,0,0,.35)}
   .nav.open{display:flex}
-  .nav a{display:block;padding:12px 0;border-bottom:1px solid var(--rule)}
-  .nav .cta a{border:none;border-radius:0;padding:12px 0}
+  .nav a{display:block;padding:14px 0;border-bottom:1px solid var(--rule);font-size:15px}
   .menu-btn{display:block}
-  .hero .wrap,.sec-head,.d-grid,.fr{grid-template-columns:1fr}
-  .hero .wrap{gap:36px;padding-top:36px}
-  .how .wrap{grid-template-columns:1fr}
-  .step,.step+.step{padding:20px 0;border-left:none;border-top:1px solid var(--rule)}
+  .hero .wrap,.d-grid,.fr{grid-template-columns:1fr}
+  .hero .wrap{gap:44px;padding-top:44px}
+  .hero h1{max-width:none}
+  .steps{grid-template-columns:1fr}
+  .step,.step+.step{padding:24px 0;border-left:none;border-top:1px solid var(--rule)}
   .step:first-child{border-top:none}
   .grid{grid-template-columns:repeat(2,1fr)}
   .d-look{position:relative;top:0}
   .seasons{grid-template-columns:repeat(3,1fr)}
   .season:nth-child(3){border-right:none}
   .season:nth-child(-n+3){border-bottom:1px solid var(--rule)}
-  .popes{grid-template-columns:1fr 1fr}
-  .pq.full{grid-template-columns:1fr}
-  .pq.full .yr{grid-row:auto}
+  .popes{grid-template-columns:1fr}
+  .pq,.pq:nth-child(even){padding:30px 0;border-left:none}
   .teach{grid-template-columns:1fr}
-  .shelf{grid-template-columns:repeat(3,1fr)}
-  .makers{grid-template-columns:1fr 1fr}
-  .mk:nth-child(n){padding-left:0;border-left:none;padding-right:20px}
-  .mk:nth-child(even){padding-left:20px;border-left:1px solid var(--rule)}
-  .mk.feature{grid-column:span 2;grid-template-columns:1fr}
+  .panel-light{padding:36px}
   .fr-card{position:relative;top:0;max-width:420px}
-  .virtues{grid-template-columns:1fr 1fr}
-  footer .grid2{grid-template-columns:1fr 1fr}
+  .makers{grid-template-columns:1fr 1fr}
+  .mk.feature{grid-template-columns:1fr;gap:24px}
+  .shelf{grid-template-columns:repeat(3,1fr)}
+  .foot{grid-template-columns:1fr;gap:40px}
+  .credits .src{grid-template-columns:1fr 1fr}
   .photo-credits{columns:2}
-  .panel-light{padding:28px}
-  .filters input{margin-left:0;width:100%}
   .filters{position:static}
-  .sec-head{gap:18px;margin-bottom:28px}
+  .filters .search{flex-basis:100%;justify-content:flex-start}
+  .filters input{flex:1;width:auto}
 }
-@media (max-width:600px){
-  .wrap{padding:0 18px}
-  section{padding:68px 0}
-  .trip-row{gap:6px}
-  .grid{gap:28px 12px}
+@media (max-width:640px){
+  :root{--head:64px}
+  .wrap{padding:0 20px}
+  .nav{padding:6px 20px 18px}
+  section,.how{padding:72px 0}
+  .sec-head{margin-bottom:36px}
+  .brand b{font-size:16px;letter-spacing:.12em}
+  .brand span{font-size:10px}
+  .trip-row,.trip .cap{gap:6px}
+  .trip .cap span{font-size:9.5px;letter-spacing:.06em}
+  .trip-meta h3{font-size:21px}
+  .grid{gap:36px 14px}
   .card h3{font-size:19px}
   .card .tag{display:none}
-  .colors{overflow-x:auto;max-width:100%}
+  .card .go{font-size:12px}
+  .filters{gap:12px}
+  .colors{overflow-x:auto;max-width:100%;padding:2px}
+  .filters select{flex:1}
   .detail-bar{padding:8px 14px}
-  .detail-body{padding:18px 16px 70px}
+  .detail-bar .btn{padding:10px 12px}
+  .detail-body{padding:22px 18px 72px}
   .palette{gap:5px}
-  .sw i{height:44px}
-  .sw b{font-size:10px}
+  .sw i{height:46px}
+  .sw b{font-size:10.5px}
   .sw small{display:none}
-  .mrow{grid-template-columns:28px 1fr 14px 28px 1fr;font-size:12px}
-  .mrow i{width:28px;height:28px}
+  .mrow{grid-template-columns:26px 1fr 14px 26px 1fr;font-size:12.5px}
+  .mrow i{width:26px;height:26px}
   .seasons{grid-template-columns:1fr 1fr}
   .season:nth-child(n){border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .season:nth-child(even){border-right:none}
-  .popes{grid-template-columns:minmax(0,1fr)}
-  .pq.wide,.pq.full{grid-column:auto}
-  .pq.wide blockquote,.pq.full blockquote{font-size:24px}
-  .shelf{grid-template-columns:1fr 1fr;gap:20px}
-  .cover .t{font-size:20px}
-  .makers{grid-template-columns:1fr}
-  .mk:nth-child(n){padding:24px 0;border-left:none}
-  .mk.feature{grid-column:auto}
+  .tabs{margin-bottom:32px}
+  .tabs button{padding:0 12px;font-size:12.5px}
+  .pq blockquote{font-size:22px}
+  .panel-light{padding:26px 20px}
+  .themes{grid-template-columns:1fr}
   .voices li{grid-template-columns:1fr;gap:6px}
-  footer .grid2{grid-template-columns:1fr}
+  .makers{grid-template-columns:1fr}
+  .shelf{grid-template-columns:1fr 1fr;gap:28px 16px}
+  .cover{padding:18px 14px 16px 18px}
+  .cover .t{font-size:19px}
+  .credits .src{grid-template-columns:1fr}
   .photo-credits{columns:1}
-  .subhead{flex-direction:column;gap:6px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><b>VIA PULCHRITUDINIS</b><span>Catholic style from sacred architecture</span></a>
+    <a class="brand" href="#top" aria-label="Via Pulchritudinis, home"><b>VIA PULCHRITUDINIS</b><span>A Catholic Journal of Style and Beauty</span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
-    <ul class="nav" id="nav">
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#seasons">Seasons</a></li>
-      <li><a href="#why">Why beauty</a></li>
-      <li><a href="#read">Read &amp; shop</a></li>
-      <li class="cta"><a href="#lookbook">The lookbook</a></li>
-    </ul>
+    <nav aria-label="Main">
+      <ul class="nav" id="nav">
+        <li><a href="#lookbook">The Lookbook</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#liturgical-year">The Liturgical Year</a></li>
+        <li><a href="#beauty-faith">Beauty &amp; Faith</a></li>
+        <li><a href="#frassati">St. Pier Giorgio</a></li>
+        <li><a href="#directory">The Directory</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<main id="top">
-<div class="hero">
+<main id="main">
+<div class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="caps eyebrow">A Catholic style journal</p>
-      <h1>Dress like a <em>cathedral.</em></h1>
-      <p class="lede">We take the colors of great churches from their stone, glass, and gold, inside and out. Then we find an outfit that wears them. <span id="heroCount"></span></p>
+      <p class="label eyebrow">A Catholic Journal of Style and Beauty</p>
+      <h1>The Beauty of Cathedrals in Everyday Fashion</h1>
+      <p class="lede">From the marble of Rome’s great basilicas to the stained glass of Gothic cathedrals, sacred architecture offers an extraordinary vocabulary of color, texture, and form. Via Pulchritudinis draws on that inheritance to explore how the beauty of the Church’s artistic tradition can inspire contemporary personal style.</p>
       <div class="hero-cta">
-        <a class="btn solid" href="#lookbook">Browse the looks</a>
-        <a class="btn" href="#how">How it works</a>
+        <a class="btn solid" href="#lookbook">Explore the Lookbook</a>
+        <a class="btn" href="#how">Discover the Concept</a>
       </div>
     </div>
-    <div class="trip" id="trip" aria-live="polite">
+    <div class="trip" id="trip" aria-roledescription="carousel" aria-label="Featured looks">
       <div class="trip-row">
-        <figure class="side"><img id="tExt" alt=""><figcaption>Exterior</figcaption></figure>
-        <figure class="mid"><img id="tLook" alt=""><figcaption>The look</figcaption></figure>
-        <figure class="side"><img id="tInt" alt=""><figcaption>Interior</figcaption></figure>
+        <figure class="side"><img id="tExt" alt=""></figure>
+        <figure class="mid"><img id="tLook" alt=""></figure>
+        <figure class="side"><img id="tInt" alt=""></figure>
       </div>
-      <div class="trip-bar" id="tBar"></div>
-      <div class="trip-meta"><div><h3 id="tTitle"></h3><p id="tSub"></p></div><div class="trip-dots" id="tDots"></div></div>
-      <a class="open" id="tOpen" href="#" aria-label="Open this look"></a>
+      <div class="cap" aria-hidden="true"><span class="label">Exterior</span><span class="label">The Look</span><span class="label">Interior</span></div>
+      <div class="trip-bar" id="tBar" aria-hidden="true"></div>
+      <div class="trip-meta">
+        <a id="tOpen" href="#"><h3 id="tTitle"></h3><p id="tSub"></p></a>
+        <div class="trip-dots" id="tDots" role="group" aria-label="Choose a featured look"></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="how" id="how">
-  <div class="wrap">
-    <div class="step"><span class="n">1</span><div><h3>The church</h3><p>An interior and an exterior photo of each church, from Baltimore to Rome to Salt Lake City.</p></div></div>
-    <div class="step"><span class="n">2</span><div><h3>The palette</h3><p>Five colors pulled from those two photos by measuring the stone, glass, wood, and metal.</p></div></div>
-    <div class="step"><span class="n">3</span><div><h3>The outfit</h3><p>A real outfit whose colors were measured against that palette. Every look shows how closely it matches.</p></div></div>
-  </div>
-</div>
-
-<section id="lookbook">
+<section class="how" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="caps eyebrow">The Lookbook</p><h2>Every look,<br><em>and its church.</em></h2></div>
-      <p class="lede">Filter by who it's for or by color. Tap any look to see the church, its palette, and how the outfit matches.</p>
+      <p class="label eyebrow">How It Works</p>
+      <h2 id="how-h">From Sacred Architecture to Personal Style</h2>
+      <p class="lede">Every look begins with a place. The architecture of a church, its materials, colors, and atmosphere, becomes the starting point for a contemporary wardrobe.</p>
     </div>
-    <div class="filters" role="toolbar" aria-label="Filter looks">
-      <div class="seg" id="segWho"><button aria-pressed="true" data-v="all">All</button><button aria-pressed="false" data-v="her">For her</button><button aria-pressed="false" data-v="him">For him</button></div>
-      <div class="colors" id="colorF"></div>
+    <ol class="steps" role="list">
+      <li class="step"><span class="n">01</span><h3>The Architecture</h3><p>Each look begins with a church. Its exterior and interior reveal a distinctive harmony of stone, stained glass, wood, metal, and ornament.</p></li>
+      <li class="step"><span class="n">02</span><h3>The Palette</h3><p>Five colors are drawn from the building’s architectural character, capturing something of its atmosphere and visual identity.</p></li>
+      <li class="step"><span class="n">03</span><h3>The Wardrobe</h3><p>Those colors become the inspiration for a contemporary outfit, bringing the beauty of sacred architecture into the art of everyday dress.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="lookbook" aria-labelledby="lookbook-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">The Lookbook</p>
+      <h2 id="lookbook-h">Sacred Spaces. Personal Style.</h2>
+      <p class="lede">Every church has its own visual language, shaped by centuries of artistic imagination, local tradition, and religious devotion. Explore contemporary looks inspired by the colors and materials of sacred architecture, from the warm stone of Roman basilicas to the luminous interiors of Gothic cathedrals.</p>
+      <p class="lede">Select a look to discover the church that inspired it, explore its architectural palette, and see how those colors find expression in a contemporary wardrobe.</p>
+    </div>
+    <div class="filters" role="search" aria-label="Filter looks">
+      <div class="seg" id="segWho" role="group" aria-label="Show looks for"><button type="button" aria-pressed="true" data-v="all">All Looks</button><button type="button" aria-pressed="false" data-v="her">Women</button><button type="button" aria-pressed="false" data-v="him">Men</button></div>
+      <div class="colors" id="colorF" role="group" aria-label="Filter by color"></div>
       <label><span class="sr">Region</span><select id="regionF"></select></label>
-      <label style="flex:1;display:flex;justify-content:flex-end"><span class="sr">Search</span><input id="q" type="search" placeholder="Search a church or city" autocomplete="off"></label>
+      <div class="search">
+        <label style="display:contents"><span class="sr">Search looks</span><input id="q" type="search" placeholder="Search by church, city, or region" autocomplete="off"></label>
+        <button type="button" class="clear" id="clearF" disabled>Clear Filters</button>
+      </div>
     </div>
     <p class="result-count" id="resultCount" aria-live="polite"></p>
     <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>No looks match. Try another color or region.</p>
+    <p class="empty" id="empty" hidden>No looks match your current selection. Try a different search or adjust the filters.</p>
   </div>
 </section>
 
 <div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="dTitle" hidden>
   <div class="detail-bar">
-    <button class="btn" id="dClose">← All looks</button>
+    <button class="btn small" id="dClose">← All Looks</button>
     <div class="detail-step"><button id="dPrev" aria-label="Previous look">←</button><span id="dIdx"></span><button id="dNext" aria-label="Next look">→</button></div>
   </div>
   <article class="detail-body" id="dBody"></article>
 </div>
 
-<section id="seasons" class="band">
+<section id="liturgical-year" class="band" aria-labelledby="ly-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="caps eyebrow">Wear the Seasons</p><h2>The Church year<br>is a <em>color wheel.</em></h2></div>
-      <p class="lede">The vestments at the altar change with the season. A wardrobe can follow quietly, in a tie, a scarf, a lining. Mary Harper's <a href="https://liturgicalstyle.com" target="_blank" rel="noopener">Liturgical Style</a> builds a whole practice on this.</p>
+      <p class="label eyebrow">The Liturgical Year</p>
+      <h2 id="ly-h">Dressing with the Seasons of the Church</h2>
+      <p class="lede">The Church marks the passage of the year through a changing language of color. Violet accompanies Advent and Lent, white and gold mark great celebrations, red recalls the Holy Spirit and the witness of the martyrs, and green characterizes Ordinary Time.</p>
+      <p class="lede">These colors belong first to the Church’s liturgical worship, but they can also provide a quiet source of inspiration for personal style. A tie, a scarf, or a carefully chosen accessory can acknowledge the rhythm of the Christian year without turning the wardrobe into an extension of the sanctuary.</p>
+      <p class="lede">Mary Harper’s <em>Liturgical Style</em> explores this relationship between clothing, the Church calendar, and the habits of everyday life.</p>
+      <div class="hero-cta" style="margin-top:28px"><a class="btn" href="https://liturgicalstyle.com" target="_blank" rel="noopener">Explore Liturgical Style</a></div>
     </div>
     <div class="seasons" id="seasonsGrid"></div>
+    <p class="season-note">The seasons above describe the colors of the Church’s liturgy. The wardrobe notes are optional suggestions for personal devotion, not rules of dress.</p>
   </div>
 </section>
 
-<section id="why" class="dark">
+<section id="beauty-faith" class="dark" aria-labelledby="bf-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="caps eyebrow">Why Beauty</p><h2>Not decoration.<br><em>A road to God.</em></h2></div>
-      <p class="lede">What the popes have said about beauty, what the Church teaches about the body and dress, and a saint who dressed well for God.</p>
+      <p class="label eyebrow">Beauty &amp; Faith</p>
+      <h2 id="bf-h">The Way of Beauty</h2>
+      <p class="lede">The Christian tradition has long recognized beauty as a means of awakening the human person to truth and goodness. From the architecture of great churches to the dignity of the human body, beauty has a place in the Church’s understanding of creation, worship, and everyday life.</p>
+      <p class="lede">The Latin expression <em>via pulchritudinis</em>, or “way of beauty,” gives this journal its name. It also provides a broader framework for considering how we dress, how we present ourselves, and how the material world can reflect something of the dignity of the human person.</p>
     </div>
-    <div class="tabs" role="tablist">
-      <button role="tab" aria-selected="true" aria-controls="p-popes" id="t-popes">The Popes</button>
-      <button role="tab" aria-selected="false" aria-controls="p-church" id="t-church">The Church on dress</button>
-      <button role="tab" aria-selected="false" aria-controls="p-fr" id="t-fr">St. Pier Giorgio Frassati</button>
+    <div class="tabs" role="tablist" aria-label="Beauty and Faith">
+      <button role="tab" aria-selected="true" aria-controls="p-popes" id="t-popes" tabindex="0">The Popes on Beauty</button>
+      <button role="tab" aria-selected="false" aria-controls="p-church" id="t-church" tabindex="-1">The Church on Dress</button>
+      <button role="tab" aria-selected="false" aria-controls="frassati" id="t-fr" tabindex="-1">St. Pier Giorgio Frassati</button>
     </div>
+
     <div class="panel" id="p-popes" role="tabpanel" aria-labelledby="t-popes">
+      <p class="panel-intro">Across generations, the popes have spoken of beauty as an expression of human creativity, a reflection of truth, and a means of drawing the human heart toward God. Their reflections offer a foundation for thinking seriously about art, culture, and the dignity of personal appearance.</p>
       <div class="popes">
-      <div class="pq wide">
-        <span class="yr">1957</span>
-        <blockquote>“Society, so to speak, speaks through the clothing it wears.”</blockquote>
-        <span class="who">Pius XII</span>
-        <span class="src">Address to the First International Congress of High Fashion, convened by the Latin Union of High Fashion, 8 November 1957. <a href="https://www.vatican.va/content/pius-xii/it/speeches/1957/documents/hf_p-xii_spe_19571108_alta-moda.html" target="_blank" rel="noopener">Read the address (Italian)</a></span>
-        <span class="translate">Translated from the Italian, “La società, per così dire, parla col vestito che indossa.” In the same address Pius names the three needs clothing serves (hygiene, modesty, and decorum) and calls fashion an ancient art.</span>
-      </div>
-      <div class="pq">
-        <span class="yr">1965</span>
-        <blockquote>“This world in which we live needs beauty in order not to sink into despair.”</blockquote>
-        <span class="who">Paul VI</span>
-        <span class="src">Closing message of the Second Vatican Council to artists, 8 December 1965</span>
-      </div>
-      <div class="pq">
-        <span class="yr">1999</span>
-        <blockquote>“Beauty is a key to the mystery and a call to transcendence.”</blockquote>
-        <span class="who">St. John Paul II</span>
-        <span class="src">Letter to Artists, §16. <a href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">Read the letter</a></span>
-      </div>
-      <div class="pq">
-        <span class="yr">1999</span>
-        <blockquote>“In order to communicate the message entrusted to her by Christ, the Church needs art.”</blockquote>
-        <span class="who">St. John Paul II</span>
-        <span class="src">Letter to Artists, §12</span>
-      </div>
-      <div class="pq">
-        <span class="yr">1999</span>
-        <blockquote>“Beauty is the vocation bestowed on him by the Creator in the gift of artistic talent.”</blockquote>
-        <span class="who">St. John Paul II</span>
-        <span class="src">Letter to Artists, §3, which also calls beauty “the visible form of the good.”</span>
-      </div>
-      <div class="pq">
-        <span class="yr">2007</span>
-        <blockquote>“Beauty, then, is not mere decoration, but rather an essential element of the liturgical action.”</blockquote>
-        <span class="who">Benedict XVI</span>
-        <span class="src">Sacramentum Caritatis, §35. <a href="https://www.vatican.va/content/benedict-xvi/en/apost_exhortations/documents/hf_ben-xvi_exh_20070222_sacramentum-caritatis.html" target="_blank" rel="noopener">Read the exhortation</a></span>
-      </div>
-      <div class="pq">
-        <span class="yr">2009</span>
-        <blockquote>Benedict gathered artists in the Sistine Chapel and quoted Simone Weil, “Beauty is the experimental proof that incarnation is possible.”</blockquote>
-        <span class="who">Benedict XVI</span>
-        <span class="src">Meeting with Artists, 21 November 2009. <a href="https://www.vatican.va/content/benedict-xvi/en/speeches/2009/november/documents/hf_ben-xvi_spe_20091121_artisti.html" target="_blank" rel="noopener">Read the address</a></span>
-      </div>
-      <div class="pq">
-        <span class="yr">2013</span>
-        <blockquote>“Every form of authentic beauty can thus be acknowledged as a path leading to an encounter with the Lord Jesus.”</blockquote>
-        <span class="who">Francis</span>
-        <span class="src">Evangelii Gaudium, §167, on the <em>via pulchritudinis</em>, the way of beauty that gives this site its name. <a href="https://www.vatican.va/content/francesco/en/apost_exhortations/documents/papa-francesco_esortazione-ap_20131124_evangelii-gaudium.html" target="_blank" rel="noopener">Read the exhortation</a></span>
-      </div>
-      <div class="pq full">
-        <span class="yr">2026</span>
-        <blockquote>“We live in a world where beauty is lacking.”</blockquote>
-        <span class="who">Leo XIV</span>
-        <span class="src">Remarks after a concert in his honor at Castel Gandolfo, 18 July 2026, where he said art helps us lift our gaze toward heaven. <a href="https://www.vatican.va/content/leo-xiv/en/speeches/2026/july.index.html" target="_blank" rel="noopener">Vatican speeches, July 2026</a></span>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Pius XII</span><span class="label">8 November 1957</span></div>
+          <blockquote>“Society, so to speak, speaks through the clothing it wears.”</blockquote>
+          <figcaption class="doc">Address to the First International Congress of High Fashion, convened by the Latin Union of High Fashion. <a href="https://www.vatican.va/content/pius-xii/it/speeches/1957/documents/hf_p-xii_spe_19571108_alta-moda.html" target="_blank" rel="noopener">Read the address (Italian)</a></figcaption>
+          <p class="note">Translated from the Italian, “La società, per così dire, parla col vestito che indossa.” In the same address Pius names hygiene, modesty, and decorum as the purposes clothing serves, and calls fashion an ancient art.</p>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Paul VI</span><span class="label">8 December 1965</span></div>
+          <blockquote>“This world in which we live needs beauty in order not to sink into despair.”</blockquote>
+          <figcaption class="doc">Address to artists at the closing of the Second Vatican Council. <a href="https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651208_epilogo-concilio-artisti.html" target="_blank" rel="noopener">Read the address</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">St. John Paul II</span><span class="label">4 April 1999</span></div>
+          <blockquote>“Beauty is a key to the mystery and a call to transcendence.”</blockquote>
+          <figcaption class="doc">Letter to Artists, §16. <a href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">Read the letter</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">St. John Paul II</span><span class="label">4 April 1999</span></div>
+          <blockquote>“In order to communicate the message entrusted to her by Christ, the Church needs art.”</blockquote>
+          <figcaption class="doc">Letter to Artists, §12. <a href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">Read the letter</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">St. John Paul II</span><span class="label">4 April 1999</span></div>
+          <blockquote>“Beauty is the vocation bestowed on him by the Creator in the gift of ‘artistic talent’.”</blockquote>
+          <figcaption class="doc">Letter to Artists, §3, which also calls beauty “the visible form of the good.” <a href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">Read the letter</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Benedict XVI</span><span class="label">22 February 2007</span></div>
+          <blockquote>“Beauty, then, is not mere decoration, but rather an essential element of the liturgical action…”</blockquote>
+          <figcaption class="doc">Post-synodal apostolic exhortation <em>Sacramentum Caritatis</em>, §35. <a href="https://www.vatican.va/content/benedict-xvi/en/apost_exhortations/documents/hf_ben-xvi_exh_20070222_sacramentum-caritatis.html" target="_blank" rel="noopener">Read the exhortation</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Benedict XVI, quoting Simone Weil</span><span class="label">21 November 2009</span></div>
+          <blockquote>“Beauty is the experimental proof that incarnation is possible.”</blockquote>
+          <figcaption class="doc">Address at the Meeting with Artists in the Sistine Chapel, where Benedict quoted the French philosopher Simone Weil. <a href="https://www.vatican.va/content/benedict-xvi/en/speeches/2009/november/documents/hf_ben-xvi_spe_20091121_artisti.html" target="_blank" rel="noopener">Read the address</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Francis</span><span class="label">24 November 2013</span></div>
+          <blockquote>“Every form of authentic beauty can thus be acknowledged as a path leading to an encounter with the Lord Jesus.”</blockquote>
+          <figcaption class="doc">Apostolic exhortation <em>Evangelii Gaudium</em>, §167, on the <em>via pulchritudinis</em>. <a href="https://www.vatican.va/content/francesco/en/apost_exhortations/documents/papa-francesco_esortazione-ap_20131124_evangelii-gaudium.html" target="_blank" rel="noopener">Read the exhortation</a></figcaption>
+        </figure>
+        <figure class="pq">
+          <div class="meta"><span class="label who">Leo XIV</span><span class="label">18 July 2026</span></div>
+          <blockquote>“We live in a world where beauty is lacking.”</blockquote>
+          <figcaption class="doc">Greeting at the end of a concert in his honor in the courtyard of the Apostolic Palace at Castel Gandolfo. <a href="https://www.vatican.va/content/leo-xiv/en/speeches/2026/july/documents/20260718-concerto.html" target="_blank" rel="noopener">Read the greeting</a></figcaption>
+        </figure>
       </div>
     </div>
-      </div>
-    </div>
+
     <div class="panel" id="p-church" role="tabpanel" aria-labelledby="t-church" hidden>
       <div class="panel-light">
-      <div class="teach">
-      <div class="tc">
-        <span class="caps">Catechism 2521–2524</span>
-        <h4>Modesty</h4>
-        <blockquote>“Modesty protects the mystery of persons and their love.”</blockquote>
-        <p>The Catechism ties modesty to dignity, not fear. It notes that the forms modesty takes vary from culture to culture, while modesty everywhere remains an intuition of the spiritual dignity proper to man.</p>
-        <div class="links"><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">CCC 2514–2533</a></div>
-      </div>
-      <div class="tc">
-        <span class="caps">Catechism 1387</span>
-        <h4>Dressing for Mass</h4>
-        <blockquote>“Bodily demeanor (gestures, clothing) ought to convey the respect, solemnity, and joy of this moment when Christ becomes our guest.”</blockquote>
-        <p>This is the one place the Catechism speaks directly to clothing at the liturgy. Respect, solemnity, and joy make a better rule than any list.</p>
-        <div class="links"><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">CCC 1384–1390</a></div>
-      </div>
-      <div class="tc">
-        <span class="caps">Catechism 2288 · 1 Corinthians 6:19</span>
-        <h4>Cleanliness and care of the body</h4>
-        <blockquote>“Life and physical health are precious gifts entrusted to us by God. We must take reasonable care of them.”</blockquote>
-        <p>St. Paul calls the body a temple of the Holy Spirit. Pius XII listed hygiene first among the purposes of clothing. Being clean, groomed, and well kept is a form of gratitude.</p>
-        <div class="links"><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">CCC 2288–2291</a></div>
-      </div>
-      <div class="tc">
-        <span class="caps">Sacrosanctum Concilium 124</span>
-        <h4>Noble beauty</h4>
-        <blockquote>Bishops should “strive after noble beauty rather than mere sumptuous display,” a principle the Council applies to vestments and ornaments.</blockquote>
-        <p>The Council wrote this about sacred art, but it is the best short guide to dress we have. Quality over quantity. Fit over flash.</p>
-        <div class="links"><a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html" target="_blank" rel="noopener">Read the constitution</a></div>
-      </div>
-      <div class="tc">
-        <span class="caps">Catechism 2500–2503</span>
-        <h4>Truth, beauty, and sacred art</h4>
-        <blockquote>“Genuine sacred art draws man to adoration, to prayer, and to the love of God, Creator and Savior, the Holy One and Sanctifier.”</blockquote>
-        <p>The Catechism treats beauty as a reflection of truth. What is made well points beyond itself.</p>
-        <div class="links"><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">CCC 2500–2503</a></div>
-      </div>
-      <div class="tc">
-        <span class="caps">St. John Paul II · 1979–1984</span>
-        <h4>Theology of the Body</h4>
-        <blockquote>The body reveals the person. Clothing, then, is never only fabric.</blockquote>
-        <p>John Paul II's Wednesday catecheses are the root of most new Catholic writing on style, including Lillian Fallon's <em>Theology of Style</em> and the founding vision of Litany NYC.</p>
-        <div class="links"><a href="https://www.vatican.va/content/john-paul-ii/en/audiences/catechesis_on_human_love.index.html" target="_blank" rel="noopener">Read the catecheses</a></div>
-      </div>
-    </div>
-      </div>
+        <div class="teach">
+          <article class="tc">
+            <span class="label">Source · Catechism of the Catholic Church, 2521–2524</span>
+            <h4>Modesty</h4>
+            <p>The Catechism presents modesty as an expression of respect for the dignity and mystery of the human person. Although its outward forms vary across cultures and circumstances, modesty remains connected to the way we understand ourselves and encounter others.</p>
+            <blockquote>“Modesty protects the mystery of persons and their love.”<cite>Catechism of the Catholic Church, 2522</cite></blockquote>
+            <div class="links"><a class="link" href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Read the Catechism</a></div>
+          </article>
+          <article class="tc">
+            <span class="label">Source · Catechism of the Catholic Church, 1387</span>
+            <h4>Dressing for Mass</h4>
+            <p>The Catechism asks that our bodily demeanor, including our clothing, reflect the respect, solemnity, and joy appropriate to receiving Christ in the Eucharist. It offers a principle of reverence rather than a universal dress code.</p>
+            <blockquote>“Bodily demeanor (gestures, clothing) ought to convey the respect, solemnity, and joy of this moment when Christ becomes our guest.”<cite>Catechism of the Catholic Church, 1387</cite></blockquote>
+            <div class="links"><a class="link" href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Read the Catechism</a></div>
+          </article>
+          <article class="tc">
+            <span class="label">Sources · Catechism of the Catholic Church, 2288; 1 Corinthians 6:19</span>
+            <h4>Care of the Body</h4>
+            <p>Christianity regards the body as a gift entrusted to our care. Cleanliness, grooming, and attention to personal appearance can express gratitude for that gift, provided they remain ordered to the good of the person rather than vanity or social competition.</p>
+            <blockquote>“Life and physical health are precious gifts entrusted to us by God. We must take reasonable care of them.”<cite>Catechism of the Catholic Church, 2288</cite></blockquote>
+            <div class="links"><a class="link" href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Read the Catechism</a></div>
+          </article>
+          <article class="tc">
+            <span class="label">Source · Sacrosanctum Concilium, 124</span>
+            <h4>Noble Beauty</h4>
+            <p>The Second Vatican Council called for noble beauty rather than mere sumptuous display in sacred art. Although the Council was addressing the Church’s artistic and liturgical life, the distinction offers a useful point of reflection for personal style. Beauty need not depend on extravagance.</p>
+            <blockquote>Ordinaries should “strive after noble beauty rather than mere sumptuous display.”<cite>Sacrosanctum Concilium, 124</cite></blockquote>
+            <div class="links"><a class="link" href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html" target="_blank" rel="noopener">Read the constitution</a></div>
+          </article>
+          <article class="tc">
+            <span class="label">Source · Catechism of the Catholic Church, 2500–2503</span>
+            <h4>Truth, Beauty, and Sacred Art</h4>
+            <p>The Catechism understands beauty in relation to truth and goodness. Sacred art has a particular vocation to lead the human person toward prayer and adoration, reminding us that beauty can communicate meanings beyond immediate utility.</p>
+            <blockquote>“Genuine sacred art draws man to adoration, to prayer, and to the love of God, Creator and Savior, the Holy One and Sanctifier.”<cite>Catechism of the Catholic Church, 2502</cite></blockquote>
+            <div class="links"><a class="link" href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Read the Catechism</a></div>
+          </article>
+          <article class="tc">
+            <span class="label">Source · St. John Paul II’s Wednesday catecheses on human love</span>
+            <h4>Theology of the Body</h4>
+            <p>John Paul II’s theology of the body places the dignity of the human person at the center of Christian reflection on embodiment. It offers a valuable starting point for considering how clothing relates to personal identity, self-expression, modesty, and the way we encounter others.</p>
+            <div class="links"><a class="link" href="https://www.vatican.va/content/john-paul-ii/en/audiences/catechesis_on_human_love.index.html" target="_blank" rel="noopener">Read the catecheses</a></div>
+          </article>
+        </div>
       </div>
     </div>
-    <div class="panel" id="p-fr" role="tabpanel" aria-labelledby="t-fr" hidden>
+
+    <div class="panel" id="frassati" role="tabpanel" aria-labelledby="t-fr" hidden>
       <div class="panel-light">
-      <div class="fr">
-    <div class="fr-card">
-      <svg viewBox="0 0 150 120" aria-hidden="true"><path d="M5 115 L50 45 L68 70 L95 22 L145 115Z" fill="none" stroke="#E8D9B5" stroke-width="1.6"/><path d="M95 22l-9 16 9-5 8 6z" fill="#E8D9B5"/><path d="M50 45l-6 10 6-3 5 4z" fill="#E8D9B5"/></svg>
-      <p class="caps" style="color:#C9A85C;font-style:normal;font-family:var(--caps);font-size:11px">Verso l'alto</p>
-      <h3>St. Pier Giorgio Frassati</h3>
-      <p>1901 – 1925 · Canonized 7 September 2025</p>
-      <div class="stripe" aria-hidden="true"></div>
-    </div>
-    <div>
-      <p class="caps eyebrow">V · A Patron for the Well-Dressed</p>
-      <h2  style="margin-top:18px">Dressed for God,<br><em>not for the world.</em></h2>
-      <p class="lede" style="margin-top:24px">Born into one of Turin's leading families, Frassati wore plain ties and tailored suits that fit his station, the university, and the mountains. He also mended his coats and gave his clothes and shoes to the poor.</p>
-      <p  style="margin-top:16px;color:var(--ink-2)">Andrew Likoudis wrote about Frassati's wardrobe for the National Catholic Register in August 2025, weeks before the canonization. The people he interviewed read the same clothes in different ways. <a class="plain" href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Read the full article</a>.</p>
-      <div class="virtues">
-        <div><h5>Fit</h5><p>Tailoring suited to the setting, whether a lecture hall or a slum.</p></div>
-        <div><h5>Thrift</h5><p>Patched coats, recalled by his sister Luciana.</p></div>
-        <div><h5>Gift</h5><p>Clothes and shoes given away, even as a child.</p></div>
-        <div><h5>Sign</h5><p>The blue-striped shirt, linked by some to Mary, Star of the Sea.</p></div>
-      </div>
-      <ul class="voices">
-        <li><div><b>Clint Branam</b><small>Catholic Men's Shop</small></div><p>Frassati's tailoring met the standard of his class and his errands. In Catholic Europe, fine materials, clean lines, and good fit were treated as moral goods that honored the body as a temple.</p></li>
-        <li><div><b>Veronica Marrinan</b><small>Co-founder, Litany NYC</small></div><p>After venerating his body in Rome during the Jubilee of Youth, she came away with a new sense of his family's wealth, and of how much his giving away of clothes revealed his generosity.</p></li>
-        <li><div><b>Mary Harper</b><small>Founder, Liturgical Style</small></div><p>His dress showed practicality and joy in ordinary life. He clothed the poor in new things before replacing his own worn shoes.</p></li>
-        <li><div><b>Eliza Monts</b><small>Writer and creator</small></div><p>She sees modesty in his clothing, dress that fit the occasion and never drew attention, and links it to the Beatitude of the poor in spirit.</p></li>
-        <li><div><b>Christine Wohar</b><small>FrassatiUSA · <em>Finding Frassati</em></small></div><p>Frassati knew his appearance and manners affected others. She describes his “apostolate of good example,” and cites a Jesuit who knew him as a boy recalling him as elegant, courteous, and modest.</p></li>
-        <li><div><b>Emily Malloy</b><small>Theology of Home</small></div><p>She points to his radiant smile and his confidence as a child of God, and to a generosity that gave without counting the cost.</p></li>
-      </ul>
-    </div>
-  </div>
+        <div class="fr">
+          <div class="fr-card">
+            <svg viewBox="0 0 150 120" aria-hidden="true"><path d="M5 115 L50 45 L68 70 L95 22 L145 115Z" fill="none" stroke="#E8D9B5" stroke-width="1.6"/><path d="M95 22l-9 16 9-5 8 6z" fill="#E8D9B5"/><path d="M50 45l-6 10 6-3 5 4z" fill="#E8D9B5"/></svg>
+            <p class="label">Verso l’alto</p>
+            <h3>St. Pier Giorgio Frassati</h3>
+            <p class="dates">1901–1925<br>Canonized September 7, 2025</p>
+          </div>
+          <div>
+            <p class="label eyebrow">St. Pier Giorgio Frassati</p>
+            <h2>A Life of Faith, Friendship, and Generosity</h2>
+            <p class="lede">St. Pier Giorgio Frassati belonged to one of Turin’s prominent families, yet his life was distinguished less by social privilege than by his devotion to the poor, his friendships, and his extraordinary generosity.</p>
+            <p class="lede">His photographs reveal a young man at ease in tailored suits, practical outdoor clothing, and the ordinary fashions of his time. His wardrobe also tells another story. Frassati repaired worn garments, gave clothing and shoes to those in need, and understood that personal appearance mattered far less than the people he encountered.</p>
+            <p class="lede">In August 2025, Andrew Likoudis explored this dimension of Frassati’s life for the <em>National Catholic Register</em>, speaking with Catholic designers, writers, and advocates about the relationship between his clothing, his character, and his witness to the Gospel.</p>
+            <div class="hero-cta" style="margin-top:26px"><a class="btn" href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Read the National Catholic Register Feature</a></div>
+            <div class="themes">
+              <div><h5>Personal Style</h5><p>Frassati dressed appropriately for the occasions and responsibilities of his life, whether among friends, at university, or in the mountains.</p></div>
+              <div><h5>Simplicity</h5><p>His attention to appearance was accompanied by a willingness to mend and continue wearing clothes that had seen better days.</p></div>
+              <div><h5>Generosity</h5><p>His concern for the poor extended to practical acts of charity, including the giving away of clothing and shoes.</p></div>
+              <div><h5>Witness</h5><p>For Frassati, faith was expressed through the ordinary circumstances of daily life. His clothing offers one small but revealing window into a much larger story of Christian discipleship.</p></div>
+            </div>
+            <div class="voices-h">
+              <h3>Perspectives on Frassati</h3>
+              <p>Designers, writers, and advocates interviewed for the <em>National Catholic Register</em> reflected on what Frassati’s clothing reveals about his character, his generosity, and the place of personal style in the Christian life.</p>
+            </div>
+            <ul class="voices">
+              <li><div><b>Clint Branam</b><small>Catholic Men’s Shop</small></div><p>Frassati’s tailoring met the standard of his class and his errands. In Catholic Europe, fine materials, clean lines, and good fit were treated as moral goods that honored the body as a temple.</p></li>
+              <li><div><b>Veronica Marrinan</b><small>Co-founder, Litany NYC</small></div><p>After venerating his body in Rome during the Jubilee of Youth, she came away with a new sense of his family’s wealth, and of how much his giving away of clothes revealed his generosity.</p></li>
+              <li><div><b>Mary Harper</b><small>Founder, Liturgical Style</small></div><p>His dress showed practicality and joy in ordinary life. He clothed the poor in new things before replacing his own worn shoes.</p></li>
+              <li><div><b>Eliza Monts</b><small>Writer and creator</small></div><p>She sees modesty in his clothing, dress that fit the occasion and never drew attention, and links it to the Beatitude of the poor in spirit.</p></li>
+              <li><div><b>Christine Wohar</b><small>FrassatiUSA · <em>Finding Frassati</em></small></div><p>Frassati knew his appearance and manners affected others. She describes his “apostolate of good example,” and cites a Jesuit who knew him as a boy recalling him as elegant, courteous, and modest.</p></li>
+              <li><div><b>Emily Malloy</b><small>Theology of Home</small></div><p>She points to his radiant smile and his confidence as a child of God, and to a generosity that gave without counting the cost.</p></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="read">
+<section id="directory" aria-labelledby="dir-h">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="caps eyebrow">Read &amp; Shop</p><h2>Books, makers,<br><em>and stylists.</em></h2></div>
-      <p class="lede">The writing behind the new Catholic conversation about style, and the people making clothes worth wearing to Mass.</p>
+      <p class="label eyebrow">The Directory</p>
+      <h2 id="dir-h">People, Books, and Ideas Worth Discovering</h2>
+      <p class="lede">A curated selection of designers, stylists, writers, publications, and books exploring the relationship between Catholic faith, beauty, and everyday life.</p>
+      <p class="lede">Some approach the subject through clothing and craftsmanship. Others begin with theology, the home, the liturgical year, or the example of the saints. Together, they offer different perspectives on the place of beauty in Christian culture.</p>
     </div>
-    <div class="subhead"><h3>Shop the makers</h3></div>
+    <div class="subhead"><h3>Designers, Stylists &amp; Publications</h3></div>
     <div class="makers">
-      <a class="mk feature" href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">
+      <article class="mk feature">
         <div class="mono" aria-hidden="true">
-          <svg viewBox="0 0 240 110"><path d="M120 18c-7 0-12 5-12 11 0 5 4 8 9 10l3 1v6L18 92h204L120 46" fill="none" stroke="#E8D9B5" stroke-width="2.2" stroke-linejoin="round"/><g fill="#C9A85C"><rect x="58" y="70" width="10" height="22"/><rect x="72" y="58" width="8" height="34"/><rect x="84" y="64" width="12" height="28"/><rect x="146" y="62" width="10" height="30"/><rect x="160" y="72" width="16" height="20"/></g></svg>
+          <svg viewBox="0 0 240 110"><path d="M120 18c-7 0-12 5-12 11 0 5 4 8 9 10l3 1v6L18 92h204L120 46" fill="none" stroke="#E8D9B5" stroke-width="2.2" stroke-linejoin="round"/><g fill="#C2A162"><rect x="58" y="70" width="10" height="22"/><rect x="72" y="58" width="8" height="34"/><rect x="84" y="64" width="12" height="28"/><rect x="146" y="62" width="10" height="30"/><rect x="160" y="72" width="16" height="20"/></g></svg>
         </div>
         <div>
-          <span class="caps tag">Featured stylist · Cincinnati</span>
-          <h4 style="margin-top:10px;font-size:40px">The Urban Sophisticate Collective</h4>
-          <p style="margin-top:12px">Halie's personal styling studio blends vintage, high street, athletic, and custom pieces into a wardrobe that is unmistakably yours. Closet edits, shopping, and styling across Cincinnati, plus her Substack, <em>The Urban Edit</em>.</p>
-          <span class="go">Book a consultation</span>
+          <span class="label">Personal Styling · Cincinnati</span>
+          <h4>The Urban Sophisticate Collective</h4>
+          <p style="margin-top:12px">Halie’s styling studio brings together vintage pieces, contemporary fashion, athletic wear, and custom clothing to help clients develop a wardrobe that reflects their individual tastes and daily lives. Services include personal shopping, wardrobe consultations, and styling.</p>
+          <a class="go" href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">Visit the Studio</a>
         </div>
-      </a>
-      <a class="mk" href="https://www.litanynyc.com" target="_blank" rel="noopener">
-        <span class="caps tag">Women · New York</span>
+      </article>
+      <article class="mk">
+        <span class="label">Women’s Fashion · New York</span>
         <h4>Litany NYC</h4>
-        <p>Veronica Marrinan's ethical, made-to-measure women's line, founded in 2020. Collections inspired by Our Lady and the saints, plus veils and scarves she designs and samples herself.</p>
-        <span class="go">Visit Litany</span>
-      </a>
-      <a class="mk" href="https://catholicgentleman.com" target="_blank" rel="noopener">
-        <span class="caps tag">Men</span>
+        <p>Co-founded by Veronica Marrinan, Litany NYC creates thoughtfully designed women’s clothing informed by Catholic faith and artistic tradition. Its collections draw inspiration from Our Lady and the saints, with an emphasis on craftsmanship and personal dignity.</p>
+        <a class="go" href="https://www.litanynyc.com" target="_blank" rel="noopener">Explore Litany NYC</a>
+      </article>
+      <article class="mk">
+        <span class="label">Men’s Style &amp; Culture</span>
         <h4>The Catholic Gentleman</h4>
-        <p>Writing, prayer, and goods for Catholic men on faith, virtue, and living well.</p>
-        <span class="go">Visit The Catholic Gentleman</span>
-      </a>
-      <a class="mk" href="https://catholicmensshop.com" target="_blank" rel="noopener">
-        <span class="caps tag">Men · Tailoring</span>
-        <h4>Catholic Men's Shop</h4>
-        <p>Clint Branam's shop for Catholic men. He spoke to the Register about Frassati's tailoring and why quality and fit matter.</p>
-        <span class="go">Visit Catholic Men's Shop</span>
-      </a>
-      <a class="mk" href="https://liturgicalstyle.com" target="_blank" rel="noopener">
-        <span class="caps tag">Women · Liturgical year</span>
+        <p>A resource for Catholic men exploring the relationship between faith, virtue, personal discipline, and the habits of everyday life.</p>
+        <a class="go" href="https://catholicgentleman.com" target="_blank" rel="noopener">Visit The Catholic Gentleman</a>
+      </article>
+      <article class="mk">
+        <span class="label">Men’s Clothing &amp; Tailoring</span>
+        <h4>Catholic Men’s Shop</h4>
+        <p>Clint Branam’s Catholic Men’s Shop approaches men’s clothing through the principles of fit, quality, and personal presentation. Branam also contributed his perspective on St. Pier Giorgio Frassati’s wardrobe to the <em>National Catholic Register</em>.</p>
+        <a class="go" href="https://catholicmensshop.com" target="_blank" rel="noopener">Visit Catholic Men’s Shop</a>
+      </article>
+      <article class="mk">
+        <span class="label">Women’s Style · Liturgical Living</span>
         <h4>Liturgical Style</h4>
-        <p>Mary Harper's guide to dressing with the Church calendar and to fashion seen through Catholic social teaching.</p>
-        <span class="go">Visit Liturgical Style</span>
-      </a>
-      <a class="mk" href="https://theologyofhome.com" target="_blank" rel="noopener">
-        <span class="caps tag">Home · Magazine</span>
+        <p>Mary Harper explores the relationship between fashion, Catholic social teaching, and the liturgical calendar, offering a thoughtful approach to dressing with the seasons of the Church.</p>
+        <a class="go" href="https://liturgicalstyle.com" target="_blank" rel="noopener">Explore Liturgical Style</a>
+      </article>
+      <article class="mk">
+        <span class="label">Catholic Culture &amp; Living</span>
         <h4>Theology of Home</h4>
-        <p>The online magazine behind the book series. Beauty, order, and faith for the home, the table, and the wardrobe.</p>
-        <span class="go">Visit Theology of Home</span>
-      </a>
-      <a class="mk" href="https://frassatiusa.org" target="_blank" rel="noopener">
-        <span class="caps tag">Saint · Apostolate</span>
+        <p>An editorial project devoted to the beauty of everyday life, exploring the home, hospitality, art, family, and the Christian imagination.</p>
+        <a class="go" href="https://theologyofhome.com" target="_blank" rel="noopener">Visit Theology of Home</a>
+      </article>
+      <article class="mk">
+        <span class="label">Saints &amp; Catholic Apostolates</span>
         <h4>FrassatiUSA</h4>
-        <p>Christine Wohar's apostolate spreading devotion to St. Pier Giorgio. A good place to begin with the patron of this page.</p>
-        <span class="go">Visit FrassatiUSA</span>
-      </a>
+        <p>An apostolate dedicated to sharing the life and spiritual legacy of St. Pier Giorgio Frassati, offering resources for those interested in his example of friendship, charity, and holiness.</p>
+        <a class="go" href="https://frassatiusa.org" target="_blank" rel="noopener">Explore FrassatiUSA</a>
+      </article>
     </div>
-    </div>
-    <div class="subhead" style="margin-top:72px"><h3>The library</h3></div>
-    <div class="shelf">
-      <a class="book" href="https://ascensionpress.com/theologyofstyle" target="_blank" rel="noopener">
-        <div class="cover" style="background:#E9D9D0;color:#5A2A2F"><span class="a">Lillian Fallon</span><span class="t">Theology of Style</span><span class="orn"></span></div>
-        <h5>Theology of Style</h5><p class="by">Lillian Fallon · Ascension, 2023</p>
-        <p>Personal style read through Theology of the Body. Fallon worked as a style editor in New York before joining Litany NYC.</p>
-      </a>
-      <a class="book" href="https://www.catholiccompany.com/products/theology-of-home-finding-the-eternal-in-the-everyday" target="_blank" rel="noopener">
-        <div class="cover" style="background:#2F3B33;color:#E9E2CF"><span class="a">Gress · Mering</span><span class="t">Theology of Home</span><span class="orn"></span></div>
-        <h5>Theology of Home</h5><p class="by">Carrie Gress and Noelle Mering · TAN, 2019</p>
-        <p>Finding the eternal in the everyday. The first of a series that includes <em>The Spiritual Art of Homemaking</em> and <em>At the Sea</em>.</p>
-      </a>
-      <a class="book" href="https://liturgicalstyle.com" target="_blank" rel="noopener">
-        <div class="cover" style="background:#4B2E5A;color:#EADFC4"><span class="a">Mary Harper</span><span class="t">The Liturgical Style Guide</span><span class="orn"></span></div>
-        <h5>The Liturgical Style Guide</h5><p class="by">Mary Harper · 2026</p>
-        <p>Dressing with the seasons of the Church year, with sacred art and notes on color and fabric. Harper is also writing <em>What the Saints Wore</em>.</p>
-      </a>
-      <a class="book" href="https://frassatiusa.org" target="_blank" rel="noopener">
-        <div class="cover" style="background:#1F2A44;color:#E8D9B5"><span class="a">Christine Wohar</span><span class="t">Finding Frassati</span><span class="orn"></span></div>
-        <h5>Finding Frassati</h5><p class="by">Christine Wohar · EWTN Publishing</p>
-        <p>The life of the new saint and how to follow his path, by the head of FrassatiUSA.</p>
-      </a>
-      <a class="book" href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">
-        <div class="cover" style="background:#F1E7D3;color:#6B1E26"><span class="a">St. John Paul II</span><span class="t">Letter to Artists</span><span class="orn"></span></div>
-        <h5>Letter to Artists</h5><p class="by">St. John Paul II · 1999</p>
-        <p>The modern charter of the Church's friendship with artists. Free to read on the Vatican site.</p>
-      </a>
-      <a class="book" href="https://lms.org.uk/node/7828" target="_blank" rel="noopener">
-        <div class="cover" style="background:#3A1C20;color:#E7CFA0"><span class="a">Virginia Coda Nunziante</span><span class="t">Christian Fashion in the Teaching of the Church</span><span class="orn"></span></div>
-        <h5>Christian Fashion in the Teaching of the Church</h5><p class="by">Virginia Coda Nunziante · 2022</p>
-        <p>Papal texts on dress from 1914 to 1971, with Pius XII's 1957 address at the center.</p>
-      </a>
-      <a class="book" href="https://www.goodreads.com/search?q=Worthy+of+Wearing+Nicole+Caruso" target="_blank" rel="noopener">
-        <div class="cover" style="background:#D8C3B3;color:#3C2A22"><span class="a">Nicole Caruso</span><span class="t">Worthy of Wearing</span><span class="orn"></span></div>
-        <h5>Worthy of Wearing</h5><p class="by">Nicole Caruso</p>
-        <p>A Catholic beauty consultant on letting inner beauty shape what women wear.</p>
-      </a>
-      <a class="book" href="https://www.abebooks.com/Frassati-Field-Guide-Bobby-Angel-Ave/32251325532/bd" target="_blank" rel="noopener">
-        <div class="cover" style="background:#5C6B4E;color:#F1EAD8"><span class="a">Bobby Angel</span><span class="t">The Frassati Field Guide</span><span class="orn"></span></div>
-        <h5>The Frassati Field Guide</h5><p class="by">Bobby Angel · Ave Maria Press</p>
-        <p>Walking in the footsteps of the mountaineer saint.</p>
-      </a>
-    </div>
+
+    <div class="library" id="library">
+      <div class="subhead">
+        <p class="label eyebrow">Books &amp; Reading</p>
+        <h3 style="margin-top:12px">The Library</h3>
+        <p>A reading list for those interested in the theology of beauty, the dignity of the human person, Catholic culture, and the relationship between faith and personal style.</p>
+      </div>
+      <div class="shelf">
+        <article class="book">
+          <div class="cover" style="background:#E9D9D0;color:#5A2A2F" aria-hidden="true"><span class="a">Lillian Fallon</span><span class="t">Theology of Style</span><span class="orn"></span></div>
+          <h5>Theology of Style</h5><p class="by">Lillian Fallon · Ascension, 2023</p>
+          <p>Personal style read through Theology of the Body. Fallon worked as a style editor in New York before joining Litany NYC.</p>
+          <a class="go link" href="https://ascensionpress.com/theologyofstyle" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#2F3B33;color:#E9E2CF" aria-hidden="true"><span class="a">Gress · Mering</span><span class="t">Theology of Home</span><span class="orn"></span></div>
+          <h5>Theology of Home</h5><p class="by">Carrie Gress and Noelle Mering · TAN, 2019</p>
+          <p>Finding the eternal in the everyday. The first of a series that includes <em>The Spiritual Art of Homemaking</em> and <em>At the Sea</em>.</p>
+          <a class="go link" href="https://www.catholiccompany.com/products/theology-of-home-finding-the-eternal-in-the-everyday" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#4B2E5A;color:#EADFC4" aria-hidden="true"><span class="a">Mary Harper</span><span class="t">The Liturgical Style Guide</span><span class="orn"></span></div>
+          <h5>The Liturgical Style Guide</h5><p class="by">Mary Harper · 2026</p>
+          <p>Dressing with the seasons of the Church year, with sacred art and notes on color and fabric. Harper is also writing <em>What the Saints Wore</em>.</p>
+          <a class="go link" href="https://liturgicalstyle.com" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#1F2A44;color:#E8D9B5" aria-hidden="true"><span class="a">Christine Wohar</span><span class="t">Finding Frassati</span><span class="orn"></span></div>
+          <h5>Finding Frassati</h5><p class="by">Christine Wohar · EWTN Publishing</p>
+          <p>The life of the new saint and how to follow his path, by the head of FrassatiUSA.</p>
+          <a class="go link" href="https://frassatiusa.org" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#F1E7D3;color:#6B1E26" aria-hidden="true"><span class="a">St. John Paul II</span><span class="t">Letter to Artists</span><span class="orn"></span></div>
+          <h5>Letter to Artists</h5><p class="by">St. John Paul II · 1999</p>
+          <p>The modern charter of the Church’s friendship with artists. Free to read on the Vatican site.</p>
+          <a class="go link" href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">Read Online</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#3A1C20;color:#E7CFA0" aria-hidden="true"><span class="a">Virginia Coda Nunziante</span><span class="t">Christian Fashion in the Teaching of the Church</span><span class="orn"></span></div>
+          <h5>Christian Fashion in the Teaching of the Church</h5><p class="by">Virginia Coda Nunziante · 2022</p>
+          <p>Papal texts on dress from 1914 to 1971, with Pius XII’s 1957 address at the center.</p>
+          <a class="go link" href="https://lms.org.uk/node/7828" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#D8C3B3;color:#3C2A22" aria-hidden="true"><span class="a">Nicole Caruso</span><span class="t">Worthy of Wearing</span><span class="orn"></span></div>
+          <h5>Worthy of Wearing</h5><p class="by">Nicole Caruso</p>
+          <p>A Catholic beauty consultant on letting inner beauty shape what women wear.</p>
+          <a class="go link" href="https://www.goodreads.com/search?q=Worthy+of+Wearing+Nicole+Caruso" target="_blank" rel="noopener">View Book</a>
+        </article>
+        <article class="book">
+          <div class="cover" style="background:#5C6B4E;color:#F1EAD8" aria-hidden="true"><span class="a">Bobby Angel</span><span class="t">The Frassati Field Guide</span><span class="orn"></span></div>
+          <h5>The Frassati Field Guide</h5><p class="by">Bobby Angel · Ave Maria Press</p>
+          <p>Walking in the footsteps of the mountaineer saint.</p>
+          <a class="go link" href="https://www.abebooks.com/Frassati-Field-Guide-Bobby-Angel-Ave/32251325532/bd" target="_blank" rel="noopener">View Book</a>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -735,19 +784,35 @@ footer .base{margin-top:64px;padding-top:24px;border-top:1px solid rgba(239,232,
 
 <footer>
   <div class="wrap">
-    <div class="grid2">
-      <div><h4>Via Pulchritudinis</h4><p>A Catholic style journal, curated by Andrew Likoudis, who wrote on St. Pier Giorgio Frassati and fashion for the National Catholic Register.</p></div>
-      <div><p class="caps" style="color:#C9A85C">Sources</p><ul>
+    <div class="foot">
+      <div>
+        <div class="brand"><b>VIA PULCHRITUDINIS</b><span>A Catholic Journal of Style and Beauty</span></div>
+        <p>Via Pulchritudinis explores the relationship between sacred architecture, personal style, and the Catholic understanding of beauty. Through its architectural lookbook, theological reflections, and curated resources, the journal invites readers to discover new ways of appreciating the Church’s artistic inheritance.</p>
+        <p class="curator">Curated by Andrew Likoudis, a Catholic writer and editor whose work on St. Pier Giorgio Frassati and personal style appeared in the <em>National Catholic Register</em>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <span class="label">Explore</span>
+        <ul>
+          <li><a href="#lookbook">The Lookbook</a></li>
+          <li><a href="#beauty-faith">Beauty &amp; Faith</a></li>
+          <li><a href="#directory">The Directory</a></li>
+          <li><a href="#credits">Sources &amp; Credits</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="credits" id="credits">
+      <h2>Sources &amp; Credits</h2>
+      <ul class="src">
         <li><a href="https://www.vatican.va/content/john-paul-ii/en/letters/1999/documents/hf_jp-ii_let_23041999_artists.html" target="_blank" rel="noopener">John Paul II, Letter to Artists</a></li>
         <li><a href="https://www.vatican.va/content/pius-xii/it/speeches/1957/documents/hf_p-xii_spe_19571108_alta-moda.html" target="_blank" rel="noopener">Pius XII on High Fashion, 1957</a></li>
-        <li><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Catechism of the Catholic Church</a></li></ul></div>
-      <div><p class="caps" style="color:#C9A85C">Visit</p><ul>
+        <li><a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Catechism of the Catholic Church</a></li>
+        <li><a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html" target="_blank" rel="noopener">Sacrosanctum Concilium</a></li>
+        <li><a href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Frassati in the National Catholic Register</a></li>
         <li><a href="https://americasfirstcathedral.org/" target="_blank" rel="noopener">The Baltimore Basilica</a></li>
-        <li><a href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Frassati in the Register</a></li>
-        <li><a href="#lookbook">The lookbook</a></li></ul></div>
+      </ul>
+      <details><summary class="label">Photo credits and licenses</summary><div class="photo-credits" id="photoCredits"></div></details>
     </div>
-    <details style="margin-top:44px"><summary class="caps" style="cursor:pointer;color:#C9A85C">Photo credits and licenses</summary><div class="photo-credits" id="photoCredits"></div></details>
-    <div class="base"><span>Photos are used under Creative Commons licenses or are in the public domain, credited above. Brand names belong to their owners.</span><span>Ad maiorem Dei gloriam</span></div>
+    <div class="base"><span>Photos are used under Creative Commons licenses or are in the public domain, credited above. Brand names belong to their owners.</span><span class="amdg">Ad maiorem Dei gloriam</span></div>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -763,81 +828,129 @@ const SEASONS=[
  ["Pentecost & Martyrs","#A1252F","Red","The fire of the Spirit and the blood of witnesses. A red tie, a red lip, a red lining."]
 ];
 
-
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const L=window.LOOKS||[];
+const WHO={her:'Women',him:'Men'};
 function credit(m,label){if(!m)return'';const by=m.creator?(m.creator_url?'<a href="'+esc(m.creator_url)+'" target="_blank" rel="noopener">'+esc(m.creator)+'</a>':esc(m.creator)):'an unnamed photographer';const l=(m.license||'').toLowerCase();const lic=l==='pdm'?'Public domain':(l==='cc0'?'CC0':'CC '+esc(l.toUpperCase())+' '+esc(m.license_version||''));return (label?label+' by ':'Photo by ')+by+' · <a href="'+esc(m.license_url||'#')+'" target="_blank" rel="noopener">'+lic+'</a> · <a href="'+esc(m.landing||'#')+'" target="_blank" rel="noopener">source</a>'}
-const words=n=>{const a=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"],t=["","","twenty","thirty","forty","fifty","sixty"];if(n<20)return a[n];return t[Math.floor(n/10)]+(n%10?"-"+a[n%10]:"")};
-document.getElementById('heroCount').textContent=words(L.length).replace(/^./,c=>c.toUpperCase())+' churches, '+words(L.length)+' looks.';
+
+/* Architectural inspiration: written from each look's own palette and measured matches, so no two entries share copy. */
+function inspiration(l,i){
+ const lc=s=>String(s).toLowerCase();
+ const P=l.palette.map(p=>lc(p.n));
+ const M=[...new Set(l.matches.map(m=>lc(m.pn)))];
+ while(M.length<3){const extra=P.find(p=>!M.includes(p));if(!extra)break;M.push(extra)}
+ const rest=P.filter(p=>!M.includes(p));
+ const n=l.name;
+ const T=[
+  ()=>'The palette of '+n+' runs from '+P[0]+' to '+P[4]+', and the outfit settles on '+M[0]+' and '+M[1]+'. It reads as an interpretation of the building’s visual harmony rather than a literal reproduction of its colors.',
+  ()=>'Here '+M[0]+' does most of the work, taken from the photographs of '+n+', while '+M[1]+' adds depth. The look keeps the church’s balance of light and shadow without imitating it piece by piece.',
+  ()=>n+' lends this outfit its '+M[0]+'. '+M[1].replace(/^./,c=>c.toUpperCase())+' and '+M[2]+' follow as supporting tones, much as secondary materials frame the main surfaces of a building.',
+  ()=>'Of the five colors drawn from '+n+', the clothes lean on '+M[0]+' and '+M[1]+'. '+((rest[0]||P[4]).replace(/^./,c=>c.toUpperCase()))+' stays in the palette as a suggestion for an accessory rather than a requirement.',
+  ()=>'The look translates the palette of '+n+' into everyday dress, with '+M[0]+' as its anchor and '+M[1]+' as a counterpoint. The aim is the building’s overall mood, not an exact match for every surface.',
+  ()=>'Think of '+M[0]+' as the starting point, taken from '+n+', and '+M[1]+' as the finishing note. Together they suggest the church’s atmosphere in a wardrobe that works well away from it.'
+ ];
+ return T[i%T.length]();
+}
 
 /* ---------- hero triptych ---------- */
 const FEAT=L.map((l,i)=>i).filter(i=>L[i].featured).concat(L.map((l,i)=>i)).filter((v,i,a)=>a.indexOf(v)===i).slice(0,6);
 let ti=0,timer;
 const tDots=document.getElementById('tDots');
-FEAT.forEach((k,j)=>{const b=document.createElement('button');b.setAttribute('aria-label','Show look '+(j+1));b.onclick=()=>{showTrip(j);restart()};tDots.appendChild(b)});
+FEAT.forEach((k,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show '+L[k].name);b.onclick=()=>{showTrip(j);restart()};tDots.appendChild(b)});
 function showTrip(j){ti=j;const l=L[FEAT[j]];
- const set=(id,src)=>{const im=document.getElementById(id);im.style.opacity=0;setTimeout(()=>{im.src=src;im.onload=()=>im.style.opacity=1},200)};
- set('tExt',l.exterior.src);set('tLook',l.look.src);set('tInt',l.interior.src);
- document.getElementById('tLook').alt=l.look.title;
+ const set=(id,src,alt)=>{const im=document.getElementById(id);im.style.opacity=0;setTimeout(()=>{im.onload=()=>im.style.opacity=1;im.src=src;im.alt=alt},200)};
+ set('tExt',l.exterior.src,l.name+', exterior');set('tLook',l.look.src,l.look.title+', a look inspired by '+l.name);set('tInt',l.interior.src,l.name+', interior');
  document.getElementById('tBar').innerHTML=l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('');
- document.getElementById('tTitle').textContent=l.look.title;
- document.getElementById('tSub').textContent=l.name+' · '+l.place;
+ document.getElementById('tTitle').textContent=l.name;
+ document.getElementById('tSub').textContent=l.place+' · '+l.look.title;
  document.getElementById('tOpen').href='#'+l.id;
  [...tDots.children].forEach((b,k)=>b.setAttribute('aria-current',k===j));}
-function restart(){clearInterval(timer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>showTrip((ti+1)%FEAT.length),6000)}
+function restart(){clearInterval(timer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>showTrip((ti+1)%FEAT.length),6500)}
+const trip=document.getElementById('trip');
+trip.addEventListener('mouseenter',()=>clearInterval(timer));trip.addEventListener('mouseleave',restart);
+trip.addEventListener('focusin',()=>clearInterval(timer));trip.addEventListener('focusout',restart);
 showTrip(0);restart();
 
 /* ---------- lookbook ---------- */
 const FAM=[["blue","#2D6A8C","Blues and greens"],["red","#9E2430","Reds and pinks"],["gold","#C49A3E","Golds and browns"],["neutral","#D8CBB2","Light neutrals"],["dark","#24211E","Darks"]];
-const grid=document.getElementById('grid'),rc=document.getElementById('resultCount'),qEl=document.getElementById('q'),regionF=document.getElementById('regionF'),colorF=document.getElementById('colorF');
+const grid=document.getElementById('grid'),rc=document.getElementById('resultCount'),qEl=document.getElementById('q'),regionF=document.getElementById('regionF'),colorF=document.getElementById('colorF'),clearF=document.getElementById('clearF');
 let fWho='all',fCol='all';
-colorF.innerHTML='<button class="all" aria-pressed="true" data-v="all">Any color</button>'+FAM.map(f=>'<button aria-pressed="false" data-v="'+f[0]+'" style="background:'+f[1]+'" title="'+f[2]+'" aria-label="'+f[2]+'"></button>').join('');
+colorF.innerHTML='<button type="button" class="all" aria-pressed="true" data-v="all">Any color</button>'+FAM.map(f=>'<button type="button" aria-pressed="false" data-v="'+f[0]+'" style="background:'+f[1]+'" title="'+f[2]+'" aria-label="'+f[2]+'"></button>').join('');
 const regions=["All regions"].concat([...new Set(L.map(l=>l.region))]);
 regionF.innerHTML=regions.map(r=>'<option>'+esc(r)+'</option>').join('');
-grid.innerHTML=L.map((l,i)=>'<button class="card" data-i="'+i+'"><div class="ph"><img loading="lazy" src="'+l.look.src+'" alt="'+esc(l.look.title)+', inspired by '+esc(l.name)+'"><span class="tag">'+(l.who==='her'?'For her':'For him')+'</span><span class="church"><img loading="lazy" src="'+l.exterior.src+'" alt=""></span></div><div class="strip">'+l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('')+'</div><h3>'+esc(l.look.title)+'</h3><span class="pl">'+esc(l.name)+', '+esc(l.city)+'</span></button>').join('');
+grid.innerHTML=L.map((l,i)=>'<button type="button" class="card" data-i="'+i+'" aria-label="Explore this look, '+esc(l.look.title)+', inspired by '+esc(l.name)+', '+esc(l.place)+'"><div class="ph"><img loading="lazy" src="'+l.look.src+'" alt=""><span class="tag">'+WHO[l.who]+'</span><span class="church"><img loading="lazy" src="'+l.exterior.src+'" alt=""></span></div><div class="strip" aria-hidden="true">'+l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('')+'</div><h3>'+esc(l.name)+'</h3><span class="pl">'+esc(l.place)+'</span><span class="go">Explore This Look</span></button>').join('');
 function filter(){const q=qEl.value.trim().toLowerCase(),r=regionF.value;let n=0;
- [...grid.children].forEach(el=>{const l=L[+el.dataset.i];const ok=(fWho==='all'||l.who===fWho)&&(fCol==='all'||l.families.includes(fCol))&&(r==='All regions'||l.region===r)&&(!q||(l.name+' '+l.place+' '+l.look.title).toLowerCase().includes(q));el.hidden=!ok;if(ok)n++});
- rc.textContent=n+(n===1?' look':' looks');document.getElementById('empty').hidden=n>0}
-document.getElementById('segWho').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fWho=b.dataset.v;[...b.parentNode.children].forEach(x=>x.setAttribute('aria-pressed',x===b));filter()});
-colorF.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fCol=b.dataset.v;[...colorF.children].forEach(x=>x.setAttribute('aria-pressed',x===b));filter()});
-regionF.onchange=filter;qEl.oninput=filter;filter();
+ [...grid.children].forEach(el=>{const l=L[+el.dataset.i];const ok=(fWho==='all'||l.who===fWho)&&(fCol==='all'||l.families.includes(fCol))&&(r==='All regions'||l.region===r)&&(!q||(l.name+' '+l.place+' '+l.city+' '+l.region+' '+l.look.title).toLowerCase().includes(q));el.hidden=!ok;if(ok)n++});
+ rc.textContent=n+(n===1?' look':' looks');document.getElementById('empty').hidden=n>0;
+ clearF.disabled=(fWho==='all'&&fCol==='all'&&r==='All regions'&&!q)}
+function press(group,b){[...group.children].forEach(x=>x.setAttribute('aria-pressed',x===b))}
+document.getElementById('segWho').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fWho=b.dataset.v;press(b.parentNode,b);filter()});
+colorF.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fCol=b.dataset.v;press(colorF,b);filter()});
+regionF.onchange=filter;qEl.oninput=filter;
+clearF.onclick=()=>{fWho='all';fCol='all';qEl.value='';regionF.value='All regions';press(document.getElementById('segWho'),document.querySelector('#segWho [data-v=all]'));press(colorF,colorF.querySelector('[data-v=all]'));filter();qEl.focus()};
+filter();
 grid.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openDetail(+c.dataset.i)});
 
 /* ---------- detail ---------- */
 const detail=document.getElementById('detail'),dBody=document.getElementById('dBody');let cur=-1,lastFocus=null;
+function makers(who){return who==='her'?'<a href="https://www.litanynyc.com" target="_blank" rel="noopener">Litany NYC</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">The Urban Sophisticate Collective</a><a href="https://liturgicalstyle.com" target="_blank" rel="noopener">Liturgical Style</a>':'<a href="https://catholicmensshop.com" target="_blank" rel="noopener">Catholic Men’s Shop</a><a href="https://catholicgentleman.com" target="_blank" rel="noopener">The Catholic Gentleman</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">The Urban Sophisticate Collective</a>'}
 function openDetail(i,noPush){cur=(i+L.length)%L.length;const l=L[cur];if(detail.hidden)lastFocus=document.activeElement;
- dBody.innerHTML='<div class="d-grid"><div class="d-look"><div class="ph"><img src="'+l.look.src+'" alt="'+esc(l.look.title)+'"></div><p class="credit">'+credit(l.look)+'</p></div>'+
- '<div class="d-info"><span class="caps kicker">'+(l.who==='her'?'For her':'For him')+' · inspired by '+esc(l.name)+'</span><h2 id="dTitle">'+esc(l.look.title)+'</h2><p class="wear">'+esc(l.look.wear)+'</p>'+
- '<div class="match"><div class="match-head"><span class="caps" style="color:var(--ink-3)">Palette match</span><b>'+l.score+'%</b></div><div class="match-rows">'+l.matches.map(m=>'<div class="mrow"><i style="background:'+m.g+'"></i><span>'+esc(m.gl)+'</span><span class="ar">→</span><i style="background:'+m.p+'"></i><span>'+esc(m.pn)+'</span></div>').join('')+'</div><p class="tip">Left, colors measured from the outfit photo. Right, the closest color in the church\'s palette.</p></div>'+
- '<div class="church-h"><span class="caps" style="color:var(--gilt)">'+esc(l.style)+'</span><h3>'+esc(l.name)+'</h3><p class="caps place">'+esc(l.place)+' · '+esc(l.year)+'</p><p class="story">'+esc(l.story)+'</p>'+
- '<div class="pair"><figure><div class="ph"><img src="'+l.exterior.src+'" alt="'+esc(l.name)+' exterior"><span class="lab">Exterior</span></div></figure><figure><div class="ph"><img src="'+l.interior.src+'" alt="'+esc(l.name)+' interior"><span class="lab">Interior</span></div></figure></div>'+
- '<p class="credit">'+credit(l.exterior,'Exterior photo')+'<br>'+credit(l.interior,'Interior photo')+'</p>'+
- '<div class="palette">'+l.palette.map(p=>'<button class="sw" data-hex="'+p.h+'" aria-label="Copy '+esc(p.n)+' '+p.h+'"><i style="background:'+p.h+'"></i><b>'+esc(p.n)+'</b><small>'+p.h+'</small></button>').join('')+'</div><p class="tip">The palette, measured from the two photos above. Tap a color to copy it.</p></div>'+
- '<div class="d-shop"><p>Find pieces like these from Catholic makers.</p><div class="links">'+(l.who==='her'?'<a href="https://www.litanynyc.com" target="_blank" rel="noopener">Litany NYC</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">Urban Sophisticate Collective</a><a href="https://liturgicalstyle.com" target="_blank" rel="noopener">Liturgical Style</a>':'<a href="https://catholicmensshop.com" target="_blank" rel="noopener">Catholic Men\'s Shop</a><a href="https://catholicgentleman.com" target="_blank" rel="noopener">The Catholic Gentleman</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">Urban Sophisticate Collective</a>')+'</div></div></div></div>';
+ dBody.innerHTML='<div class="d-grid"><div class="d-look"><div class="ph"><img src="'+l.look.src+'" alt="'+esc(l.look.title)+'. '+esc(l.look.wear)+'"></div><p class="credit">'+credit(l.look)+'</p></div>'+
+ '<div class="d-info">'+
+  '<span class="label kicker">'+WHO[l.who]+' · '+esc(l.style)+'</span><h2 id="dTitle">'+esc(l.name)+'</h2><p class="label place">'+esc(l.place)+' · '+esc(l.year)+'</p><p class="story">'+esc(l.story)+'</p>'+
+  '<div class="pair"><figure><div class="ph"><img src="'+l.exterior.src+'" alt="'+esc(l.name)+', exterior"></div><figcaption class="label">Exterior</figcaption></figure><figure><div class="ph"><img src="'+l.interior.src+'" alt="'+esc(l.name)+', interior"></div><figcaption class="label">Interior</figcaption></figure></div>'+
+  '<p class="credit">'+credit(l.exterior,'Exterior photo')+'<br>'+credit(l.interior,'Interior photo')+'</p>'+
+  '<div class="d-sec"><span class="label">The Palette</span><div class="palette">'+l.palette.map(p=>'<button type="button" class="sw" data-hex="'+p.h+'" aria-label="Copy '+esc(p.n)+', '+p.h+'"><i style="background:'+p.h+'"></i><b>'+esc(p.n)+'</b><small>'+p.h+'</small></button>').join('')+'</div><p class="tip">Five colors measured from the exterior and interior photographs. Select a color to copy its value.</p></div>'+
+  '<div class="d-sec"><span class="label">The Look</span><h3>'+esc(l.look.title)+'</h3><p class="wear">'+esc(l.look.wear)+'</p></div>'+
+  '<div class="d-sec"><span class="label">Architectural Inspiration</span><p class="insp">'+esc(inspiration(l,cur))+'</p></div>'+
+  '<details class="analysis"><summary><span class="label">Color analysis</span><b>'+l.score+'% palette match</b></summary><div class="inner"><div class="match-rows">'+l.matches.map(m=>'<div class="mrow"><i style="background:'+m.g+'"></i><span>'+esc(m.gl)+'</span><span class="ar" aria-hidden="true">→</span><i style="background:'+m.p+'"></i><span>'+esc(m.pn)+'</span></div>').join('')+'</div><p class="tip">Left, colors measured from the outfit photo. Right, the closest color in the church’s palette. The score is a guide, not a verdict on the look.</p></div></details>'+
+  '<div class="d-shop"><p>Find pieces like these from Catholic makers.</p><div class="links">'+makers(l.who)+'</div></div>'+
+ '</div></div>';
  document.getElementById('dIdx').textContent=(cur+1)+' of '+L.length;
  detail.hidden=false;document.body.classList.add('locked');detail.scrollTop=0;
  if(!noPush){try{history.replaceState(null,'','#'+l.id)}catch(e){}}
  document.getElementById('dClose').focus({preventScroll:true});}
-function closeDetail(){detail.hidden=true;document.body.classList.remove('locked');try{history.replaceState(null,'','#lookbook')}catch(e){};if(lastFocus)lastFocus.focus({preventScroll:true})}
+function closeDetail(){detail.hidden=true;document.body.classList.remove('locked');try{history.replaceState(null,'','#lookbook')}catch(e){};if(lastFocus&&document.contains(lastFocus))lastFocus.focus({preventScroll:true})}
 document.getElementById('dClose').onclick=closeDetail;
 document.getElementById('dPrev').onclick=()=>openDetail(cur-1);
 document.getElementById('dNext').onclick=()=>openDetail(cur+1);
-document.addEventListener('keydown',e=>{if(detail.hidden)return;if(e.key==='Escape')closeDetail();if(e.key==='ArrowRight')openDetail(cur+1);if(e.key==='ArrowLeft')openDetail(cur-1)});
+document.addEventListener('keydown',e=>{if(detail.hidden)return;
+ if(e.key==='Escape')closeDetail();
+ if(e.key==='ArrowRight'&&!e.target.closest('summary'))openDetail(cur+1);
+ if(e.key==='ArrowLeft'&&!e.target.closest('summary'))openDetail(cur-1);
+ if(e.key==='Tab'){const f=[...detail.querySelectorAll('a[href],button,summary,[tabindex="0"]')].filter(x=>x.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
 dBody.addEventListener('click',e=>{const sw=e.target.closest('.sw');if(sw){const h=sw.dataset.hex;try{navigator.clipboard.writeText(h).then(()=>toast(h+' copied'),()=>toast(h))}catch(err){toast(h)}}});
-function route(){const id=location.hash.slice(1);const i=L.findIndex(l=>l.id===id);if(i>=0)openDetail(i,true);else if(!detail.hidden)closeDetail()}
-window.addEventListener('hashchange',route);route();
 
 /* ---------- tabs ---------- */
-document.querySelector('.tabs').addEventListener('click',e=>{const b=e.target.closest('[role=tab]');if(!b)return;document.querySelectorAll('.tabs [role=tab]').forEach(t=>{const on=t===b;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on})});
+const tabs=[...document.querySelectorAll('.tabs [role=tab]')];
+function selectTab(t,focus){tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});if(focus)t.focus()}
+document.querySelector('.tabs').addEventListener('click',e=>{const b=e.target.closest('[role=tab]');if(b)selectTab(b)});
+document.querySelector('.tabs').addEventListener('keydown',e=>{const i=tabs.indexOf(document.activeElement);if(i<0)return;let n=null;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==null){e.preventDefault();selectTab(tabs[n],true)}});
+
+/* ---------- routing: look ids open the detail, #frassati opens its tab ---------- */
+function route(e){const id=location.hash.slice(1);
+ const i=L.findIndex(l=>l.id===id);
+ if(i>=0){openDetail(i,true);return}
+ if(!detail.hidden)closeDetail();
+ if(id==='frassati'){selectTab(document.getElementById('t-fr'));const smooth=e&&!matchMedia('(prefers-reduced-motion: reduce)').matches;requestAnimationFrame(()=>document.querySelector('.tabs').scrollIntoView({behavior:smooth?'smooth':'auto',block:'start'}))}}
+window.addEventListener('hashchange',route);route();
+/* on first load, re-settle the Frassati deep link once fonts and images have laid out */
+if(location.hash==='#frassati'){const settle=()=>document.querySelector('.tabs').scrollIntoView({block:'start'});window.addEventListener('load',()=>{(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>requestAnimationFrame(settle))})}
 
 /* ---------- credits ---------- */
 document.getElementById('photoCredits').innerHTML=L.map(l=>'<p>'+esc(l.name)+'. '+credit(l.look,'Look')+'; '+credit(l.exterior,'exterior')+'; '+credit(l.interior,'interior')+'</p>').join('');
 
 /* ---------- seasons, nav, toast ---------- */
-document.getElementById('seasonsGrid').innerHTML=SEASONS.map(s=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);const bar=light?'background:linear-gradient(180deg,'+s[1]+',#E9DDB8);':'background:'+s[1]+';';return '<div class="season"><div class="bar" style="'+bar+'"></div><div class="txt"><span class="caps">'+esc(s[2])+'</span><h4>'+esc(s[0])+'</h4><p>'+esc(s[3])+'</p></div></div>'}).join('');
+document.getElementById('seasonsGrid').innerHTML=SEASONS.map(s=>{const light=['#F4EEDF','#F7F2E4'].includes(s[1]);const bar=light?'background:linear-gradient(180deg,'+s[1]+',#E5D7B0);':'background:'+s[1]+';';return '<div class="season"><div class="bar" style="'+bar+'" aria-hidden="true"></div><div class="txt"><span class="label">'+esc(s[2])+'</span><h4>'+esc(s[0])+'</h4><p>'+esc(s[3])+'</p></div></div>'}).join('');
 const btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
-btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
-nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu'});
+nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);btn.textContent='Menu';
+ if(e.target.getAttribute('href')==='#frassati'&&location.hash==='#frassati')route({})}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);btn.textContent='Menu';btn.focus()}});
+/* highlight the current section in the nav */
+const secs=['lookbook','how','liturgical-year','beauty-faith','directory'].map(id=>document.getElementById(id));
+const navLinks=[...nav.querySelectorAll('a')];
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){const id=en.target.id;navLinks.forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+id))}})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(s=>io.observe(s))}
 let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1600)}
 </script>
 </body>
