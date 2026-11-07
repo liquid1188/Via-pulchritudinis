@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Via Pulchritudinis | The Beauty of Cathedrals in Everyday Fashion</title>
-<meta name="description" content="Via Pulchritudinis explores the beauty of cathedrals in everyday fashion through sacred architecture, contemporary style, Catholic art, and the theology of beauty.">
+<meta name="description" content="Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.">
 <link rel="canonical" href="https://liquid1188.github.io/Via-pulchritudinis/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Via Pulchritudinis">
@@ -121,6 +121,7 @@ section{padding:112px 0}
 .colors button[aria-pressed="true"]:not(.all)::after{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
 .colors .all{width:auto;height:30px;border-radius:2px;background:none;padding:0 11px;font-size:11.5px;font-weight:500;border:1px solid var(--rule);box-shadow:none}
 .colors .all[aria-pressed="true"]{background:var(--ink);color:var(--ivory);box-shadow:none}
+.color-name{font-size:12.5px;color:var(--ink-2);white-space:nowrap;min-width:9ch}
 .filters select,.filters input{font-size:14px;background:var(--vellum);border:1px solid var(--rule);border-radius:2px;min-height:40px;padding:0 12px;color:var(--ink)}
 .filters .search{flex:1;display:flex;justify-content:flex-end;gap:10px;align-items:center}
 .filters input{width:260px}
@@ -169,6 +170,13 @@ section{padding:112px 0}
 .d-sec h3{font-size:30px;margin-top:8px}
 .d-sec .wear{margin-top:10px;font-size:16px;color:var(--ink-2)}
 .d-sec .insp{margin-top:12px;font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--ink)}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;max-width:620px;margin:0 0 36px;padding-bottom:26px;border-bottom:1px solid var(--rule)}
+.trio figure{margin:0;min-width:0}
+.trio .ph,.trio .chips{height:200px;overflow:hidden;background:var(--ivory-2)}
+.trio img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.trio .chips{display:flex;flex-direction:column}
+.trio .chips i{flex:1}
+.trio .label{display:block;margin-top:8px;color:var(--ink-3)}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
 .pair figure{margin:0}
 .pair .ph{aspect-ratio:4/5;overflow:hidden;background:var(--ivory-2)}
@@ -256,12 +264,12 @@ body.locked{overflow:hidden}
 .voices-h{margin-top:56px}
 .voices-h h3{font-size:32px}
 .voices-h p{margin-top:12px;color:var(--ink-2);max-width:var(--read)}
-.voices{list-style:none;margin-top:24px}
-.voices li{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--rule)}
-.voices li:last-child{border-bottom:1px solid var(--rule)}
-.voices b{font-family:var(--serif);font-size:21px;font-weight:600;display:block;line-height:1.15}
-.voices small{display:block;color:var(--ink-3);font-size:12.5px;margin-top:4px}
-.voices p{color:var(--ink-2);font-size:15.5px}
+.fqs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:24px;border-top:1px solid var(--rule)}
+.fq{margin:0;padding:26px 0 28px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;min-width:0}
+.fq .label{color:var(--gold)}
+.fq blockquote{font-family:var(--serif);font-size:23px;line-height:1.36;color:var(--ink);margin:12px 0 16px;flex:1}
+.fq b{font-family:var(--serif);font-size:19px;font-weight:600;display:block;line-height:1.2}
+.fq small{display:block;color:var(--ink-3);font-size:12.5px;margin-top:3px}
 
 /* directory */
 .subhead{margin:0 0 28px}
@@ -388,7 +396,11 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
   .pq blockquote{font-size:22px}
   .panel-light{padding:26px 20px}
   .themes{grid-template-columns:1fr}
-  .voices li{grid-template-columns:1fr;gap:6px}
+  .fqs{grid-template-columns:1fr}
+  .fq blockquote{font-size:21px}
+  .trio{gap:8px}
+  .trio .ph,.trio .chips{height:140px}
+  .trio .label{font-size:9.5px}
   .makers{grid-template-columns:1fr}
   .shelf{grid-template-columns:1fr 1fr;gap:28px 16px}
   .cover{padding:18px 14px 16px 18px}
@@ -424,7 +436,7 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
     <div>
       <p class="label eyebrow">A Catholic Journal of Style and Beauty</p>
       <h1>The Beauty of Cathedrals in Everyday Fashion</h1>
-      <p class="lede">From the marble of Rome’s great basilicas to the stained glass of Gothic cathedrals, sacred architecture offers an extraordinary vocabulary of color, texture, and form. Via Pulchritudinis draws on that inheritance to explore how the beauty of the Church’s artistic tradition can inspire contemporary personal style.</p>
+      <p class="lede">From the marble of Rome’s great basilicas to the stained glass of Gothic cathedrals, sacred architecture offers an extraordinary vocabulary of color, texture, and form. Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.</p>
       <div class="hero-cta">
         <a class="btn solid" href="#lookbook">Explore the Lookbook</a>
         <a class="btn" href="#how">Discover the Concept</a>
@@ -452,6 +464,7 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
       <p class="label eyebrow">How It Works</p>
       <h2 id="how-h">From Sacred Architecture to Personal Style</h2>
       <p class="lede">Every look begins with a place. The architecture of a church, its materials, colors, and atmosphere, becomes the starting point for a contemporary wardrobe.</p>
+      <p class="lede">These churches are sacred places before they are sources of inspiration. They were built for prayer and worship, and the looks here are a small tribute to their beauty, not a substitute for visiting them.</p>
     </div>
     <ol class="steps" role="list">
       <li class="step"><span class="n">01</span><h3>The Architecture</h3><p>Each look begins with a church. Its exterior and interior reveal a distinctive harmony of stone, stained glass, wood, metal, and ornament.</p></li>
@@ -471,7 +484,8 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
     </div>
     <div class="filters" role="search" aria-label="Filter looks">
       <div class="seg" id="segWho" role="group" aria-label="Show looks for"><button type="button" aria-pressed="true" data-v="all">All Looks</button><button type="button" aria-pressed="false" data-v="her">Women</button><button type="button" aria-pressed="false" data-v="him">Men</button></div>
-      <div class="colors" id="colorF" role="group" aria-label="Filter by color"></div>
+      <div class="colors" id="colorF" role="group" aria-label="Filter by color"></div><span class="color-name" id="colorName" aria-hidden="true">Any color</span>
+      <label><span class="sr">Architectural style</span><select id="styleF"></select></label>
       <label><span class="sr">Region</span><select id="regionF"></select></label>
       <div class="search">
         <label style="display:contents"><span class="sr">Search looks</span><input id="q" type="search" placeholder="Search by church, city, or region" autocomplete="off"></label>
@@ -514,6 +528,7 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
       <h2 id="bf-h">The Way of Beauty</h2>
       <p class="lede">The Christian tradition has long recognized beauty as a means of awakening the human person to truth and goodness. From the architecture of great churches to the dignity of the human body, beauty has a place in the Church’s understanding of creation, worship, and everyday life.</p>
       <p class="lede">The Latin expression <em>via pulchritudinis</em>, or “way of beauty,” gives this journal its name. It also provides a broader framework for considering how we dress, how we present ourselves, and how the material world can reflect something of the dignity of the human person.</p>
+      <p class="lede">Clothing occupies a modest but meaningful place in the wider human experience of beauty. Through color, proportion, material, and craftsmanship, it can express personality, cultural inheritance, and respect for an occasion. The Church’s artistic tradition offers a rich source of inspiration for this everyday art, without prescribing a particular fashion or aesthetic.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="Beauty and Faith">
       <button role="tab" aria-selected="true" aria-controls="p-popes" id="t-popes" tabindex="0">The Popes on Beauty</button>
@@ -633,10 +648,11 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
           <div>
             <p class="label eyebrow">St. Pier Giorgio Frassati</p>
             <h2>A Life of Faith, Friendship, and Generosity</h2>
-            <p class="lede">St. Pier Giorgio Frassati belonged to one of Turin’s prominent families, yet his life was distinguished less by social privilege than by his devotion to the poor, his friendships, and his extraordinary generosity.</p>
-            <p class="lede">His photographs reveal a young man at ease in tailored suits, practical outdoor clothing, and the ordinary fashions of his time. His wardrobe also tells another story. Frassati repaired worn garments, gave clothing and shoes to those in need, and understood that personal appearance mattered far less than the people he encountered.</p>
-            <p class="lede">In August 2025, Andrew Likoudis explored this dimension of Frassati’s life for the <em>National Catholic Register</em>, speaking with Catholic designers, writers, and advocates about the relationship between his clothing, his character, and his witness to the Gospel.</p>
-            <div class="hero-cta" style="margin-top:26px"><a class="btn" href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Read the National Catholic Register Feature</a></div>
+            <p class="lede">St. Pier Giorgio Frassati belonged to one of Turin’s most prominent families, yet his life was distinguished by an extraordinary generosity toward the poor and a profound devotion to Christ.</p>
+            <p class="lede">Photographs of the young saint reveal a man equally at ease in tailored suits, university attire, and the practical clothing of a mountaineer. His sense of style reflected the conventions of his time and social circumstances, but his attachment to material possessions was remarkably slight. He gave clothing and shoes to those in need, continued wearing garments that had been repaired repeatedly, and placed the needs of others before his own comfort.</p>
+            <p class="lede">Frassati’s example offers a compelling perspective on the relationship between personal style and Christian virtue. His elegance was compatible with simplicity, his social standing with humility, and his appreciation for appropriate dress with a freedom from material possessions.</p>
+            <p class="lede">In August 2025, Andrew Likoudis explored this dimension of Frassati’s life for the <em>National Catholic Register</em>, drawing on interviews with Catholic designers, writers, and advocates who reflected on the spiritual significance of his wardrobe.</p>
+            <div class="hero-cta" style="margin-top:26px"><a class="btn" href="https://www.ncregister.com/features/frassati-tailored-for-holiness" target="_blank" rel="noopener">Read “Patron Saint of Fashion?” in the Register</a></div>
             <div class="themes">
               <div><h5>Personal Style</h5><p>Frassati dressed appropriately for the occasions and responsibilities of his life, whether among friends, at university, or in the mountains.</p></div>
               <div><h5>Simplicity</h5><p>His attention to appearance was accompanied by a willingness to mend and continue wearing clothes that had seen better days.</p></div>
@@ -645,16 +661,16 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
             </div>
             <div class="voices-h">
               <h3>Perspectives on Frassati</h3>
-              <p>Designers, writers, and advocates interviewed for the <em>National Catholic Register</em> reflected on what Frassati’s clothing reveals about his character, his generosity, and the place of personal style in the Christian life.</p>
+              <p>Six people interviewed for the <em>National Catholic Register</em> on what his clothing reveals about his character. Quotations are reproduced as published.</p>
             </div>
-            <ul class="voices">
-              <li><div><b>Clint Branam</b><small>Catholic Men’s Shop</small></div><p>Frassati’s tailoring met the standard of his class and his errands. In Catholic Europe, fine materials, clean lines, and good fit were treated as moral goods that honored the body as a temple.</p></li>
-              <li><div><b>Veronica Marrinan</b><small>Co-founder, Litany NYC</small></div><p>After venerating his body in Rome during the Jubilee of Youth, she came away with a new sense of his family’s wealth, and of how much his giving away of clothes revealed his generosity.</p></li>
-              <li><div><b>Mary Harper</b><small>Founder, Liturgical Style</small></div><p>His dress showed practicality and joy in ordinary life. He clothed the poor in new things before replacing his own worn shoes.</p></li>
-              <li><div><b>Eliza Monts</b><small>Writer and creator</small></div><p>She sees modesty in his clothing, dress that fit the occasion and never drew attention, and links it to the Beatitude of the poor in spirit.</p></li>
-              <li><div><b>Christine Wohar</b><small>FrassatiUSA · <em>Finding Frassati</em></small></div><p>Frassati knew his appearance and manners affected others. She describes his “apostolate of good example,” and cites a Jesuit who knew him as a boy recalling him as elegant, courteous, and modest.</p></li>
-              <li><div><b>Emily Malloy</b><small>Theology of Home</small></div><p>She points to his radiant smile and his confidence as a child of God, and to a generosity that gave without counting the cost.</p></li>
-            </ul>
+            <div class="fqs">
+              <figure class="fq"><span class="label">Quality</span><blockquote>“In Catholic Europe, quality and beauty were intertwined and treated as moral goods…”</blockquote><figcaption><b>Clint Branam</b><small>Catholic Men’s Shop</small></figcaption></figure>
+              <figure class="fq"><span class="label">Generosity</span><blockquote>“For him to give away such personal items as clothing shows real generosity.”</blockquote><figcaption><b>Veronica Marrinan</b><small>Co-founder, Litany NYC</small></figcaption></figure>
+              <figure class="fq"><span class="label">Simplicity</span><blockquote>“He’s an example for us today to reject the tendency of overconsumption with fast fashion.”</blockquote><figcaption><b>Mary Harper</b><small>Founder, LiturgicalStyle.com</small></figcaption></figure>
+              <figure class="fq"><span class="label">Modesty</span><blockquote>“In observing Pier Giorgio’s personal style, I’m struck by his modesty in how well his clothing blends in…”</blockquote><figcaption><b>Eliza Monts</b><small>Writer and Catholic content creator</small></figcaption></figure>
+              <figure class="fq"><span class="label">Example</span><blockquote>“Pier Giorgio was very conscious of the impact his behavior had on others.”</blockquote><figcaption><b>Christine Wohar</b><small>Executive director, FrassatiUSA</small></figcaption></figure>
+              <figure class="fq"><span class="label">Confidence</span><blockquote>“Instantly, one senses that this man owes his confidence to a recognition of and gratitude at being a child of God.”</blockquote><figcaption><b>Emily Malloy</b><small>Food and floral design editor, Theology of Home</small></figcaption></figure>
+            </div>
           </div>
         </div>
       </div>
@@ -738,19 +754,19 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
           <div class="cover" style="background:#2F3B33;color:#E9E2CF" aria-hidden="true"><span class="a">Gress · Mering</span><span class="t">Theology of Home</span><span class="orn"></span></div>
           <h5>Theology of Home</h5><p class="by">Carrie Gress and Noelle Mering · TAN, 2019</p>
           <p>Finding the eternal in the everyday. The first of a series that includes <em>The Spiritual Art of Homemaking</em> and <em>At the Sea</em>.</p>
-          <a class="go link" href="https://www.catholiccompany.com/products/theology-of-home-finding-the-eternal-in-the-everyday" target="_blank" rel="noopener">View Book</a>
+          <a class="go link" href="https://bookshop.org/p/books/theology-of-home-noelle-mering/d642ff033c766f82" target="_blank" rel="noopener">View Book</a>
         </article>
         <article class="book">
           <div class="cover" style="background:#4B2E5A;color:#EADFC4" aria-hidden="true"><span class="a">Mary Harper</span><span class="t">The Liturgical Style Guide</span><span class="orn"></span></div>
-          <h5>The Liturgical Style Guide</h5><p class="by">Mary Harper · 2026</p>
+          <h5>The Liturgical Style Guide</h5><p class="by">Mary Harper · Limited edition, January 2026</p>
           <p>Dressing with the seasons of the Church year, with sacred art and notes on color and fabric. Harper is also writing <em>What the Saints Wore</em>.</p>
           <a class="go link" href="https://liturgicalstyle.com" target="_blank" rel="noopener">View Book</a>
         </article>
         <article class="book">
           <div class="cover" style="background:#1F2A44;color:#E8D9B5" aria-hidden="true"><span class="a">Christine Wohar</span><span class="t">Finding Frassati</span><span class="orn"></span></div>
-          <h5>Finding Frassati</h5><p class="by">Christine Wohar · EWTN Publishing</p>
-          <p>The life of the new saint and how to follow his path, by the head of FrassatiUSA.</p>
-          <a class="go link" href="https://frassatiusa.org" target="_blank" rel="noopener">View Book</a>
+          <h5>Finding Frassati</h5><p class="by">Christine Wohar · EWTN Publishing, 2021</p>
+          <p>Forty short reflections on the new saint’s life, each with a prayer and a step to take, by the founder of FrassatiUSA.</p>
+          <a class="go link" href="https://www.christianbook.com/finding-frassati-following-his-path-holiness/9781682782491/pd/782496" target="_blank" rel="noopener">View Book</a>
         </article>
         <article class="book">
           <div class="cover" style="background:#F1E7D3;color:#6B1E26" aria-hidden="true"><span class="a">St. John Paul II</span><span class="t">Letter to Artists</span><span class="orn"></span></div>
@@ -760,15 +776,15 @@ footer{background:var(--night);color:var(--night-text);padding:84px 0 32px}
         </article>
         <article class="book">
           <div class="cover" style="background:#3A1C20;color:#E7CFA0" aria-hidden="true"><span class="a">Virginia Coda Nunziante</span><span class="t">Christian Fashion in the Teaching of the Church</span><span class="orn"></span></div>
-          <h5>Christian Fashion in the Teaching of the Church</h5><p class="by">Virginia Coda Nunziante · 2022</p>
+          <h5>Christian Fashion in the Teaching of the Church</h5><p class="by">Virginia Coda Nunziante · Calx Mariae, 2022</p>
           <p>Papal texts on dress from 1914 to 1971, with Pius XII’s 1957 address at the center.</p>
-          <a class="go link" href="https://lms.org.uk/node/7828" target="_blank" rel="noopener">View Book</a>
+          <a class="go link" href="https://voiceofthefamily.com/item/christian-fashion-in-the-teaching-of-the-church" target="_blank" rel="noopener">View Book</a>
         </article>
         <article class="book">
           <div class="cover" style="background:#D8C3B3;color:#3C2A22" aria-hidden="true"><span class="a">Nicole Caruso</span><span class="t">Worthy of Wearing</span><span class="orn"></span></div>
-          <h5>Worthy of Wearing</h5><p class="by">Nicole Caruso</p>
+          <h5>Worthy of Wearing</h5><p class="by">Nicole Caruso · Sophia Institute Press, 2021</p>
           <p>A Catholic beauty consultant on letting inner beauty shape what women wear.</p>
-          <a class="go link" href="https://www.goodreads.com/search?q=Worthy+of+Wearing+Nicole+Caruso" target="_blank" rel="noopener">View Book</a>
+          <a class="go link" href="https://catholic.market/books/worthy-of-wearing-how-personal-style-expresses-our-feminine-genius" target="_blank" rel="noopener">View Book</a>
         </article>
         <article class="book">
           <div class="cover" style="background:#5C6B4E;color:#F1EAD8" aria-hidden="true"><span class="a">Bobby Angel</span><span class="t">The Frassati Field Guide</span><span class="orn"></span></div>
@@ -872,52 +888,63 @@ trip.addEventListener('focusin',()=>clearInterval(timer));trip.addEventListener(
 showTrip(0);restart();
 
 /* ---------- lookbook ---------- */
+const PERIODS=["Early Christian and Byzantine","Romanesque","Gothic","Renaissance and Baroque","Neoclassical and Revival","Modern"];
+const PERIOD_OF={ecb:"st-paul-outside maria-maggiore lateran pantheon st-marks monreale hagia-sophia",rom:"trastevere pisa santiago mont-saint-michel",got:"minerva florence siena orvieto milan assisi notre-dame-paris sainte-chapelle chartres reims seville toledo burgos jeronimos cologne vienna st-vitus",ren:"st-peters sant-ignazio mexico-city st-louis-nola",neo:"baltimore st-peter-chains st-paul-mn yamoussoukro national-shrine sacre-coeur westminster-cathedral st-louis-basilica lourdes st-patricks sacred-heart-nd notre-dame-montreal madeleine",mod:"christ-cathedral brasilia sagrada"};
+const PK=["ecb","rom","got","ren","neo","mod"];
+L.forEach(l=>{const k=PK.find(k=>PERIOD_OF[k].split(' ').includes(l.id));l.period=k?PERIODS[PK.indexOf(k)]:'Other'});
+const dim=m=>m&&m.w?' width="'+m.w+'" height="'+m.h+'"':'';
 const FAM=[["blue","#2D6A8C","Blues and greens"],["red","#9E2430","Reds and pinks"],["gold","#C49A3E","Golds and browns"],["neutral","#D8CBB2","Light neutrals"],["dark","#24211E","Darks"]];
+const styleF=document.getElementById('styleF'),colorName=document.getElementById('colorName');
+styleF.innerHTML='<option>All styles</option>'+PERIODS.filter(p=>L.some(l=>l.period===p)).map(p=>'<option>'+esc(p)+'</option>').join('');
 const grid=document.getElementById('grid'),rc=document.getElementById('resultCount'),qEl=document.getElementById('q'),regionF=document.getElementById('regionF'),colorF=document.getElementById('colorF'),clearF=document.getElementById('clearF');
 let fWho='all',fCol='all';
 colorF.innerHTML='<button type="button" class="all" aria-pressed="true" data-v="all">Any color</button>'+FAM.map(f=>'<button type="button" aria-pressed="false" data-v="'+f[0]+'" style="background:'+f[1]+'" title="'+f[2]+'" aria-label="'+f[2]+'"></button>').join('');
 const regions=["All regions"].concat([...new Set(L.map(l=>l.region))]);
 regionF.innerHTML=regions.map(r=>'<option>'+esc(r)+'</option>').join('');
-grid.innerHTML=L.map((l,i)=>'<button type="button" class="card" data-i="'+i+'" aria-label="Explore this look, '+esc(l.look.title)+', inspired by '+esc(l.name)+', '+esc(l.place)+'"><div class="ph"><img loading="lazy" src="'+l.look.src+'" alt=""><span class="tag">'+WHO[l.who]+'</span><span class="church"><img loading="lazy" src="'+l.exterior.src+'" alt=""></span></div><div class="strip" aria-hidden="true">'+l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('')+'</div><h3>'+esc(l.name)+'</h3><span class="pl">'+esc(l.place)+'</span><span class="go">Explore This Look</span></button>').join('');
-function filter(){const q=qEl.value.trim().toLowerCase(),r=regionF.value;let n=0;
- [...grid.children].forEach(el=>{const l=L[+el.dataset.i];const ok=(fWho==='all'||l.who===fWho)&&(fCol==='all'||l.families.includes(fCol))&&(r==='All regions'||l.region===r)&&(!q||(l.name+' '+l.place+' '+l.city+' '+l.region+' '+l.look.title).toLowerCase().includes(q));el.hidden=!ok;if(ok)n++});
+grid.innerHTML=L.map((l,i)=>'<button type="button" class="card" data-i="'+i+'" aria-label="Explore this look, '+esc(l.look.title)+', inspired by '+esc(l.name)+', '+esc(l.place)+'"><div class="ph"><img loading="lazy" decoding="async" src="'+l.look.src+'"'+dim(l.look)+' alt=""><span class="tag">'+WHO[l.who]+'</span><span class="church"><img loading="lazy" decoding="async" src="'+l.exterior.src+'"'+dim(l.exterior)+' alt=""></span></div><div class="strip" aria-hidden="true">'+l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('')+'</div><h3>'+esc(l.name)+'</h3><span class="pl">'+esc(l.place)+'</span><span class="go">Explore This Look</span></button>').join('');
+let VIS=L.map((l,i)=>i);
+function filter(){const q=qEl.value.trim().toLowerCase(),r=regionF.value,st=styleF.value;let n=0;VIS=[];
+ [...grid.children].forEach(el=>{const l=L[+el.dataset.i];const ok=(fWho==='all'||l.who===fWho)&&(fCol==='all'||l.families.includes(fCol))&&(r==='All regions'||l.region===r)&&(st==='All styles'||l.period===st)&&(!q||(l.name+' '+l.place+' '+l.city+' '+l.region+' '+l.style+' '+l.look.title).toLowerCase().includes(q));el.hidden=!ok;if(ok){n++;VIS.push(+el.dataset.i)}});
  rc.textContent=n+(n===1?' look':' looks');document.getElementById('empty').hidden=n>0;
- clearF.disabled=(fWho==='all'&&fCol==='all'&&r==='All regions'&&!q)}
+ const fam=FAM.find(f=>f[0]===fCol);colorName.textContent=fam?fam[2]:'Any color';
+ clearF.disabled=(fWho==='all'&&fCol==='all'&&r==='All regions'&&st==='All styles'&&!q)}
 function press(group,b){[...group.children].forEach(x=>x.setAttribute('aria-pressed',x===b))}
 document.getElementById('segWho').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fWho=b.dataset.v;press(b.parentNode,b);filter()});
 colorF.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fCol=b.dataset.v;press(colorF,b);filter()});
-regionF.onchange=filter;qEl.oninput=filter;
-clearF.onclick=()=>{fWho='all';fCol='all';qEl.value='';regionF.value='All regions';press(document.getElementById('segWho'),document.querySelector('#segWho [data-v=all]'));press(colorF,colorF.querySelector('[data-v=all]'));filter();qEl.focus()};
+regionF.onchange=filter;styleF.onchange=filter;qEl.oninput=filter;
+clearF.onclick=()=>{fWho='all';fCol='all';qEl.value='';regionF.value='All regions';styleF.value='All styles';press(document.getElementById('segWho'),document.querySelector('#segWho [data-v=all]'));press(colorF,colorF.querySelector('[data-v=all]'));filter();qEl.focus()};
 filter();
 grid.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openDetail(+c.dataset.i)});
 
 /* ---------- detail ---------- */
 const detail=document.getElementById('detail'),dBody=document.getElementById('dBody');let cur=-1,lastFocus=null;
 function makers(who){return who==='her'?'<a href="https://www.litanynyc.com" target="_blank" rel="noopener">Litany NYC</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">The Urban Sophisticate Collective</a><a href="https://liturgicalstyle.com" target="_blank" rel="noopener">Liturgical Style</a>':'<a href="https://catholicmensshop.com" target="_blank" rel="noopener">Catholic Men’s Shop</a><a href="https://catholicgentleman.com" target="_blank" rel="noopener">The Catholic Gentleman</a><a href="https://urbansophisticatecollective.com" target="_blank" rel="noopener">The Urban Sophisticate Collective</a>'}
+function seq(){return VIS.includes(cur)&&VIS.length?VIS:L.map((l,i)=>i)}
+function step(d){const S=seq();const k=S.indexOf(cur);openDetail(S[(k+d+S.length)%S.length])}
 function openDetail(i,noPush){cur=(i+L.length)%L.length;const l=L[cur];if(detail.hidden)lastFocus=document.activeElement;
- dBody.innerHTML='<div class="d-grid"><div class="d-look"><div class="ph"><img src="'+l.look.src+'" alt="'+esc(l.look.title)+'. '+esc(l.look.wear)+'"></div><p class="credit">'+credit(l.look)+'</p></div>'+
+ dBody.innerHTML='<div class="trio" aria-label="From church to palette to look"><figure><div class="ph"><img src="'+l.exterior.src+'"'+dim(l.exterior)+' alt=""></div><span class="label">The Church</span></figure><figure><div class="chips" aria-hidden="true">'+l.palette.map(p=>'<i style="background:'+p.h+'"></i>').join('')+'</div><span class="label">The Palette</span></figure><figure><div class="ph"><img src="'+l.look.src+'"'+dim(l.look)+' alt=""></div><span class="label">The Look</span></figure></div><div class="d-grid"><div class="d-look"><div class="ph"><img src="'+l.look.src+'"'+dim(l.look)+' alt="'+esc(l.look.title)+'. '+esc(l.look.wear)+'"></div><p class="credit">'+credit(l.look)+'</p></div>'+
  '<div class="d-info">'+
   '<span class="label kicker">'+WHO[l.who]+' · '+esc(l.style)+'</span><h2 id="dTitle">'+esc(l.name)+'</h2><p class="label place">'+esc(l.place)+' · '+esc(l.year)+'</p><p class="story">'+esc(l.story)+'</p>'+
-  '<div class="pair"><figure><div class="ph"><img src="'+l.exterior.src+'" alt="'+esc(l.name)+', exterior"></div><figcaption class="label">Exterior</figcaption></figure><figure><div class="ph"><img src="'+l.interior.src+'" alt="'+esc(l.name)+', interior"></div><figcaption class="label">Interior</figcaption></figure></div>'+
+  '<div class="pair"><figure><div class="ph"><img loading="lazy" src="'+l.exterior.src+'"'+dim(l.exterior)+' alt="'+esc(l.name)+', exterior"></div><figcaption class="label">Exterior</figcaption></figure><figure><div class="ph"><img loading="lazy" src="'+l.interior.src+'"'+dim(l.interior)+' alt="'+esc(l.name)+', interior"></div><figcaption class="label">Interior</figcaption></figure></div>'+
   '<p class="credit">'+credit(l.exterior,'Exterior photo')+'<br>'+credit(l.interior,'Interior photo')+'</p>'+
   '<div class="d-sec"><span class="label">The Palette</span><div class="palette">'+l.palette.map(p=>'<button type="button" class="sw" data-hex="'+p.h+'" aria-label="Copy '+esc(p.n)+', '+p.h+'"><i style="background:'+p.h+'"></i><b>'+esc(p.n)+'</b><small>'+p.h+'</small></button>').join('')+'</div><p class="tip">Five colors measured from the exterior and interior photographs. Select a color to copy its value.</p></div>'+
   '<div class="d-sec"><span class="label">The Look</span><h3>'+esc(l.look.title)+'</h3><p class="wear">'+esc(l.look.wear)+'</p></div>'+
-  '<div class="d-sec"><span class="label">Architectural Inspiration</span><p class="insp">'+esc(inspiration(l,cur))+'</p></div>'+
+  '<div class="d-sec"><span class="label">Architectural Inspiration</span><p class="insp">'+esc(l.inspiration||inspiration(l,cur))+'</p></div>'+
   '<details class="analysis"><summary><span class="label">Color analysis</span><b>'+l.score+'% palette match</b></summary><div class="inner"><div class="match-rows">'+l.matches.map(m=>'<div class="mrow"><i style="background:'+m.g+'"></i><span>'+esc(m.gl)+'</span><span class="ar" aria-hidden="true">→</span><i style="background:'+m.p+'"></i><span>'+esc(m.pn)+'</span></div>').join('')+'</div><p class="tip">Left, colors measured from the outfit photo. Right, the closest color in the church’s palette. The score is a guide, not a verdict on the look.</p></div></details>'+
   '<div class="d-shop"><p>Find pieces like these from Catholic makers.</p><div class="links">'+makers(l.who)+'</div></div>'+
  '</div></div>';
- document.getElementById('dIdx').textContent=(cur+1)+' of '+L.length;
+ {const S=seq();document.getElementById('dIdx').textContent=(S.indexOf(cur)+1)+' of '+S.length}
  detail.hidden=false;document.body.classList.add('locked');detail.scrollTop=0;
  if(!noPush){try{history.replaceState(null,'','#'+l.id)}catch(e){}}
  document.getElementById('dClose').focus({preventScroll:true});}
 function closeDetail(){detail.hidden=true;document.body.classList.remove('locked');try{history.replaceState(null,'','#lookbook')}catch(e){};if(lastFocus&&document.contains(lastFocus))lastFocus.focus({preventScroll:true})}
 document.getElementById('dClose').onclick=closeDetail;
-document.getElementById('dPrev').onclick=()=>openDetail(cur-1);
-document.getElementById('dNext').onclick=()=>openDetail(cur+1);
+document.getElementById('dPrev').onclick=()=>step(-1);
+document.getElementById('dNext').onclick=()=>step(1);
 document.addEventListener('keydown',e=>{if(detail.hidden)return;
  if(e.key==='Escape')closeDetail();
- if(e.key==='ArrowRight'&&!e.target.closest('summary'))openDetail(cur+1);
- if(e.key==='ArrowLeft'&&!e.target.closest('summary'))openDetail(cur-1);
+ if(e.key==='ArrowRight'&&!e.target.closest('summary'))step(1);
+ if(e.key==='ArrowLeft'&&!e.target.closest('summary'))step(-1);
  if(e.key==='Tab'){const f=[...detail.querySelectorAll('a[href],button,summary,[tabindex="0"]')].filter(x=>x.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
 dBody.addEventListener('click',e=>{const sw=e.target.closest('.sw');if(sw){const h=sw.dataset.hex;try{navigator.clipboard.writeText(h).then(()=>toast(h+' copied'),()=>toast(h))}catch(err){toast(h)}}});
 
