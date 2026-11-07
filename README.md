@@ -1,6 +1,6 @@
 # Via Pulchritudinis
 
-A Catholic Journal of Style and Beauty. The Beauty of Cathedrals in Everyday Fashion. Outfits drawn from the stone, glass, and gold of 48 churches, each with its own interior and exterior photos, a measured palette, and a unique outfit, with what the popes and the Church have said about beauty, dress, and the body.
+A Catholic Journal of Style and Beauty. The Beauty of Cathedrals in Everyday Fashion. Outfits drawn from the stone, glass, and gold of 50 cathedrals, basilicas, and shrines, each with its own interior and exterior photos, a measured palette, and a unique outfit, with what the popes and the Church have said about beauty, dress, and the body.
 
 Static site for GitHub Pages. `index.html` holds the layout, `data.js` holds the churches, palettes, looks, and photo credits, and `img/` holds the photos.
 

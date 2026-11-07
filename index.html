@@ -968,7 +968,7 @@ showTrip(0);restart();
 
 /* ---------- lookbook ---------- */
 const PERIODS=["Early Christian and Byzantine","Romanesque","Gothic","Renaissance and Baroque","Neoclassical and Revival","Modern"];
-const PERIOD_OF={ecb:"st-paul-outside maria-maggiore lateran pantheon st-marks monreale hagia-sophia",rom:"trastevere pisa santiago mont-saint-michel",got:"minerva florence siena orvieto milan assisi notre-dame-paris sainte-chapelle chartres reims seville toledo burgos jeronimos cologne vienna st-vitus",ren:"st-peters sant-ignazio mexico-city st-louis-nola",neo:"baltimore st-peter-chains st-paul-mn yamoussoukro national-shrine sacre-coeur westminster-cathedral st-louis-basilica lourdes st-patricks sacred-heart-nd notre-dame-montreal madeleine",mod:"christ-cathedral brasilia sagrada"};
+const PERIOD_OF={ecb:"st-paul-outside maria-maggiore lateran pantheon st-marks monreale",rom:"trastevere pisa santiago vezelay",got:"minerva florence siena orvieto milan assisi notre-dame-paris saint-denis chartres reims seville toledo burgos cologne vienna st-vitus",ren:"st-peters santa-maria-popolo mexico-city st-louis-nola estrela bom-jesus",neo:"baltimore st-peter-chains st-paul-mn yamoussoukro national-shrine sacre-coeur westminster-cathedral st-louis-basilica lourdes st-patricks sacred-heart-nd notre-dame-montreal madeleine manila las-lajas",mod:"christ-cathedral brasilia sagrada"};
 const PK=["ecb","rom","got","ren","neo","mod"];
 L.forEach(l=>{const k=PK.find(k=>PERIOD_OF[k].split(' ').includes(l.id));l.period=k?PERIODS[PK.indexOf(k)]:'Other'});
 const sm=src=>src.replace(/^img\/(ext|look)\//,'img/sm/$1/');
