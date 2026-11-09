@@ -129,7 +129,7 @@ h3{font-size:clamp(24px,2.4vw,30px)}
 
 /* full-width architecture */
 .interlude{position:relative;margin:0;background:var(--night)}
-.interlude img{width:100%;height:min(76vh,740px);object-fit:cover;object-position:center 35%;cursor:zoom-in}
+.interlude img{width:100%;height:min(76vh,740px);object-fit:cover;object-position:center 64%;cursor:zoom-in}
 .interlude figcaption{display:grid;grid-template-columns:220px 1fr auto;gap:28px;align-items:baseline;padding-top:22px;padding-bottom:26px;color:var(--night-text)}
 .interlude .label{color:var(--gold-2)}
 .interlude p{font-family:var(--serif);font-size:22px;line-height:1.4;color:#F3ECDD;max-width:52ch}
