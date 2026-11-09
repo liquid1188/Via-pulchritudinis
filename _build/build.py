@@ -102,13 +102,17 @@ HINT='<p class="swipe-hint" aria-hidden="true">Swipe for more →</p>'
 
 PAGES={}
 # ---------------- HOME ----------------
-TOC=[('lookbook.html','I','The Lookbook','Fifty churches, each with its own palette and a contemporary outfit.','img/sm/look/siena.jpg'),
+TOC=[('lookbook.html','I','The Lookbook','Fifty churches, each with its own palette and a contemporary outfit.','img/sm/ext/siena.jpg|img/sm/look/siena-v2.jpg'),
  ('how-it-works.html','II','How It Works','From stone and glass to five colors to a wardrobe.','img/sm/ext/st-marks.jpg'),
  ('liturgical-year.html','III','The Liturgical Year','The colors of the Church’s seasons, worn lightly.','img/int/saint-denis.jpg'),
  ('beauty-and-faith.html','IV','Beauty &amp; Faith','What the popes and the Church have said about beauty and dress.','img/art/san-paolo-nave.jpg'),
  ('st-pier-giorgio.html','V','St. Pier Giorgio','The saint who dressed well and gave his clothes away.','img/art/fra-angelico-st-dominic.jpg'),
  ('directory.html','VI','The Directory','Catholic makers, stylists, publications, and books.','img/sm/ext/vezelay.jpg')]
-toc=''.join(f'<li><a href="{h}"><div class="im"><img loading="lazy" src="{im}" alt=""{' style="object-position:center 88%"' if 'angelico' in im else ''}></div><h3>{t}</h3><p>{d}</p></a></li>' for h,n,t,d,im in TOC)
+def _im(im):
+  if '|' in im: return '<div class="im two">'+''.join(f'<img loading="lazy" src="{x}" alt="">' for x in im.split('|'))+'</div>'
+  st=' style="object-position:center 88%"' if 'angelico' in im else ''
+  return f'<div class="im"><img loading="lazy" src="{im}" alt=""{st}></div>'
+toc=''.join(f'<li><a href="{h}">{_im(im)}<h3>{t}</h3><p>{d}</p></a></li>' for h,n,t,d,im in TOC)
 PAGES['index.html']=('Home','Via Pulchritudinis draws inspiration from the world’s great Catholic cathedrals, basilicas, and shrines, translating their architectural beauty into contemporary personal style.','home',f'''
 <section class="hero" id="hero" data-zoom-group aria-roledescription="carousel" aria-label="Featured churches and looks">
   <div class="h-panel h-church zp"><img class="kb" alt="" data-zoom tabindex="0" role="button"><img class="kb" alt="" data-zoom tabindex="-1" role="button" aria-hidden="true"></div>
@@ -203,7 +207,7 @@ head('II','How It Works','From Sacred Architecture to Personal Style',
   <div class="wrap method">
     <figure id="methodFig"></figure>
     <div>
-      <h2 style="margin:0 0 18px">A Palette, Not a Formula</h2>
+      <h2 style="margin:0 0 18px">How a Look Is Chosen</h2>
       <p>Each palette is measured from an exterior and an interior photograph, then checked by eye so it reflects the building’s real stone, glass, wood, and metal rather than the accident of a cloudy day or a camera’s color cast.</p>
       <p>The outfit is chosen first for its own beauty and good taste. A color-match score in each look shows how closely the clothes follow the palette, but it is a guide, not a verdict.</p>
       <p>Photographs of churches and clothing are used under Creative Commons licenses or are in the public domain, and every image is credited.</p>

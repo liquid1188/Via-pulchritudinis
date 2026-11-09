@@ -103,8 +103,10 @@ h3{font-size:clamp(24px,2.4vw,30px)}
 .toc{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,32px)}
 .toc a{display:block;text-decoration:none;background:var(--paper);padding:14px 14px 20px;border:1px solid var(--rule);transition:border-color .2s}
 .toc a:hover{border-color:var(--ink-3)}
-.toc .im{aspect-ratio:3/2;overflow:hidden;background:var(--ivory-2)}
+.toc .im{aspect-ratio:4/3;overflow:hidden;background:var(--ivory-2)}
 .toc img{width:100%;height:100%;object-fit:cover}
+.toc .im.two{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.toc .im.two img+img{object-position:center 15%}
 .toc .n{display:block;margin-top:16px;color:var(--gold)}
 .toc h3{margin-top:6px;font-size:26px}
 .toc p{margin-top:6px;font-size:14.5px;color:var(--ink-2);line-height:1.55}
@@ -363,15 +365,16 @@ img[data-zoom]{cursor:zoom-in}
 
 /* ---------- cinematic hero: church, palette, look ---------- */
 .hero{position:relative;display:grid;grid-template-columns:1.25fr 56px 1fr;height:max(560px,min(calc(100vh - 174px),900px));background:var(--night);color:#F6EFDF;overflow:hidden}
-.h-panel{position:relative;overflow:hidden;margin:0}
+.h-panel{position:relative;overflow:hidden;margin:0;background:#1A1714}
+.h-panel::before{content:"";position:absolute;inset:-60px;background:var(--bg,none) center/cover no-repeat;filter:blur(30px) brightness(.5) saturate(1.1);transition:background-image 1.3s}
 .h-panel.zp::after{display:none}
-.kb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.3s ease;will-change:opacity,transform}
+.kb{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity 1.3s ease;will-change:opacity,transform}
 .kb.on{opacity:1;z-index:1}
 html.motion .kb.on{animation:kb 9s ease-out forwards}
 html.motion .hero.paused .kb.on{animation-play-state:paused}
-@keyframes kb{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.03)}}
 .h-look .kb.on{animation-name:kb2}
-@keyframes kb2{from{transform:scale(1.1) translate3d(1%,0,0)}to{transform:scale(1.02) translate3d(0,-1%,0)}}
+@keyframes kb2{from{transform:scale(1.03)}to{transform:scale(1)}}
 .h-pal{display:flex;flex-direction:column;z-index:2}
 .h-pal i{flex:1;background:#555;transition:background 1s ease}
 html.motion .h-pal i{animation:barIn .9s cubic-bezier(.2,.7,.2,1) both}
@@ -428,8 +431,8 @@ html.motion .marquee.rev .mq-track{animation-direction:reverse;animation-duratio
 .marquee:hover .mq-track,.marquee:focus-within .mq-track{animation-play-state:paused}
 @keyframes mq{to{transform:translateX(-50%)}}
 html:not(.motion) .marquee{overflow-x:auto}
-.mq{display:block;width:230px;flex:none;text-decoration:none}
-.mq-ph{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:160px;overflow:hidden}
+.mq{display:block;width:280px;flex:none;text-decoration:none}
+.mq-ph{display:grid;grid-template-columns:1.35fr 1fr;gap:3px;height:170px;overflow:hidden}
 .mq-ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .mq-ph img+img{object-position:center 22%}
 .mq:hover .mq-ph img{transform:scale(1.05)}
@@ -471,13 +474,14 @@ html.motion body{animation:fadeIn .45s ease both}
 @media (max-width:720px){
   body{font-size:16px}
 
-  .hero{grid-template-columns:1fr 14px 1fr;height:calc(100svh - 56px);min-height:520px;max-height:820px}
-  .hero::before{background:linear-gradient(0deg,rgba(16,14,12,.88) 0%,rgba(16,14,12,.55) 38%,rgba(16,14,12,0) 62%)}
-  .h-copy{left:var(--gut);right:var(--gut);bottom:112px;max-width:none}
-  .h-copy h1{font-size:40px}
+  .hero{grid-template-columns:1fr;grid-template-rows:30svh 8px 46svh auto auto;height:auto;min-height:0;max-height:none}
+  .hero::before{display:none}
+  .h-pal{flex-direction:row}
+  .h-copy{position:static;padding:26px var(--gut) 0;max-width:none}
+  .h-copy h1{font-size:36px;margin-top:0}
   .h-copy .ctas{margin-top:20px;gap:10px}
   .h-copy .btn{flex:1 1 0;padding:0 10px;min-height:44px;font-size:11.5px}
-  .h-now{bottom:16px;gap:12px;grid-template-columns:auto 1fr auto}
+  .h-now{position:static;margin:24px var(--gut) 18px;gap:12px;grid-template-columns:auto 1fr auto}
   .h-count b{font-size:24px}
   .h-name b{font-size:17px}
   .h-name span:last-child{display:none}
@@ -486,8 +490,8 @@ html.motion body{animation:fadeIn .45s ease both}
   .statement{padding-top:44px}
   .today{grid-template-columns:40px 1fr;gap:14px}
   .today .more{grid-column:2}
-  .mq{width:168px}
-  .mq-ph{height:120px}
+  .mq{width:212px}
+  .mq-ph{height:128px}
   .mq b{font-size:16px}
   .masthead{display:none}
   .navbar .in{justify-content:space-between;min-height:56px}

@@ -63,11 +63,11 @@ if($('hero')&&L.length){
  function swap(set,src,alt,cap,cred,pos){const on=set.find(i=>i.classList.contains('on'))||set[1],nx=set[0]===on?set[1]:set[0];
   nx.src=src;nx.alt=alt;nx.dataset.cap=cap;nx.dataset.credit=cred;nx.style.objectPosition=pos||'';nx.setAttribute('tabindex','0');nx.removeAttribute('aria-hidden');
   on.setAttribute('tabindex','-1');on.setAttribute('aria-hidden','true');
-  nx.classList.remove('on');void nx.offsetWidth;nx.classList.add('on');on.classList.remove('on')}
+  nx.parentElement.style.setProperty('--bg','url("'+new URL(src,location.href).href+'")');nx.classList.remove('on');void nx.offsetWidth;nx.classList.add('on');on.classList.remove('on')}
  async function show(j){hi=(j+F.length)%F.length;const {l,k}=F[hi];const nx=F[(hi+1)%F.length];
   await Promise.all([load(l[k].src),load(l.look.src)]);
   swap(ch,l[k].src,l.name+(k==='interior'?', interior':', exterior'),l.name+(k==='interior'?', interior':', exterior'),credit(l[k]));
-  swap(lk,l.look.src,l.look.title+', a look inspired by '+l.name,l.look.title+', inspired by '+l.name,credit(l.look),'center 22%');
+  swap(lk,l.look.src,l.look.title+', a look inspired by '+l.name,l.look.title+', inspired by '+l.name,credit(l.look));
   bars.forEach((b,i)=>{b.style.transitionDelay=(i*90)+'ms';b.style.background=l.palette[i].h;b.title=l.palette[i].n});
   $('hNo').textContent=String(hi+1).padStart(2,'0');$('hTitle').textContent=l.name;$('hSub').textContent=l.place+' · '+l.look.title;$('hOpen').href='lookbook.html#'+l.id;
   load(nx.l[nx.k].src);load(nx.l.look.src);
